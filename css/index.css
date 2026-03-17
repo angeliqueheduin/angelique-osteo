@@ -892,7 +892,7 @@ body {
 @media (max-width: 767px) {
     .marquee-outer::before,
     .marquee-outer::after {
-        width: 32px;
+        width: 16px;
     }
 }
 

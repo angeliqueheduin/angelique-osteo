@@ -17,21 +17,23 @@
     <meta name="description" content="Conseils en ostéopathie, articles santé et réponses à vos questions fréquentes. Angélique Héduin, ostéopathe D.O. à Bessan (34550), Hérault.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="author" content="Angélique Héduin — Ostéopathe D.O.">
-    <link rel="canonical" href="https://angelique-osteo.fr/actualites.html">
+    <link rel="canonical" href="https://angelique-osteo.fr/actualites">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <link rel="alternate" hreflang="fr" href="https://angelique-osteo.fr/actualites.html">
+    <link rel="alternate" hreflang="fr" href="https://angelique-osteo.fr/actualites">
 
     <!-- === GEO === -->
     <meta name="geo.region" content="FR-34">
     <meta name="geo.placename" content="Bessan">
-    <meta name="geo.position" content="43.3566559;3.4190211">
-    <meta name="ICBM" content="43.3566559, 3.4190211">
+    <meta name="geo.position" content="43.3566598;3.4164462">
+    <meta name="ICBM" content="43.3566598, 3.4164462">
 
-    <!-- === FAVICONS === -->
-    <link rel="icon" type="image/webp" href="/photos-header/logo-site.webp">
+    <!-- === FAVICONS (PNG en premier pour compatibilité maximale) === -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/photos-header/logo-site.png">
+    <link rel="icon" type="image/webp" href="/photos-header/logo-site.webp">
     <link rel="apple-touch-icon" href="/photos-header/logo-site.png">
     <meta name="theme-color" content="#7d9d85">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="format-detection" content="telephone=no">
 
     <!-- === OPEN GRAPH === -->
@@ -40,12 +42,12 @@
     <meta property="og:site_name" content="Angélique Héduin — Ostéopathe D.O.">
     <meta property="og:title" content="Ressources, Articles &amp; FAQ — Ostéopathe à Bessan | Angélique Héduin">
     <meta property="og:description" content="Mes articles de conseils en ostéopathie, actualités santé et réponses à vos questions fréquentes. Cabinet à Bessan dans l'Hérault.">
-    <meta property="og:image" content="https://angelique-osteo.fr/photos-header/personnes-agees.jpg">
+    <meta property="og:image" content="https://angelique-osteo.fr/photos-header/open-graph.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:alt" content="Ostéopathie seniors — Cabinet Angélique Héduin Bessan">
-    <meta property="og:url" content="https://angelique-osteo.fr/actualites.html">
+    <meta property="og:url" content="https://angelique-osteo.fr/actualites">
 
     <!-- === TWITTER CARD === -->
     <meta name="twitter:card" content="summary_large_image">
@@ -159,8 +161,8 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Ressources &amp; FAQ",
-          "item": "https://angelique-osteo.fr/actualites.html"
+          "name": "Ressources & FAQ",
+          "item": "https://angelique-osteo.fr/actualites"
         }
       ]
     }
@@ -172,7 +174,7 @@
 <body>
 
     <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Consentement aux cookies">
-        <p>Ce site utilise des outils tiers (Calendly, Google Maps) pouvant déposer des cookies. En continuant votre navigation, vous acceptez leur utilisation. <a href="mentions-legales.html">En savoir plus</a></p>
+        <p>Ce site utilise des outils tiers (Calendly, Google Maps) pouvant déposer des cookies. En continuant votre navigation, vous acceptez leur utilisation. <a href="/mentions-legales">En savoir plus</a></p>
         <div class="cookie-buttons">
             <button class="btn-accept-cookies" onclick="acceptCookies()">Accepter</button>
             <button class="btn-refuse-cookies" onclick="refuseCookies()">Refuser</button>
@@ -191,10 +193,10 @@
             </button>
             <ul class="navbar-links" id="navbar-links" role="list" aria-label="Navigation principale">
                 <li role="listitem"><a href="/">ACCUEIL</a></li>
-                <li role="listitem"><a href="parcours.html">PARCOURS</a></li>
-                <li role="listitem"><a href="tarifs-et-horaires.html">TARIFS / HORAIRES</a></li>
-                <li role="listitem"><a href="avis.html">AVIS</a></li>
-                <li role="listitem"><a href="actualites.html" aria-current="page">FAQ</a></li>
+                <li role="listitem"><a href="/parcours">PARCOURS</a></li>
+                <li role="listitem"><a href="/tarifs-et-horaires">TARIFS / HORAIRES</a></li>
+                <li role="listitem"><a href="/avis">AVIS</a></li>
+                <li role="listitem"><a href="/actualites" aria-current="page">FAQ</a></li>
             </ul>
             <a href="https://calendly.com/angeliqueheduin-osteopathe" class="btn-rdv" target="_blank" rel="noopener noreferrer">Prendre RDV</a>
         </nav>
@@ -208,17 +210,36 @@
                 <p class="section-subtitle">Retrouvez mes conseils en ostéopathie et les réponses à vos questions.</p>
             </section>
 
+            <!-- SECTION ARTICLES : lien vers concurrent retiré, section conservée pour structure future -->
             <section class="articles-section animate-on-scroll" aria-labelledby="articles-titre">
                 <div class="container">
                     <h2 id="articles-titre" class="subsection-title">Articles récents</h2>
                     <div class="article-grid">
                         <article class="article-card">
-                            <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop');" role="img" aria-label="Illustration ostéopathie nourrisson"></div>
+                            <div class="article-image" style="background-image: url('photos-header/bebe-jouer.webp');" role="img" aria-label="Ostéopathie pédiatrique nourrisson — Cabinet Angélique Héduin Bessan"></div>
                             <div class="article-content">
-                                <span class="article-category">Mes conseils</span>
-                                <h3 class="article-title">Coliques du nourrisson : comment j'aide votre bébé</h3>
-                                <p class="article-excerpt">Je vous explique comment comprendre les tensions abdominales du nourrisson pour soulager durablement ses coliques grâce à une approche ostéopathique douce et naturelle...</p>
-                                <a href="https://www.dan-sebbah-osteopathe.fr/post/coliques-du-nourrisson-comprendre-soulager-et-aider-son-b%C3%A9b%C3%A9-gr%C3%A2ce-%C3%A0-l-ost%C3%A9opathie" class="article-link" target="_blank" rel="noopener noreferrer nofollow">Lire l'article <span aria-hidden="true">&rarr;</span></a>
+                                <span class="article-category">Pédiatrie</span>
+                                <h3 class="article-title">L'ostéopathie pédiatrique est-elle vraiment utile ?</h3>
+                                <p class="article-excerpt">Face aux idées reçues relayées dans certains médias, la SEROPP et le Syndicat français des ostéopathes rappellent que l'ostéopathie pédiatrique est reconnue depuis 2002, réglementée depuis 2007, et soutenue par de nombreuses études scientifiques. Découvrez pourquoi elle représente un accompagnement sérieux et sécurisé pour votre nourrisson.</p>
+                                <a href="https://seropp.org/communique-de-presse-non-losteopathie-pediatrique-nest-pas-sans-interet/" class="article-link" target="_blank" rel="noopener noreferrer">Lire l'article <span aria-hidden="true">&rarr;</span></a>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <div class="article-image" style="background-image: url('photos-header/grossesse.webp');" role="img" aria-label="Ostéopathie du sport — Cabinet Angélique Héduin Bessan"></div>
+                            <div class="article-content">
+                                <span class="article-category-2">Grossesse</span>
+                                <h3 class="article-title">Ostéopathie et douleurs lombaires pendant la grossesse</h3>
+                                <p class="article-excerpt">Une étude prospective menée sur des femmes enceintes au troisième trimestre montre que l'ostéopathie réduit significativement les douleurs lombaires et pelviennes, sans médicament. Un accompagnement naturel, adapté et efficace pour améliorer votre qualité de vie pendant la grossesse.</p>
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10530515/" class="article-link" target="_blank" rel="noopener noreferrer">Lire l'étude <span aria-hidden="true">&rarr;</span></a>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <div class="article-image" style="background-image: url('photos-header/lombalgie.webp');" role="img" aria-label="Ostéopathie grossesse — Cabinet Angélique Héduin Bessan"></div>
+                            <div class="article-content">
+                                <span class="article-category-3">Douleur et Posture</span>
+                                <h3 class="article-title">L'ostéopathie efficace contre les douleurs chroniques du dos</h3>
+                                <p class="article-excerpt">Une méta-analyse internationale portant sur 10 essais cliniques confirme que l'ostéopathie réduit la douleur et améliore la mobilité chez les patients souffrant de lombalgie chronique. En particulier, les techniques de relâchement myofascial montrent des résultats probants et durables.</p>
+                                <a href="https://www.osteopathe-syndicat.fr/osteopathie-pour-qui" class="article-link" target="_blank" rel="noopener noreferrer">Lire l'article <span aria-hidden="true">&rarr;</span></a>
                             </div>
                         </article>
                     </div>
@@ -229,7 +250,7 @@
                 <div class="container">
                     <h2 id="presse-titre" class="subsection-title">Presse &amp; Médias</h2>
                     <div class="press-feature">
-                        <div class="press-feature-img" style="background-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop');" role="img" aria-label="Illustration cabinet">
+                        <div class="press-feature-img" style="background-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop');" role="img" aria-label="Illustration cabinet ostéopathie Bessan Hérault">
                             <span class="press-badge">À la une</span>
                         </div>
                         <div class="press-feature-content">
@@ -254,10 +275,12 @@
                             <p>La Cour de cassation a rendu un arrêt concernant la présence d'un ostéopathe au sein d'une Maison de santé pluridisciplinaire.</p>
                             <span class="read-more">Lire l'article <span aria-hidden="true">&rarr;</span></span>
                         </a>
-                        <a href="https://www.inserm.fr/information-en-sante/dossiers-information/douleur-chronique/" class="press-mini-card" target="_blank" rel="noopener noreferrer nofollow">
-                            <p class="press-date">Inserm</p>
-                            <h4>Inserm — Douleur chronique</h4>
-                            <p>Le point sur la douleur chronique : mécanismes, traitements et approches thérapeutiques complémentaires selon l'Institut national de la santé.</p>
+                        <a href="https://clinicaltrials.gov/study/NCT07260422" class="press-mini-card" target="_blank" rel="noopener noreferrer nofollow">
+                            <p class="press-date">03.12.2025</p>
+                            <h4>National Library of Medecine</h4>
+                            <p>Gemini a dit
+
+Cette étude de 2026 prouve que l'ostéopathie réduit durablement les douleurs cervicales chroniques. Elle démontre une amélioration réelle de la mobilité et de la force musculaire des patients.</p>
                             <span class="read-more">Lire l'article <span aria-hidden="true">&rarr;</span></span>
                         </a>
                     </div>
@@ -291,7 +314,7 @@
 
                         <details class="faq-item">
                             <summary class="faq-question">L'ostéopathie est-elle dangereuse ?</summary>
-                            <p class="faq-answer">L'ostéopathie est une pratique manuelle douce et sécurisée lorsqu'elle est exercée par un professionnel diplômé d'État. Je réalise systématiquement un bilan complet avant toute manipulation afin d'identifier les éventuelles contre-indications et d'adapter les techniques utilisées.</p>
+                            <p class="faq-answer">L'ostéopathie est une pratique manuelle douce et sécurisée lorsqu'elle est exercée par un professionnel diplômé. Je réalise systématiquement un bilan complet avant toute manipulation afin d'identifier les éventuelles contre-indications et d'adapter les techniques utilisées.</p>
                         </details>
 
                         <details class="faq-item">
@@ -301,7 +324,7 @@
 
                         <details class="faq-item">
                             <summary class="faq-question">L'ostéopathie est-elle conseillée pendant la grossesse ?</summary>
-                            <p class="faq-answer">Oui, l'ostéopathie est particulièrement bénéfique pendant la grossesse pour soulager les douleurs lombaires, les sciatiques, les tensions du bassin et préparer le corps à l'accouchement. Les techniques sont entièrement adaptées à chaque trimestre.</p>
+                            <p class="faq-answer">Oui, l'ostéopathie est particulièrement bénéfique pendant la grossesse pour soulager les douleurs lombaires, les sciatiques, les tensions du bassin, les difficultés d'allaitement et préparer le corps à l'accouchement. Les techniques sont entièrement adaptées à chaque trimestre.</p>
                         </details>
 
                         <details class="faq-item">
@@ -310,8 +333,8 @@
                         </details>
 
                         <details class="faq-item">
-                            <summary class="faq-question">Quels modes de paiement acceptez-vous ?</summary>
-                            <p class="faq-answer">Je règle les honoraires par chèque ou en espèces. Je ne dispose pas de terminal de paiement par carte bancaire. Je remets une facture en fin de séance pour faciliter le remboursement par votre mutuelle.</p>
+                            <summary class="faq-question">Quels modes de paiement j'accepte ?</summary>
+                            <p class="faq-answer">Vous pouvez règler les honoraires par chèque ou en espèces. Je ne dispose pas de terminal de paiement par carte bancaire. Je remets une facture en fin de séance pour faciliter le remboursement par votre mutuelle.</p>
                         </details>
 
                         <details class="faq-item">
@@ -360,7 +383,7 @@
                 <p>Tél : <a href="tel:+33622400172">06 22 40 01 72</a></p>
             </div>
             <div class="footer-legal">
-                <p>© 2024–<span id="copyright-year">2026</span> angelique-osteo.fr | <a href="mentions-legales.html">Mentions légales</a></p>
+                <p>© 2024–<span id="copyright-year">2026</span> angelique-osteo.fr | <a href="/mentions-legales">Mentions légales</a></p>
                 <p class="recaptcha-mention">Ce site est protégé par reCAPTCHA — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Confidentialité</a> &amp; <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">CGU</a> Google.</p>
             </div>
         </div>
@@ -368,11 +391,29 @@
 
     <script src="script.js" defer></script>
     <script>
+        function _lsGet(k) { try { return localStorage.getItem(k); } catch(e) { return null; } }
+
+        // Masquage immédiat du cookie banner si consentement déjà donné
         (function() {
-            var consent = localStorage.getItem('cookie_consent');
+            var consent = _lsGet('cookie_consent');
             var banner = document.getElementById('cookie-banner');
             if (consent && banner) banner.style.display = 'none';
         })();
+
+        // Rechargement des scripts tiers si consentement accepté
+        (function() {
+            var consent = _lsGet('cookie_consent');
+            if (consent === 'accepted') {
+                if (!document.querySelector('script[src*="recaptcha"]')) {
+                    var s = document.createElement('script');
+                    s.src = 'https://www.google.com/recaptcha/api.js?render=6Ldup4osAAAAACCUSh7PHbTCISNPjY-ABHnM6h1H';
+                    s.async = true;
+                    document.head.appendChild(s);
+                }
+            }
+        })();
+
+        // Mise à jour dynamique de l'année du copyright
         (function() {
             var el = document.getElementById('copyright-year');
             if (el) el.textContent = new Date().getFullYear();

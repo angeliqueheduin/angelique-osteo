@@ -12,10 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- === FAVICONS === -->
-  <link rel="icon" type="image/webp" href="/photos-header/logo-site.webp">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/photos-header/logo-site.png">
+  <link rel="icon" type="image/webp" href="/photos-header/logo-site.webp">
   <link rel="apple-touch-icon" href="/photos-header/logo-site.png">
   <meta name="theme-color" content="#7d9d85">
+    <link rel="manifest" href="/site.webmanifest">
 
   <link rel="stylesheet" href="css/mentions-legales.css">
 </head>
@@ -158,9 +160,14 @@
         <p>Conformément au Règlement Général sur la Protection des Données (RGPD – Règlement UE 2016/679) et à la loi Informatique et Libertés modifiée, vous disposez de droits sur vos données personnelles.</p>
         <p>Aucune donnée de santé n'est collectée via ce site. Les informations de santé relatives aux consultations sont gérées séparément, dans le respect du secret médical et de mes obligations déontologiques.</p>
         <h3>Finalité et base légale</h3>
-        <p>Les données sont traitées uniquement pour répondre à vos demandes de contact ou de prise de rendez-vous. Elles ne sont en aucun cas cédées, vendues ou louées à des tiers.</p>
+        <p>Les données sont traitées pour les finalités suivantes :</p>
+        <ul style="margin:8px 0 12px 16px;line-height:2">
+          <li><strong>Demandes de contact et de prise de rendez-vous</strong> — base légale : intérêt légitime</li>
+          <li><strong>Avis et témoignages patients</strong> — prénom, initiale du nom, note, texte du témoignage et source collectés via le formulaire d'avis. Base légale : consentement explicite lors de la soumission du formulaire. Ces données sont stockées sur Firebase (Google) et soumises à validation avant publication.</li>
+        </ul>
+        <p>Ces données ne sont en aucun cas cédées, vendues ou louées à des tiers.</p>
         <h3>Durée de conservation</h3>
-        <p>Les données de contact sont conservées pendant une durée maximale de 3 ans à compter du dernier contact. Au-delà, elles sont supprimées ou anonymisées.</p>
+        <p>Les données de contact sont conservées pendant une durée maximale de 3 ans à compter du dernier contact. Les avis publiés sont conservés tant qu'ils sont visibles sur le site ; ils peuvent être supprimés sur simple demande. Au-delà, les données sont supprimées ou anonymisées.</p>
         <h3>Vos droits</h3>
         <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité, de limitation et d'opposition au traitement de vos données. Vous pouvez exercer ces droits en m'écrivant à <a href="mailto:angeliqueheduin@gmail.com">angeliqueheduin@gmail.com</a> ou par courrier à l'adresse du cabinet.</p>
         <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a>.</p>
@@ -173,9 +180,17 @@
         <h3>Cookies utilisés sur ce site</h3>
         <div class="highlight-box">
           <strong>Cookies strictement nécessaires</strong> — indispensables au bon fonctionnement du site (mémorisation de votre consentement). Ils ne nécessitent pas de consentement préalable.<br><br>
-          <strong>Cookies tiers</strong> — Ce site intègre un widget de prise de rendez-vous (Calendly) susceptible de déposer des cookies lors de son utilisation. Vous pouvez les accepter ou les refuser via la bannière affichée lors de votre première visite.
+          <strong>Cookies tiers (soumis à consentement)</strong> — Ce site intègre les services tiers suivants, susceptibles de déposer des cookies lors de leur utilisation :
+          <ul style="margin:12px 0 0 16px;line-height:2">
+            <li><strong>Calendly</strong> (Calendly LLC, États-Unis) — widget de prise de rendez-vous en ligne</li>
+            <li><strong>Google reCAPTCHA</strong> (Google LLC, États-Unis) — protection anti-spam du formulaire d'avis</li>
+            <li><strong>Firebase / Google</strong> (Google LLC, États-Unis) — stockage des avis patients et authentification</li>
+            <li><strong>EmailJS</strong> (EmailJS Ltd, Royaume-Uni) — envoi des notifications par e-mail</li>
+            <li><strong>Google Fonts</strong> (Google LLC, États-Unis) — chargement des polices de caractères</li>
+          </ul><br>
+          Vous pouvez accepter ou refuser ces cookies via la bannière affichée lors de votre première visite. En cas de refus, les fonctionnalités associées (prise de RDV, formulaire d'avis) resteront accessibles via des liens directs.
         </div>
-        <p>Conformément aux recommandations de la CNIL, vous pouvez à tout moment retirer votre consentement ou paramétrer votre navigateur pour refuser les cookies.</p>
+        <p>Conformément aux recommandations de la CNIL, vous pouvez à tout moment retirer votre consentement en effaçant les cookies de votre navigateur ou en paramétrant celui-ci pour les refuser.</p>
         <h3>Durée de conservation des cookies</h3>
         <p>Les cookies ont une durée de vie maximale de 13 mois, conformément aux recommandations de la CNIL.</p>
       </section>

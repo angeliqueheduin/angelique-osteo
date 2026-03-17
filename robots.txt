@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /img-partenaires/
+Disallow: /404.html
 
 User-agent: AhrefsBot
 Crawl-delay: 10

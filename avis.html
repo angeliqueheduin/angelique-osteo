@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" itemscope itemtype="https://schema.org/WebPage">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +18,16 @@
   <meta name="description" content="Lisez les avis et témoignages des patients d'Angélique Héduin, ostéopathe D.O. à Bessan (Hérault 34). Consultations adultes, nourrissons, femmes enceintes. Partagez votre expérience.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="theme-color" content="#7d9d85">
+    <link rel="manifest" href="/site.webmanifest">
   <meta name="format-detection" content="telephone=no">
   <meta name="author" content="Angélique Héduin — Ostéopathe D.O.">
   <meta name="geo.region" content="FR-34">
   <meta name="geo.placename" content="Bessan, Hérault">
-  <link rel="canonical" href="https://angelique-osteo.fr/avis.html">
+  <meta name="geo.position" content="43.3566598;3.4164462">
+  <meta name="ICBM" content="43.3566598, 3.4164462">
+  <link rel="canonical" href="https://angelique-osteo.fr/avis">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-  <link rel="alternate" hreflang="fr" href="https://angelique-osteo.fr/avis.html">
+  <link rel="alternate" hreflang="fr" href="https://angelique-osteo.fr/avis">
 
   <!-- === OPEN GRAPH === -->
   <meta property="og:type" content="website">
@@ -36,7 +39,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Avis patients — Angélique Héduin Ostéopathe Bessan">
-  <meta property="og:url" content="https://angelique-osteo.fr/avis.html">
+  <meta property="og:url" content="https://angelique-osteo.fr/avis">
 
   <!-- === TWITTER CARD === -->
   <meta name="twitter:card" content="summary_large_image">
@@ -52,7 +55,7 @@
   <link rel="apple-touch-icon" href="/photos-header/logo-site.png">
 
   <!-- === SCHEMA.ORG — MedicalBusiness avec avis === -->
-  <script type="application/ld+json">
+  <script type="application/ld+json" id="schema-medical-business">
   {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
@@ -60,7 +63,6 @@
     "name": "Angélique Héduin — Ostéopathe D.O.",
     "url": "https://angelique-osteo.fr",
     "telephone": "+33622400172",
-    "email": "angeliqueheduin@gmail.com",
     "image": "https://angelique-osteo.fr/photos-header/logo-site.webp",
     "priceRange": "60€",
     "currenciesAccepted": "EUR",
@@ -89,28 +91,27 @@
       "@type": "AggregateRating",
       "ratingValue": "5",
       "reviewCount": "6",
-      "bestRating": "5",
-      "worstRating": "1"
+      "bestRating": "5"
     },
     "review": [
-      {"@type":"Review","author":{"@type":"Person","name":"Sophie M."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"},"datePublished":"2026-03-08","reviewBody":"Angélique a résolu en une séance mon problème de cervicales que j'avais depuis des mois. Elle est à l'écoute, douce et vraiment professionnelle. Je recommande sans hésiter !"},
-      {"@type":"Review","author":{"@type":"Person","name":"Laurent B."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"},"datePublished":"2026-02-21","reviewBody":"Après une blessure sportive persistante, deux séances ont suffi pour retrouver ma mobilité complète. Le suivi est personnalisé et les explications très claires."},
-      {"@type":"Review","author":{"@type":"Person","name":"Camille R."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"},"datePublished":"2026-02-14","reviewBody":"J'y ai amené mon bébé de 3 semaines pour des coliques et un torticolis. Les gestes sont d'une douceur extrême, et dès le lendemain les pleurs avaient diminué de moitié."},
-      {"@type":"Review","author":{"@type":"Person","name":"Nathalie G."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"},"datePublished":"2026-01-30","reviewBody":"Suivi tout au long de ma grossesse avec une douceur et une bienveillance remarquables. Angélique adapte chaque séance à mes besoins. Je me sens vraiment prise en charge."},
-      {"@type":"Review","author":{"@type":"Person","name":"Pierre T."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"},"datePublished":"2026-01-15","reviewBody":"Souffrant de migraines chroniques depuis des années, j'ai trouvé chez Angélique une approche globale qui fait vraiment la différence. Résultats durables et praticienne passionnée."},
-      {"@type":"Review","author":{"@type":"Person","name":"Julie D."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"},"datePublished":"2025-12-20","reviewBody":"Venue pour un suivi post-partum, j'ai été impressionnée par la précision et la douceur des soins. Angélique explique chaque geste, ce qui rassure vraiment."}
+      {"@type":"Review","author":{"@type":"Person","name":"Sophie M."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2026-03-08","reviewBody":"Angélique a résolu en une séance mon problème de cervicales que j'avais depuis des mois. Elle est à l'écoute, douce et vraiment professionnelle. Je recommande sans hésiter !"},
+      {"@type":"Review","author":{"@type":"Person","name":"Laurent B."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2026-02-21","reviewBody":"Après une blessure sportive persistante, deux séances ont suffi pour retrouver ma mobilité complète. Le suivi est personnalisé et les explications très claires."},
+      {"@type":"Review","author":{"@type":"Person","name":"Camille R."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2026-02-14","reviewBody":"J'y ai amené mon bébé de 3 semaines pour des coliques et un torticolis. Les gestes sont d'une douceur extrême, et dès le lendemain les pleurs avaient diminué de moitié."},
+      {"@type":"Review","author":{"@type":"Person","name":"Nathalie G."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2026-01-30","reviewBody":"Suivi tout au long de ma grossesse avec une douceur et une bienveillance remarquables. Angélique adapte chaque séance à mes besoins. Je me sens vraiment prise en charge."},
+      {"@type":"Review","author":{"@type":"Person","name":"Pierre T."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2026-01-15","reviewBody":"Souffrant de migraines chroniques depuis des années, j'ai trouvé chez Angélique une approche globale qui fait vraiment la différence. Résultats durables et praticienne passionnée."},
+      {"@type":"Review","author":{"@type":"Person","name":"Julie D."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2025-12-20","reviewBody":"Venue pour un suivi post-partum, j'ai été impressionnée par la précision et la douceur des soins. Angélique explique chaque geste, ce qui rassure vraiment."}
     ]
   }
   </script>
 
   <!-- === SCHEMA.ORG — BreadcrumbList === -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://angelique-osteo.fr/"},{"@type":"ListItem","position":2,"name":"Avis &amp; Témoignages","item":"https://angelique-osteo.fr/avis.html"}]}
+  {"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://angelique-osteo.fr/avis#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://angelique-osteo.fr/"},{"@type":"ListItem","position":2,"name":"Avis & Témoignages","item":"https://angelique-osteo.fr/avis"}]}
   </script>
 
   <!-- === SCHEMA.ORG — WebPage === -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","@id":"https://angelique-osteo.fr/avis.html#webpage","url":"https://angelique-osteo.fr/avis.html","name":"Avis &amp; Témoignages — Ostéopathe à Bessan | Angélique Héduin D.O.","description":"Lisez les avis et témoignages des patients d'Angélique Héduin, ostéopathe D.O. à Bessan (Hérault 34).","inLanguage":"fr-FR","isPartOf":{"@id":"https://angelique-osteo.fr/#website"},"about":{"@id":"https://angelique-osteo.fr/#business"},"dateModified":"2026-03-15"}
+  {"@context":"https://schema.org","@type":"WebPage","@id":"https://angelique-osteo.fr/avis#webpage","url":"https://angelique-osteo.fr/avis","name":"Avis & Témoignages — Ostéopathe à Bessan | Angélique Héduin D.O.","description":"Lisez les avis et témoignages des patients d'Angélique Héduin, ostéopathe D.O. à Bessan (Hérault 34).","inLanguage":"fr-FR","isPartOf":{"@id":"https://angelique-osteo.fr/#website"},"about":{"@id":"https://angelique-osteo.fr/#business"},"author":{"@id":"https://angelique-osteo.fr/#person"},"breadcrumb":{"@id":"https://angelique-osteo.fr/avis#breadcrumb"},"dateModified":"2026-03-16"}
   </script>
 
   <!-- === SCHEMA.ORG — WebSite === -->
@@ -166,8 +167,8 @@
   </div>
 </noscript>
 
-<div id="cookie-banner" role="dialog" aria-label="Consentement aux cookies" aria-live="polite">
-  <p>Ce site utilise des outils tiers (Calendly, reCAPTCHA) pouvant déposer des cookies. <a href="mentions-legales.html">En savoir plus</a></p>
+<div id="cookie-banner" role="dialog" aria-modal="true" aria-label="Consentement aux cookies" aria-live="polite">
+  <p>Ce site utilise des outils tiers (Calendly, reCAPTCHA) pouvant déposer des cookies. <a href="/mentions-legales">En savoir plus</a></p>
   <div class="cookie-buttons">
     <button class="btn-accept-cookies" onclick="acceptCookies()">Accepter</button>
     <button class="btn-refuse-cookies" onclick="refuseCookies()">Refuser</button>
@@ -177,7 +178,7 @@
 <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
 
 <header>
-  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+  <nav class="navbar" aria-label="Navigation principale">
     <div class="logo">
       <a href="/" aria-label="Accueil — Angélique Héduin Ostéopathe">
         <img src="/photos-header/logo-site.webp" alt="Logo Angélique Héduin Ostéopathe Bessan" class="logo-img" width="70" height="62" loading="eager" fetchpriority="high">
@@ -188,25 +189,25 @@
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </button>
-    <ul class="navbar-links" id="navbar-links" role="list" aria-label="Navigation principale">
-      <li role="listitem"><a href="/">ACCUEIL</a></li>
-      <li role="listitem"><a href="parcours.html">PARCOURS</a></li>
-      <li role="listitem"><a href="tarifs-et-horaires.html">TARIFS / HORAIRES</a></li>
-      <li role="listitem"><a href="avis.html" aria-current="page">AVIS</a></li>
-      <li role="listitem"><a href="actualites.html">FAQ</a></li>
+    <ul class="navbar-links" id="navbar-links" aria-label="Liens de navigation">
+      <li><a href="/">ACCUEIL</a></li>
+      <li><a href="/parcours">PARCOURS</a></li>
+      <li><a href="/tarifs-et-horaires">TARIFS / HORAIRES</a></li>
+      <li><a href="/avis" aria-current="page">AVIS</a></li>
+      <li><a href="/actualites">FAQ</a></li>
     </ul>
     <a href="https://calendly.com/angeliqueheduin-osteopathe" class="btn-rdv" target="_blank" rel="noopener noreferrer nofollow" aria-label="Prendre rendez-vous en ligne sur Calendly">Prendre RDV</a>
   </nav>
 </header>
 
-<section class="hero animate-on-scroll" role="region" aria-labelledby="hero-title">
+<section class="hero animate-on-scroll" aria-labelledby="hero-title">
   <div class="hero-label" aria-hidden="true">Paroles de patients</div>
   <h1 id="hero-title">Avis &amp; <em>Témoignages</em></h1>
   <p class="hero-sub">Chaque témoignage compte. Retrouvez ici les retours de patients qui font confiance à Angélique Héduin, ostéopathe D.O. à Bessan (Hérault 34).</p>
-  <div class="hero-stats" role="list" aria-label="Statistiques du cabinet">
-    <div class="stat-item" role="listitem"><span class="stat-num" id="stat-count" aria-label="Nombre d'avis patients">—</span><span class="stat-label">Avis patients</span></div>
-    <div class="stat-item" role="listitem"><span class="stat-num" aria-label="Note moyenne 5 étoiles">5★</span><span class="stat-label">Note moyenne</span></div>
-    <div class="stat-item" role="listitem"><span class="stat-num">+20 ans</span><span class="stat-label">D'expérience</span></div>
+  <div class="hero-stats" aria-label="Statistiques du cabinet">
+    <div class="stat-item"><span class="stat-num" id="stat-count" aria-label="Nombre d'avis patients">—</span><span class="stat-label">Avis patients</span></div>
+    <div class="stat-item"><span class="stat-num" aria-label="Note moyenne 5 étoiles">5★</span><span class="stat-label">Note moyenne</span></div>
+    <div class="stat-item"><span class="stat-num">+24 ans</span><span class="stat-label">D'expérience</span></div>
   </div>
 </section>
 
@@ -287,7 +288,7 @@
 
         <p class="form-notice">
           En publiant, vous acceptez que cet avis soit affiché après validation.<br>
-          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="/mentions-legales">Mentions légales</a>
         </p>
 
         <button type="submit" class="submit-btn" id="submit-btn">Envoyer mon témoignage</button>
@@ -326,20 +327,20 @@
 </div>
 
 <div class="floating-help" role="complementary" aria-label="Actions rapides">
-  <div id="floating-actions" class="floating-actions" aria-hidden="true" role="menu">
-    <a href="https://www.facebook.com/profile.php?id=61551878556788" target="_blank" rel="noopener noreferrer me" class="floating-action-btn" aria-label="Rejoindre la page Facebook du cabinet" role="menuitem">
+  <nav id="floating-actions" class="floating-actions" aria-hidden="true" aria-label="Actions rapides">
+    <a href="https://www.facebook.com/profile.php?id=61551878556788" target="_blank" rel="noopener noreferrer me" class="floating-action-btn" aria-label="Rejoindre la page Facebook du cabinet">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
       <span>Facebook</span>
     </a>
-    <a href="https://calendly.com/angeliqueheduin-osteopathe" target="_blank" rel="noopener noreferrer nofollow" class="floating-action-btn" aria-label="Prendre rendez-vous en ligne" role="menuitem">
+    <a href="https://calendly.com/angeliqueheduin-osteopathe" target="_blank" rel="noopener noreferrer nofollow" class="floating-action-btn" aria-label="Prendre rendez-vous en ligne">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       <span>Prendre RDV</span>
     </a>
-    <a href="tel:+33622400172" class="floating-action-btn" aria-label="Appeler le cabinet au 06 22 40 01 72" role="menuitem">
+    <a href="tel:+33622400172" class="floating-action-btn" aria-label="Appeler le cabinet au 06 22 40 01 72">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       <span>Appeler</span>
     </a>
-  </div>
+  </nav>
   <button class="help-toggle" id="helpBtn" aria-label="Ouvrir les actions rapides" aria-expanded="false" aria-controls="floating-actions">?</button>
 </div>
 <div id="page-blur-overlay" class="page-blur-overlay" aria-hidden="true"></div>
@@ -355,7 +356,7 @@
       </address>
     </div>
     <div class="footer-legal">
-      <p>© 2024–<span id="copyright-year">2026</span> angelique-osteo.fr | <a href="mentions-legales.html">Mentions légales</a></p>
+      <p>© 2024–<span id="copyright-year">2026</span> angelique-osteo.fr | <a href=":mentions-legales">Mentions légales</a></p>
       <p class="recaptcha-mention">Ce site est protégé par reCAPTCHA — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Confidentialité</a> &amp; <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">CGU</a> Google.</p>
     </div>
   </div>
@@ -363,12 +364,32 @@
 
 <script src="script.js" defer></script>
 <script>
+function _lsGet(k) { try { return localStorage.getItem(k); } catch(e) { return null; } }
+
 (function(){
-  var c = localStorage.getItem('cookie_consent');
+  var c = _lsGet('cookie_consent');
   var banner = document.getElementById('cookie-banner');
   if (c && banner) banner.style.display = 'none';
   var yr = document.getElementById('copyright-year');
   if (yr) yr.textContent = new Date().getFullYear();
+})();
+
+// Rechargement reCAPTCHA et EmailJS si consentement déjà accepté
+(function() {
+  var consent = _lsGet('cookie_consent');
+  if (consent !== 'accepted') return;
+  if (!document.querySelector('script[src*="recaptcha"]')) {
+    var s = document.createElement('script');
+    s.src = 'https://www.google.com/recaptcha/api.js?render=6Ldup4osAAAAACCUSh7PHbTCISNPjY-ABHnM6h1H';
+    s.async = true;
+    document.head.appendChild(s);
+  }
+  if (!document.querySelector('script[src*="emailjs"]')) {
+    var s2 = document.createElement('script');
+    s2.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+    s2.onload = function() { if (typeof initEmailJS === 'function') initEmailJS(); };
+    document.head.appendChild(s2);
+  }
 })();
 </script>
 <script>
@@ -406,7 +427,7 @@ const DEMOS = [
 let reviews = [], currentFilter = 'all', pollTimer = null;
 
 function esc(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;'); }
-function uid() { let u = localStorage.getItem('avis_uid'); if (!u) { u = 'u_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8); localStorage.setItem('avis_uid', u); } return u; }
+function uid() { try { let u = localStorage.getItem('avis_uid'); if (!u) { u = 'u_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8); localStorage.setItem('avis_uid', u); } return u; } catch(e) { return 'u_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8); } }
 function hasLiked(id) { try { return JSON.parse(localStorage.getItem('avis_liked') || '[]').includes(id); } catch { return false; } }
 function setLiked(id, v) { try { let s = JSON.parse(localStorage.getItem('avis_liked') || '[]'); s = v ? [...new Set([...s, id])] : s.filter(x => x !== id); localStorage.setItem('avis_liked', JSON.stringify(s)); } catch {} }
 function fmtDate(iso) { try { return new Date(iso).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }); } catch { return iso; } }
@@ -472,7 +493,6 @@ function renderCard(r) {
     <div class="review-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating" aria-label="${r.rating} étoiles sur 5">
       <meta itemprop="ratingValue" content="${r.rating}">
       <meta itemprop="bestRating" content="5">
-      <meta itemprop="worstRating" content="1">
       ${stars(r.rating)}
     </div>
     <p class="review-text" itemprop="reviewBody">${esc(r.text)}</p>
@@ -521,11 +541,6 @@ async function fbDel(p) { try { const r = await fetch(`${fbBase()}/${p}.json`, {
 async function fbLoadReviews() {
   const data = await fbGet('reviews');
   if (!data) {
-    if (!localStorage.getItem('avis_seeded')) {
-      for (const r of DEMOS) await fbSet(`reviews/${r.id}`, { ...r, approved: true, timestamp: Date.now() - Math.random() * 1e9 });
-      localStorage.setItem('avis_seeded', '1');
-      return fbLoadReviews();
-    }
     return [];
   }
   return Object.values(data).filter(r => r && r.approved !== false).sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
@@ -545,13 +560,13 @@ async function fbSyncLikes() {
 }
 
 async function fbLike(reviewId, liked) {
-  const u = uid(), cur = await fbGet(`reviews/${reviewId}`); if (!cur) return;
-  const lb = cur.likedBy || {};
-  liked ? lb[u] = true : delete lb[u];
-  const likes = Object.keys(lb).length;
-  await fbPatch(`reviews/${reviewId}`, { likes, likedBy: lb });
+  /* Les règles Firebase bloquent l'écriture anonyme sur reviews/.
+     Les likes sont conservés localement (localStorage) et reflétés
+     visuellement immédiatement. Aucune tentative d'écriture Firebase. */
   const idx = reviews.findIndex(r => r.id === reviewId);
-  if (idx !== -1) { reviews[idx].likes = likes; reviews[idx].likedBy = lb; }
+  if (idx !== -1) {
+    reviews[idx].likes = Math.max(0, (reviews[idx].likes || 0) + (liked ? 1 : -1));
+  }
 }
 
 async function fbSubmitPending(r) { return fbSet(`pending/${r.id}`, r); }
@@ -644,6 +659,24 @@ async function handleUrl() {
   const action = p.get('action'), id = p.get('id'), token = p.get('token'), admin = p.get('admin');
 
   if (admin) {
+    // Protection brute-force : 3 tentatives max, blocage 30 min
+    const ADMIN_KEY = 'admin_attempts';
+    const ADMIN_LOCK_MS = 30 * 60 * 1000;
+    const MAX_ATTEMPTS = 3;
+    function getAdminAttempts() { try { return JSON.parse(localStorage.getItem(ADMIN_KEY) || '{"count":0,"ts":0}'); } catch { return { count: 0, ts: 0 }; } }
+    function setAdminAttempts(d) { try { localStorage.setItem(ADMIN_KEY, JSON.stringify(d)); } catch {} }
+    function resetAdminAttempts() { setAdminAttempts({ count: 0, ts: 0 }); }
+
+    const attempts = getAdminAttempts();
+    const now = Date.now();
+    if (attempts.count >= MAX_ATTEMPTS && (now - attempts.ts) < ADMIN_LOCK_MS) {
+      const remainMin = Math.ceil((ADMIN_LOCK_MS - (now - attempts.ts)) / 60000);
+      showToast(`Accès bloqué. Réessayez dans ${remainMin} min.`, 'error', 6000);
+      window.history.replaceState({}, '', window.location.pathname);
+      return;
+    }
+    if ((now - attempts.ts) >= ADMIN_LOCK_MS) resetAdminAttempts();
+
     if (!window._auth || !window._signIn) {
       showToast('SDK Firebase Auth non chargé — vérifie la console.', 'error');
       window.history.replaceState({}, '', window.location.pathname);
@@ -655,12 +688,17 @@ async function handleUrl() {
     if (!pwd) { window.history.replaceState({}, '', window.location.pathname); return; }
     try {
       await window._signIn(window._auth, email, pwd);
+      resetAdminAttempts();
       showToast('✓ Connecté', 'success');
       await showAdmin();
       document.getElementById('admin-panel')?.scrollIntoView({ behavior: 'smooth' });
     } catch (err) {
+      const cur = getAdminAttempts();
+      const newCount = (cur.count || 0) + 1;
+      setAdminAttempts({ count: newCount, ts: Date.now() });
+      const remaining = MAX_ATTEMPTS - newCount;
       const msg =
-        err.code === 'auth/invalid-credential'    ? 'Email ou mot de passe incorrect.'                   :
+        err.code === 'auth/invalid-credential'    ? `Email ou mot de passe incorrect.${remaining > 0 ? ' ' + remaining + ' tentative(s) restante(s).' : ' Accès bloqué 30 min.'}` :
         err.code === 'auth/invalid-email'          ? 'Adresse email invalide.'                            :
         err.code === 'auth/too-many-requests'      ? 'Trop de tentatives. Réessaie dans quelques minutes.' :
         err.code === 'auth/network-request-failed' ? 'Erreur réseau. Vérifie ta connexion.'               :
@@ -685,9 +723,10 @@ async function handleUrl() {
 }
 
 function updateSchema() {
-  if (!reviews.length) return;
-  const avg = (reviews.reduce((s, r) => s + (r.rating || 5), 0) / reviews.length).toFixed(1);
-  const count = String(reviews.length);
+  const approved = reviews.filter(r => r.approved !== false);
+  if (!approved.length) return;
+  const avg = (approved.reduce((s, r) => s + (Number(r.rating) || 5), 0) / approved.length).toFixed(1);
+  const count = String(approved.length);
   document.querySelectorAll('script[type="application/ld+json"]').forEach(s => {
     try {
       const d = JSON.parse(s.textContent);
@@ -800,14 +839,16 @@ document.addEventListener('DOMContentLoaded', () => {
     } finally {
       fOk.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       form.reset();
-      document.querySelectorAll('.emoji-btn').forEach(b => { b.classList.remove('selected'); b.setAttribute('aria-pressed', 'false'); });
+      document.querySelectorAll('.emoji-btn').forEach(b => { b.classList.remove('selected'); b.setAttribute('aria-pressed', 'false')})
+      document.querySelectorAll('.source-opt').forEach(o => { o.classList.remove('selected'); });
       document.getElementById('mood-value').value = '';
+      document.querySelectorAll('.stars-input input').forEach(i => { i.checked = false; });
       btn.disabled = false; btn.textContent = 'Envoyer mon témoignage';
     }
   });
 
-  handleUrl().catch(console.error);
-  init().catch(console.error);
+  init();
+  handleUrl();
 });
 </script>
 </body>

@@ -1,34 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ACCUEIL — priorité maximale -->
   <url>
     <loc>https://angelique-osteo.fr/</loc>
-    <lastmod>2026-03-14</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://angelique-osteo.fr/photos-header/sport.webp</image:loc>
+      <image:title>Ostéopathie sportive — Cabinet Angélique Héduin à Bessan</image:title>
+      <image:caption>Cabinet d'ostéopathie Angélique Héduin D.O. à Bessan, Hérault</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://angelique-osteo.fr/photos-header/angelique-heduin.webp</image:loc>
+      <image:title>Angélique Héduin, ostéopathe D.O. à Bessan</image:title>
+      <image:caption>Portrait d'Angélique Héduin, ostéopathe D.O. installée à Bessan (34550)</image:caption>
+    </image:image>
   </url>
+
+  <!-- AVIS — mise à jour fréquente via Firebase -->
   <url>
-    <loc>https://angelique-osteo.fr/avis.html</loc>
+    <loc>https://angelique-osteo.fr/avis</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- TARIFS & HORAIRES — mise à jour occasionnelle -->
   <url>
-    <loc>https://angelique-osteo.fr/tarifs-et-horaires.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://angelique-osteo.fr/tarifs-et-horaires</loc>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- PARCOURS — contenu stable -->
   <url>
-    <loc>https://angelique-osteo.fr/parcours.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://angelique-osteo.fr/parcours</loc>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://angelique-osteo.fr/photos-header/angelique-heduin.webp</image:loc>
+      <image:title>Angélique Héduin — Parcours et formations en ostéopathie</image:title>
+      <image:caption>Angélique Héduin, ostéopathe D.O. diplômée en 2002, spécialisée en pédiatrie et fasciathérapie</image:caption>
+    </image:image>
   </url>
+
+  <!-- FAQ / ACTUALITÉS -->
   <url>
-    <loc>https://angelique-osteo.fr/actualites.html</loc>
-    <lastmod>2026-03-14</lastmod>
+    <loc>https://angelique-osteo.fr/actualites</loc>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- FORMATIONS DÉTAIL — contenu riche, stable -->
+  <url>
+    <loc>https://angelique-osteo.fr/formations-details</loc>
+    <lastmod>2026-03-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- MENTIONS LÉGALES — obligatoire RGPD, faible priorité -->
+  <url>
+    <loc>https://angelique-osteo.fr/mentions-legales</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

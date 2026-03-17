@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       hamburger.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
         hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
+        hamburger.setAttribute('aria-expanded', 'false');
       });
     });
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
         navLinks.classList.remove('open');
         hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
+        hamburger.setAttribute('aria-expanded', 'false');
       }
     });
   }
@@ -120,12 +120,14 @@ document.addEventListener("DOMContentLoaded", () => {
     floatingActions.classList.add('open');
     if (overlay) overlay.classList.add('active');
     helpBtn.textContent = '×';
+    helpBtn.setAttribute('aria-expanded', 'true');
   }
 
   function closeHelper() {
     floatingActions.classList.remove('open');
     if (overlay) overlay.classList.remove('active');
     helpBtn.textContent = '?';
+    helpBtn.setAttribute('aria-expanded', 'false');
   }
 
   if (helpBtn && floatingActions) {
@@ -146,6 +148,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+/* ===== UTILITAIRES localStorage sécurisés (Safari navigation privée) ===== */
+function lsGet(key) {
+  try { return localStorage.getItem(key); } catch (e) { return null; }
+}
+function lsSet(key, val) {
+  try { localStorage.setItem(key, val); } catch (e) { /* stockage indisponible, silencieux */ }
+}
+
 function loadThirdPartyContent() {
   document.querySelectorAll('iframe.requires-cookies').forEach(iframe => {
     const dataSrc = iframe.getAttribute('data-src');
@@ -160,7 +171,7 @@ function loadThirdPartyContent() {
 }
 
 function acceptCookies() {
-  localStorage.setItem('cookie_consent', 'accepted');
+  lsSet('cookie_consent', 'accepted');
   const banner = document.getElementById('cookie-banner');
   if (banner) banner.style.display = 'none';
   loadThirdPartyContent();
@@ -179,13 +190,13 @@ function acceptCookies() {
 }
 
 function refuseCookies() {
-  localStorage.setItem('cookie_consent', 'refused');
+  lsSet('cookie_consent', 'refused');
   const banner = document.getElementById('cookie-banner');
   if (banner) banner.style.display = 'none';
 }
 
 (function initCookies() {
-  const consent = localStorage.getItem('cookie_consent');
+  const consent = lsGet('cookie_consent');
   const banner = document.getElementById('cookie-banner');
   if (consent === 'accepted') {
     if (banner) banner.style.display = 'none';

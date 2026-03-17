@@ -216,6 +216,24 @@ body {
     margin-bottom: 8px;
 }
 
+.article-category-2 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(125, 104, 36);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.article-category-3 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(176, 59, 119);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
 .article-title {
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem;

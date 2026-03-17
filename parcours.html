@@ -17,35 +17,37 @@
     <meta name="description" content="Angélique Héduin, ostéopathe D.O. diplômée en 2002. 24 ans d'expérience, spécialisations en pédiatrie, fasciathérapie et psychothérapie. Cabinet à Bessan (34550), Hérault.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="author" content="Angélique Héduin — Ostéopathe D.O.">
-    <link rel="canonical" href="https://angelique-osteo.fr/parcours.html">
+    <link rel="canonical" href="https://angelique-osteo.fr/parcours">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <link rel="alternate" hreflang="fr" href="https://angelique-osteo.fr/parcours.html">
+    <link rel="alternate" hreflang="fr" href="https://angelique-osteo.fr/parcours">
 
     <!-- === GEO === -->
     <meta name="geo.region" content="FR-34">
     <meta name="geo.placename" content="Bessan">
-    <meta name="geo.position" content="43.3566559;3.4190211">
-    <meta name="ICBM" content="43.3566559, 3.4190211">
+    <meta name="geo.position" content="43.3566598;3.4164462">
+    <meta name="ICBM" content="43.3566598, 3.4164462">
 
-    <!-- === FAVICONS === -->
-    <link rel="icon" type="image/webp" href="/photos-header/logo-site.webp">
+    <!-- === FAVICONS (PNG en premier pour compatibilité maximale) === -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/photos-header/logo-site.png">
+    <link rel="icon" type="image/webp" href="/photos-header/logo-site.webp">
     <link rel="apple-touch-icon" href="/photos-header/logo-site.png">
     <meta name="theme-color" content="#7d9d85">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="format-detection" content="telephone=no">
 
     <!-- === OPEN GRAPH === -->
-    <meta property="og:type" content="profile">
+    <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Angélique Héduin — Ostéopathe D.O.">
     <meta property="og:title" content="Parcours — Angélique Héduin, Ostéopathe D.O. à Bessan">
     <meta property="og:description" content="Plus de 24 ans d'expérience en ostéopathie. Spécialisations en pédiatrie, fasciathérapie et psychothérapie à Bessan dans l'Hérault.">
-    <meta property="og:image" content="https://angelique-osteo.fr/photos-header/angelique-heduin.jpg">
+    <meta property="og:image" content="https://angelique-osteo.fr/photos-header/open-graph.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:alt" content="Angélique Héduin, ostéopathe D.O. à Bessan">
-    <meta property="og:url" content="https://angelique-osteo.fr/parcours.html">
+    <meta property="og:url" content="https://angelique-osteo.fr/parcours">
 
     <!-- === TWITTER CARD === -->
     <meta name="twitter:card" content="summary_large_image">
@@ -59,10 +61,14 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "@id": "https://angelique-osteo.fr/parcours.html#person",
+      "@id": "https://angelique-osteo.fr/#person",
       "name": "Angélique Héduin",
       "jobTitle": "Ostéopathe D.O.",
-      "url": "https://angelique-osteo.fr/parcours.html",
+      "url": "https://angelique-osteo.fr/parcours",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://angelique-osteo.fr/parcours"
+      },
       "image": {
         "@type": "ImageObject",
         "url": "https://angelique-osteo.fr/photos-header/angelique-heduin.webp",
@@ -70,7 +76,6 @@
         "height": 400
       },
       "telephone": "+33622400172",
-      "email": "angeliqueheduin@gmail.com",
       "knowsAbout": [
         "Ostéopathie",
         "Fasciathérapie",
@@ -105,7 +110,7 @@
           "@type": "EducationalOccupationalCredential",
           "name": "Diplôme de Praticienne en Psychothérapie",
           "credentialCategory": "certificate",
-          "dateCreated": "2023"
+          "dateCreated": "2021"
         }
       ],
       "identifier": [
@@ -125,6 +130,7 @@
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
+      "@id": "https://angelique-osteo.fr/parcours#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -136,9 +142,25 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Mon Parcours",
-          "item": "https://angelique-osteo.fr/parcours.html"
+          "item": "https://angelique-osteo.fr/parcours"
         }
       ]
+    }
+    </script>
+
+    <!-- === SCHEMA.ORG — WebPage === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://angelique-osteo.fr/parcours",
+      "name": "Parcours — Angélique Héduin, Ostéopathe D.O. à Bessan",
+      "description": "Angélique Héduin, ostéopathe D.O. diplômée en 2002. 24 ans d'expérience, spécialisations en pédiatrie, fasciathérapie et psychothérapie. Cabinet à Bessan (34550).",
+      "isPartOf": { "@type": "WebSite", "@id": "https://angelique-osteo.fr/#website" },
+      "breadcrumb": { "@id": "https://angelique-osteo.fr/parcours#breadcrumb" },
+      "author": { "@id": "https://angelique-osteo.fr/#person" },
+      "inLanguage": "fr-FR",
+      "dateModified": "2026-03-16"
     }
     </script>
 
@@ -147,8 +169,8 @@
 </head>
 <body>
 
-    <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Consentement aux cookies">
-        <p>Ce site utilise des outils tiers (Calendly, Google Maps) pouvant déposer des cookies. En continuant votre navigation, vous acceptez leur utilisation. <a href="mentions-legales.html">En savoir plus</a></p>
+    <div id="cookie-banner" role="dialog" aria-modal="true" aria-live="polite" aria-label="Consentement aux cookies">
+        <p>Ce site utilise des outils tiers (Calendly, Google Maps) pouvant déposer des cookies. En continuant votre navigation, vous acceptez leur utilisation. <a href="/mentions-legales">En savoir plus</a></p>
         <div class="cookie-buttons">
             <button class="btn-accept-cookies" onclick="acceptCookies()">Accepter</button>
             <button class="btn-refuse-cookies" onclick="refuseCookies()">Refuser</button>
@@ -156,7 +178,7 @@
     </div>
 
     <header class="header-section">
-        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <nav class="navbar" aria-label="Navigation principale">
             <a href="/" class="logo" aria-label="Accueil — Angélique Héduin Ostéopathe">
                 <img src="/photos-header/logo-site.webp" alt="Logo Angélique Héduin Ostéopathe" class="logo-img" width="70" height="62" loading="eager" fetchpriority="high">
             </a>
@@ -165,12 +187,12 @@
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </button>
-            <ul class="navbar-links" id="navbar-links" role="list" aria-label="Navigation principale">
-                <li role="listitem"><a href="/">ACCUEIL</a></li>
-                <li role="listitem"><a href="parcours.html" aria-current="page">PARCOURS</a></li>
-                <li role="listitem"><a href="tarifs-et-horaires.html">TARIFS / HORAIRES</a></li>
-                <li role="listitem"><a href="avis.html">AVIS</a></li>
-                <li role="listitem"><a href="actualites.html">FAQ</a></li>
+            <ul class="navbar-links" id="navbar-links" aria-label="Liens de navigation">
+                <li><a href="/">ACCUEIL</a></li>
+                <li><a href="/parcours" aria-current="page">PARCOURS</a></li>
+                <li><a href="/tarifs-et-horaires">TARIFS / HORAIRES</a></li>
+                <li><a href="/avis">AVIS</a></li>
+                <li><a href="/actualites">FAQ</a></li>
             </ul>
             <a href="https://calendly.com/angeliqueheduin-osteopathe" class="btn-rdv" target="_blank" rel="noopener noreferrer">Prendre RDV</a>
         </nav>
@@ -183,6 +205,19 @@
                 <span class="badge-top">Mon Expertise &amp; Mon Engagement</span>
                 <h1 id="hero-titre">Angélique Héduin — Ostéopathe D.O. à Bessan</h1>
                 <p class="subtitle">Ostéopathe D.O. — Fasciathérapeute — Praticienne en Psychothérapie</p>
+                <!-- Portrait visible — signal E-E-A-T -->
+                <div class="hero-portrait-wrapper">
+                    <img
+                        src="/photos-header/angelique-heduin.webp"
+                        alt="Angélique Héduin, ostéopathe D.O. à Bessan, Hérault"
+                        class="hero-portrait"
+                        width="320"
+                        height="400"
+                        loading="eager"
+                        fetchpriority="high"
+                    >
+                </div>
+
                 <div class="hero-bio">
                     <p>Ayant plus de <strong>24 ans d'expérience</strong> en ostéopathie, mon approche repose sur une écoute profonde du corps et de l'esprit. Diplômée en 2002, j'ai constamment enrichi ma pratique par des formations complémentaires pour vous offrir une prise en charge globale, personnalisée et bienveillante. Installée à <strong>Bessan dans l'Hérault</strong>, je reçois des patients de tous âges venant de Bessan, Agde, Pézenas, Béziers et des communes voisines.</p>
                 </div>
@@ -191,7 +226,7 @@
 
         <section id="parcours" class="timeline-section" aria-labelledby="timeline-titre">
             <div class="container">
-                <h2 id="timeline-titre" class="sr-only">Parcours et formations</h2>
+                <h2 id="timeline-titre">Mon parcours &amp; mes formations</h2>
                 <div class="timeline" role="list" aria-label="Chronologie du parcours professionnel">
                     <div class="timeline-item animate-on-scroll" role="listitem">
                         <div class="timeline-dot" aria-hidden="true"></div>
@@ -244,38 +279,69 @@
                         </div>
                     </div>
                 </div>
+
+        <!-- Bouton vers le détail complet des formations -->
+                <div style="text-align:center; margin-top: 48px;">
+                    <a href="/formations-details"
+                       style="display:inline-flex; align-items:center; gap:10px; padding:16px 36px;
+                              background-color: #7d9d85; color:white;
+                              text-decoration:none; border-radius:50px; font-family:'Poppins',sans-serif;
+                              font-size:0.92rem; font-weight:600; letter-spacing:0.5px;
+                              box-shadow:0 6px 24px rgba(125,157,133,0.25);
+                              transition:transform 0.2s ease, box-shadow 0.2s ease;"
+                       onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 32px rgba(125,157,133,0.35)';"
+                       onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 24px rgba(125,157,133,0.25)';"
+                       aria-label="Voir le détail complet de toutes les formations">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                        Voir toutes mes formations en détail
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+                    <p style="margin-top:12px; font-size:0.78rem; color:#aaa; font-family:'Poppins',sans-serif;">
+                        30+ formations · 7 spécialités · depuis 1999
+                    </p>
+                </div>
+
             </div>
         </section>
 
-        <div class="floating-help">
-
-            <div id="floating-actions" class="floating-actions" role="menu" aria-label="Actions rapides">
-
-                <a href="https://www.facebook.com/profile.php?id=61551878556788" target="_blank" rel="noopener noreferrer me" class="floating-action-btn" aria-label="Page Facebook" role="menuitem">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    <span>Facebook</span>
-                </a>
-
-                <a href="https://calendly.com/angeliqueheduin-osteopathe" target="_blank" rel="noopener noreferrer" class="floating-action-btn" aria-label="Prendre rendez-vous en ligne" role="menuitem">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    <span>Prendre RDV</span>
-                </a>
-
-                <a href="tel:+33622400172" class="floating-action-btn" aria-label="Appeler le 06 22 40 01 72" role="menuitem">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    <span>Appeler</span>
-                </a>
-
-            </div>
-
-            <button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions">?</button>
-
-        </div>
     </main>
 
     <div id="page-blur-overlay" class="page-blur-overlay" aria-hidden="true"></div>
 
+    <div class="floating-help">
+        <nav id="floating-actions" class="floating-actions" aria-label="Actions rapides">
+            <a href="https://www.facebook.com/profile.php?id=61551878556788" target="_blank" rel="noopener noreferrer me" class="floating-action-btn" aria-label="Page Facebook d'Angélique Héduin">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <span>Facebook</span>
+            </a>
+            <a href="https://calendly.com/angeliqueheduin-osteopathe" target="_blank" rel="noopener noreferrer" class="floating-action-btn" aria-label="Prendre rendez-vous en ligne">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>Prendre RDV</span>
+            </a>
+            <a href="tel:+33622400172" class="floating-action-btn" aria-label="Appeler le 06 22 40 01 72">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Appeler</span>
+            </a>
+        </nav>
+        <button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions">?</button>
+    </div>
+
     <footer class="site-footer">
+        <div class="footer-partners">
+            <div class="partner-logos">
+                <a href="https://www.resalib.fr/praticien/77980-angelique-heduin-osteopathe-bessan" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/logo-resalib.webp" alt="Resalib — annuaire de praticiens" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
+                <a href="https://www.annuaire-therapeutes.com/therapeute/133632-angelique-heduin-bessan" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/logo-annuaire-therapeute.webp" alt="Annuaire Thérapeutes" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
+                <a href="https://www.pagesjaunes.fr/pros/61376348" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/pages-jaunes-simple.webp" alt="Pages Jaunes" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
+                <a href="https://www.doqi.fr/osteopathes/bessan-34550/osteopathe-bessan-angelique-heduin/horaires" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/doqi.webp" alt="Doqi" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
+                <a href="https://www.justacote.com/bessan-34550/osteopathe/angelique-heduin-1000384.htm" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/justacote.webp" alt="Justacôté" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
+            </div>
+        </div>
         <div class="footer-bottom">
             <div class="footer-info">
                 <p><strong>Angélique Héduin</strong> — Ostéopathe D.O.</p>
@@ -283,7 +349,7 @@
                 <p>Tél : <a href="tel:+33622400172">06 22 40 01 72</a></p>
             </div>
             <div class="footer-legal">
-                <p>© 2024–<span id="copyright-year">2026</span> angelique-osteo.fr | <a href="mentions-legales.html">Mentions légales</a></p>
+                <p>© 2024–<span id="copyright-year">2026</span> angelique-osteo.fr | <a href="/mentions-legales">Mentions légales</a></p>
                 <p class="recaptcha-mention">Ce site est protégé par reCAPTCHA — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Confidentialité</a> &amp; <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">CGU</a> Google.</p>
             </div>
         </div>
@@ -291,11 +357,29 @@
 
     <script src="script.js" defer></script>
     <script>
+        function _lsGet(k) { try { return localStorage.getItem(k); } catch(e) { return null; } }
+
+        // Masquage immédiat du cookie banner si consentement déjà donné
         (function() {
-            var consent = localStorage.getItem('cookie_consent');
+            var consent = _lsGet('cookie_consent');
             var banner = document.getElementById('cookie-banner');
             if (consent && banner) banner.style.display = 'none';
         })();
+
+        // Rechargement des scripts tiers si consentement accepté
+        (function() {
+            var consent = _lsGet('cookie_consent');
+            if (consent === 'accepted') {
+                if (!document.querySelector('script[src*="recaptcha"]')) {
+                    var s = document.createElement('script');
+                    s.src = 'https://www.google.com/recaptcha/api.js?render=6Ldup4osAAAAACCUSh7PHbTCISNPjY-ABHnM6h1H';
+                    s.async = true;
+                    document.head.appendChild(s);
+                }
+            }
+        })();
+
+        // Mise à jour dynamique de l'année du copyright
         (function() {
             var el = document.getElementById('copyright-year');
             if (el) el.textContent = new Date().getFullYear();
