@@ -11,7 +11,8 @@
   <link rel="dns-prefetch" href="https://www.google.com">
   <link rel="preload" href="/photos-header/logo-site.webp" as="image" fetchpriority="high">
   <link rel="preload" href="https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko80ySKSelqFsYT.woff2" as="font" type="font/woff2" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"></noscript>
 
   <!-- === SEO BASE === -->
   <title>Avis &amp; Témoignages — Ostéopathe à Bessan | Angélique Héduin D.O.</title>
@@ -352,7 +353,7 @@
       <address>
         <p>17 Chemin du Maïroual, 34550 Bessan (Hérault)</p>
         <p>Tél : <a href="tel:+33622400172">06 22 40 01 72</a></p>
-        <p><a href="mailto:angeliqueheduin@gmail.com">angeliqueheduin@gmail.com</a></p>
+        <p><a href="/cdn-cgi/l/email-protection#b9d8d7dedcd5d0c8ccdcd1dcddccd0d7f9ded4d8d0d597dad6d4"><span class="__cf_email__" data-cfemail="64050a0301080d1511010c0100110d0a240309050d084a070b09">[email&#160;protected]</span></a></p>
       </address>
     </div>
     <div class="footer-legal">
@@ -362,36 +363,7 @@
   </div>
 </footer>
 
-<script src="script.js" defer></script>
-<script>
-function _lsGet(k) { try { return localStorage.getItem(k); } catch(e) { return null; } }
-
-(function(){
-  var c = _lsGet('cookie_consent');
-  var banner = document.getElementById('cookie-banner');
-  if (c && banner) banner.style.display = 'none';
-  var yr = document.getElementById('copyright-year');
-  if (yr) yr.textContent = new Date().getFullYear();
-})();
-
-// Rechargement reCAPTCHA et EmailJS si consentement déjà accepté
-(function() {
-  var consent = _lsGet('cookie_consent');
-  if (consent !== 'accepted') return;
-  if (!document.querySelector('script[src*="recaptcha"]')) {
-    var s = document.createElement('script');
-    s.src = 'https://www.google.com/recaptcha/api.js?render=6Ldup4osAAAAACCUSh7PHbTCISNPjY-ABHnM6h1H';
-    s.async = true;
-    document.head.appendChild(s);
-  }
-  if (!document.querySelector('script[src*="emailjs"]')) {
-    var s2 = document.createElement('script');
-    s2.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
-    s2.onload = function() { if (typeof initEmailJS === 'function') initEmailJS(); };
-    document.head.appendChild(s2);
-  }
-})();
-</script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js" defer></script>
 <script>
 'use strict';
 

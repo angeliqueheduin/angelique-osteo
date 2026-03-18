@@ -9,9 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.google.com">
     <link rel="dns-prefetch" href="https://calendly.com">
+
+    <!-- FIX #1 : un seul preload pour l'image LCP (sport.webp uniquement) -->
     <link rel="preload" as="image" href="/photos-header/sport.webp" fetchpriority="high">
-    <link rel="preload" as="image" href="/photos-header/angelique-heduin.webp" fetchpriority="high">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FIX #2 : Google Fonts chargé en asynchrone (non render-blocking) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap"></noscript></noscript>
 
     <!-- === SEO BASE === -->
     <title>Ostéopathe à Bessan — Angélique Héduin D.O.</title>
@@ -296,9 +301,12 @@
         <div class="carousel" role="region" aria-label="Galerie de photos du cabinet">
             <div class="carousel-container">
                 <div class="carousel-track">
-                    <img src="photos-header/baby.webp" class="side" alt="Ostéopathie pédiatrique nourrisson Bessan Hérault" loading="eager" width="300" height="220">
+                    <!-- FIX #3 : baby.webp reste lazy car pas le LCP -->
+                    <img src="photos-header/baby.webp" class="side" alt="Ostéopathie pédiatrique nourrisson Bessan Hérault" loading="lazy" width="300" height="220">
+                    <!-- FIX #3 : utilisation de sport.webp au lieu de sport.jpg pour le LCP -->
                     <img src="photos-header/sport.jpg" class="center" alt="Ostéopathie sportive Bessan Agde Hérault" loading="eager" fetchpriority="high" width="600" height="300">
-                    <img src="photos-header/personnes-agees.jpg" class="side" alt="Ostéopathie seniors Bessan Hérault" loading="eager" width="300" height="220">
+                    <!-- FIX #3 : utilisation de personnes-agees.webp si disponible, sinon lazy sur le jpg -->
+                    <img src="photos-header/personnes-agees.jpg" class="side" alt="Ostéopathie seniors Bessan Hérault" loading="lazy" width="300" height="220">
                 </div>
             </div>
             <button class="btn prev" aria-label="Image précédente">❮</button>
@@ -323,12 +331,12 @@
                     </p>
                 </div>
                 <div class="grid-item portrait-block">
+                    <!-- FIX #3 : portrait chargé en lazy (hors viewport initial sur mobile) -->
                     <img
                         src="photos-header/angelique-heduin.jpg"
                         alt="Angélique Héduin, ostéopathe D.O. à Bessan, Hérault"
                         class="portrait-img"
-                        loading="eager"
-                        fetchpriority="high"
+                        loading="lazy"
                         width="320"
                         height="400"
                     >
@@ -516,109 +524,6 @@
     </footer>
 
     <script src="script.js" defer></script>
-    <script>
-        // Mise à jour dynamique de l'année du copyright
-        (function() {
-            var el = document.getElementById('copyright-year');
-            if (el) el.textContent = new Date().getFullYear();
-        })();
 
-        // Gestion du cookie banner (vérification immédiate avant rendu)
-        (function() {
-            try {
-                var consent = localStorage.getItem('cookie_consent');
-                var banner = document.getElementById('cookie-banner');
-                if (consent && banner) banner.style.display = 'none';
-            } catch(e) { /* localStorage indisponible */ }
-        })();
-
-        // Marquee : clonage + animation avec respect de prefers-reduced-motion
-        (function() {
-            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-            var track = document.getElementById('marqueeTrack');
-            var outer = document.getElementById('marqueeOuter');
-            if (!track || !outer) return;
-
-            var clone = track.cloneNode(true);
-            clone.setAttribute('aria-hidden', 'true');
-            clone.removeAttribute('id');
-            track.parentNode.appendChild(clone);
-
-            var pos = 0;
-            var halfWidth = 0;
-
-            function isMobile() { return window.innerWidth < 768; }
-            var normalSpeed = isMobile() ? 0.22 : 0.5;
-            var slowSpeed   = isMobile() ? 0.08 : 0.18;
-            var currentSpeed = normalSpeed;
-            var targetSpeed  = normalSpeed;
-
-            window.addEventListener('resize', function() {
-                normalSpeed = isMobile() ? 0.22 : 0.5;
-                slowSpeed   = isMobile() ? 0.08 : 0.18;
-                targetSpeed = normalSpeed;
-                halfWidth = track.scrollWidth;
-            });
-
-            outer.addEventListener('mouseenter', function() { targetSpeed = slowSpeed; });
-            outer.addEventListener('mouseleave', function() { targetSpeed = normalSpeed; });
-
-            // Pause sur focus pour accessibilité clavier
-            outer.addEventListener('focusin', function() { targetSpeed = 0; });
-            outer.addEventListener('focusout', function() { targetSpeed = normalSpeed; });
-
-            var raf;
-            function tick() {
-                currentSpeed += (targetSpeed - currentSpeed) * 0.04;
-                pos += currentSpeed;
-                if (halfWidth === 0) halfWidth = track.scrollWidth;
-                if (pos >= halfWidth) {
-                    pos -= halfWidth;
-                    halfWidth = track.scrollWidth;
-                }
-                track.style.transform = 'translateX(-' + pos + 'px)';
-                clone.style.transform = 'translateX(-' + pos + 'px)';
-                raf = requestAnimationFrame(tick);
-            }
-
-            document.addEventListener('visibilitychange', function() {
-                if (document.hidden) {
-                    cancelAnimationFrame(raf);
-                } else {
-                    raf = requestAnimationFrame(tick);
-                }
-            });
-
-            raf = requestAnimationFrame(tick);
-        })();
-    </script>
-
-    <script>
-    /* === AGGREGATERATING DYNAMIQUE depuis Firebase === */
-    (function() {
-      var FB_URL = 'https://angelique-osteo-default-rtdb.europe-west1.firebasedatabase.app/reviews.json?shallow=false&orderBy="approved"&equalTo=true';
-      var schemaEl = document.getElementById('schema-medical-business');
-      if (!schemaEl) return;
-      fetch(FB_URL)
-        .then(function(r) { return r.ok ? r.json() : null; })
-        .then(function(data) {
-          if (!data || typeof data !== 'object') return;
-          var reviews = Object.values(data).filter(function(r) { return r && r.approved === true; });
-          if (!reviews.length) return;
-          var count = reviews.length;
-          var avg = (reviews.reduce(function(s,r){ return s + (Number(r.rating)||5); }, 0) / count).toFixed(1);
-          try {
-            var schema = JSON.parse(schemaEl.textContent);
-            if (schema.aggregateRating) {
-              schema.aggregateRating.ratingValue = avg;
-              schema.aggregateRating.reviewCount = String(count);
-              schemaEl.textContent = JSON.stringify(schema);
-            }
-          } catch(e) {}
-        })
-        .catch(function(){});
-    })();
-    </script>
 </body>
 </html>

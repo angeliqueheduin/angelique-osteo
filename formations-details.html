@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://calendly.com">
     <link rel="dns-prefetch" href="https://www.google.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"></noscript>
 
     <!-- === SEO === -->
     <title>Toutes les formations — Angélique Héduin, Ostéopathe D.O. à Bessan</title>
@@ -638,6 +639,8 @@
                 <a href="https://www.resalib.fr/praticien/77980-angelique-heduin-osteopathe-bessan" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/logo-resalib.webp" alt="Resalib — annuaire de praticiens" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
                 <a href="https://www.annuaire-therapeutes.com/therapeute/133632-angelique-heduin-bessan" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/logo-annuaire-therapeute.webp" alt="Annuaire Thérapeutes" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
                 <a href="https://www.pagesjaunes.fr/pros/61376348" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/pages-jaunes-simple.webp" alt="Pages Jaunes" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
+                <a href="https://autour-de-moi.pro/fiche/osteopathe-bessan-angelique-heduin-femmes-enceintes-bebes-adultes-seniors/" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/logo2.webp" alt="Autour de moi" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
+                <a href="https://www.cylex-locale.fr/entreprises/osteopathe-bessan-ang%c3%a9lique-h%c3%a9duin-14634468.html" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/cylex.webp" alt="Cylex" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
                 <a href="https://www.doqi.fr/osteopathes/bessan-34550/osteopathe-bessan-angelique-heduin/horaires" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/doqi.webp" alt="Doqi" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
                 <a href="https://www.justacote.com/bessan-34550/osteopathe/angelique-heduin-1000384.htm" target="_blank" rel="noopener noreferrer"><img src="img-partenaires/justacote.webp" alt="Justacôté" loading="lazy" width="120" height="50" style="height:50px;width:auto;max-width:120px;object-fit:contain;"></a>
             </div>
@@ -656,98 +659,5 @@
     </footer>
 
     <script src="script.js" defer></script>
-    <script>
-        function _lsGet(k) { try { return localStorage.getItem(k); } catch(e) { return null; } }
-
-        // === COOKIE BANNER ===
-        (function() {
-            var consent = _lsGet('cookie_consent');
-            var banner = document.getElementById('cookie-banner');
-            if (consent && banner) banner.style.display = 'none';
-        })();
-
-        (function() {
-            var consent = _lsGet('cookie_consent');
-            if (consent === 'accepted') {
-                if (!document.querySelector('script[src*="recaptcha"]')) {
-                    var s = document.createElement('script');
-                    s.src = 'https://www.google.com/recaptcha/api.js?render=6Ldup4osAAAAACCUSh7PHbTCISNPjY-ABHnM6h1H';
-                    s.async = true;
-                    document.head.appendChild(s);
-                }
-            }
-        })();
-
-        // === COPYRIGHT YEAR ===
-        (function() {
-            var el = document.getElementById('copyright-year');
-            if (el) el.textContent = new Date().getFullYear();
-        })();
-
-        // === HAMBURGER MENU ===
-        (function() {
-            var btn = document.getElementById('hamburger');
-            var links = document.getElementById('navbar-links');
-            if (!btn || !links) return;
-            btn.addEventListener('click', function() {
-                var open = links.classList.toggle('open');
-                btn.classList.toggle('open', open);
-                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-            });
-            links.querySelectorAll('a').forEach(function(a) {
-                a.addEventListener('click', function() {
-                    links.classList.remove('open');
-                    btn.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-                });
-            });
-        })();
-
-        // === FILTRE PAR CATÉGORIE ===
-        (function() {
-            var tabs = document.querySelectorAll('.filter-tab');
-            var groups = document.querySelectorAll('.category-group');
-
-            tabs.forEach(function(tab) {
-                tab.addEventListener('click', function() {
-                    var filter = tab.getAttribute('data-filter');
-
-                    tabs.forEach(function(t) {
-                        t.classList.remove('active');
-                        t.setAttribute('aria-selected', 'false');
-                    });
-                    tab.classList.add('active');
-                    tab.setAttribute('aria-selected', 'true');
-
-                    groups.forEach(function(group) {
-                        if (filter === 'all') {
-                            group.classList.remove('hidden');
-                        } else {
-                            var match = group.getAttribute('data-category') === filter;
-                            group.classList.toggle('hidden', !match);
-                        }
-                    });
-                });
-            });
-        })();
-
-        // === ANIMATE ON SCROLL ===
-        (function() {
-            var els = document.querySelectorAll('.animate-on-scroll');
-            if (!('IntersectionObserver' in window)) {
-                els.forEach(function(el) { el.classList.add('visible'); });
-                return;
-            }
-            var obs = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-            els.forEach(function(el) { obs.observe(el); });
-        })();
-    </script>
 </body>
 </html>

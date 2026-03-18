@@ -7,7 +7,12 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
     X-XSS-Protection = "0"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com https://cdn.jsdelivr.net https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://www.gstatic.com/firebasejs/ https://cdn.emailjs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://angelique-osteo.fr https://lh3.googleusercontent.com https://maps.gstatic.com https://maps.googleapis.com https://www.gstatic.com/; frame-src https://calendly.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/ https://angelique-osteo.firebaseapp.com; connect-src 'self' https://fonts.googleapis.com https://calendly.com https://www.google.com https://www.gstatic.com https://*.firebasedatabase.app https://firebasedatabase.app https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://api.emailjs.com; worker-src 'none'; upgrade-insecure-requests"
+    # FIXES CSP :
+    # - 'unsafe-inline' supprimé de script-src (scripts inline déplacés dans script.js)
+    # - object-src 'none' ajouté (bloque Flash et plugins obsolètes)
+    # - data: retiré de font-src (inutile, fonts viennent de gstatic ou self)
+    # - data: conservé dans img-src uniquement (nécessaire SVG/canvas base64)
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://assets.calendly.com https://cdn.jsdelivr.net https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://www.gstatic.com/firebasejs/ https://cdn.emailjs.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://angelique-osteo.fr https://lh3.googleusercontent.com https://maps.gstatic.com https://maps.googleapis.com https://www.gstatic.com/; object-src 'none'; frame-src https://calendly.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/ https://angelique-osteo.firebaseapp.com; connect-src 'self' https://fonts.googleapis.com https://calendly.com https://www.google.com https://www.gstatic.com https://*.firebasedatabase.app https://firebasedatabase.app https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://api.emailjs.com; worker-src 'none'; upgrade-insecure-requests"
     Cross-Origin-Opener-Policy = "same-origin-allow-popups"
 
 [[headers]]
@@ -50,6 +55,12 @@
   [headers.values]
     Cache-Control = "public, max-age=3600, must-revalidate"
 
+# FIX 404 : Cache-Control explicite pour que le CDN puisse mettre en cache la page d'erreur
+[[headers]]
+  for = "/404.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
 [[headers]]
   for = "/sitemap.xml"
   [headers.values]
@@ -60,7 +71,6 @@
   for = "/robots.txt"
   [headers.values]
     Cache-Control = "public, max-age=86400"
-
 
 [[headers]]
   for = "/*.webmanifest"
@@ -110,7 +120,8 @@
   status = 301
   force = true
 
+# FIX 404 : status 200 au lieu de 404 pour que le CDN Netlify puisse cacher la réponse
 [[redirects]]
   from = "/*"
   to = "/404.html"
-  status = 404
+  status = 200
