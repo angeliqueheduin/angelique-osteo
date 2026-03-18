@@ -95,6 +95,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: true });
   }
 
+  /* ===== FAQ ACCORDÉON ===== */
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  if (faqItems.length) {
+    faqItems.forEach(item => {
+      const summary = item.querySelector('.faq-question');
+      if (!summary) return;
+
+      // Clic sur la question OU sur tout le container
+      [item, summary].forEach(el => {
+        el.addEventListener('click', (e) => {
+          // Évite le double déclenchement si clic sur summary (qui bubble vers item)
+          if (e.currentTarget === item && e.target.closest('.faq-question')) return;
+          e.preventDefault();
+
+          const isOpen = item.hasAttribute('open');
+
+          // Ferme tous les items ouverts
+          faqItems.forEach(other => other.removeAttribute('open'));
+
+          // Ouvre uniquement si c'était fermé
+          if (!isOpen) item.setAttribute('open', '');
+        });
+      });
+    });
+
+    // Ferme au clic dans le vide (hors FAQ)
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.faq-item')) {
+        faqItems.forEach(item => item.removeAttribute('open'));
+      }
+    });
+  }
+
   /* ===== SCROLL ANIMATIONS ===== */
   const isMobile = window.innerWidth < 768;
 

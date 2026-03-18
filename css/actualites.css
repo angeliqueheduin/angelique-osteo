@@ -389,6 +389,7 @@ body {
 .faq-item {
     padding: 20px 0;
     border-bottom: 1px solid #e8e2db;
+    transition: padding 0.5s ease;
 }
 
 .faq-item:last-child {
@@ -847,82 +848,57 @@ body {
 
 /* ===== FAQ INTERACTIVITÉ ===== */
 
-/* Curseur pointer sur toute la zone cliquable */
 .faq-item {
   cursor: pointer;
 }
 
-/* La question devient cliquable visuellement */
 .faq-question {
   cursor: pointer;
-  transition: color 0.2s ease;
-  padding-bottom: 10px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-right: 4px;
+  user-select: none;
 }
 
-/* Trois petits points sous la question pour signaler le contenu */
+/* Flèche SVG à droite */
 .faq-question::after {
-  content: '• • •';
+  content: '';
   display: block;
-  font-size: 0.55rem;
-  letter-spacing: 4px;
-  color: var(--primary-color);
-  opacity: 0.45;
-  margin-top: 6px;
-  transition: opacity 0.2s ease, letter-spacing 0.2s ease;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237d9d85' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
 }
 
-/* Quand le details est ouvert, les points s'effacent */
+/* Flèche retournée quand ouvert */
 .faq-item[open] .faq-question::after {
-  opacity: 0;
-  letter-spacing: 6px;
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Couleur de la question à l'ouverture */
+.faq-item[open] .faq-question {
+  color: var(--primary-color);
 }
 
 /* Hover sur l'item entier */
+.faq-item:hover {
+  background-color: #faf8f6;
+  border-radius: 10px;
+  padding-left: 14px;
+}
+
 .faq-item:hover .faq-question {
   color: var(--primary-color);
 }
 
 .faq-item:hover .faq-question::after {
-  opacity: 0.75;
-  letter-spacing: 5px;
-}
-
-/* Légère teinte de fond au hover */
-.faq-item:hover {
-  background-color: #faf8f6;
-  border-radius: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: -10px;
-  margin-right: -10px;
-  transition: background-color 0.2s ease, padding 0.2s ease;
-}
-
-/* Animation d'apparition de la réponse */
-.faq-answer {
-  animation: faqOpen 0.25s ease-out;
-}
-
-@keyframes faqOpen {
-  from {
-    opacity: 0;
-    transform: translateY(-4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Respect de prefers-reduced-motion */
-@media (prefers-reduced-motion: reduce) {
-  .faq-question,
-  .faq-question::after,
-  .faq-item {
-    transition: none;
-  }
-  .faq-answer {
-    animation: none;
-  }
+  opacity: 1;
 }
