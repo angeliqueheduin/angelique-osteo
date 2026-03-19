@@ -131,10 +131,21 @@ function renderList() {
 }
 
 function fbBase() { return CFG.fbUrl; }
-async function fbGet(p) { try { const r = await fetch(`${fbBase()}/${p}.json`); return r.ok ? r.json() : null; } catch { return null; } }
-async function fbSet(p, d) { try { const r = await fetch(`${fbBase()}/${p}.json`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) }); return r.ok; } catch { return false; } }
-async function fbPatch(p, d) { try { const r = await fetch(`${fbBase()}/${p}.json`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) }); return r.ok; } catch { return false; } }
-async function fbDel(p) { try { const r = await fetch(`${fbBase()}/${p}.json`, { method: 'DELETE' }); return r.ok; } catch { return false; } }
+async function fbAuthToken() {
+  try {
+    const user = window._auth && window._auth.currentUser;
+    if (!user) return null;
+    return await user.getIdToken();
+  } catch { return null; }
+}
+async function fbUrl(p) {
+  const token = await fbAuthToken();
+  return token ? `${fbBase()}/${p}.json?auth=${token}` : `${fbBase()}/${p}.json`;
+}
+async function fbGet(p) { try { const r = await fetch(await fbUrl(p)); return r.ok ? r.json() : null; } catch { return null; } }
+async function fbSet(p, d) { try { const r = await fetch(await fbUrl(p), { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) }); return r.ok; } catch { return false; } }
+async function fbPatch(p, d) { try { const r = await fetch(await fbUrl(p), { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) }); return r.ok; } catch { return false; } }
+async function fbDel(p) { try { const r = await fetch(await fbUrl(p), { method: 'DELETE' }); return r.ok; } catch { return false; } }
 
 async function fbLoadReviews() {
   const data = await fbGet('reviews');
