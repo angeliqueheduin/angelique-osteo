@@ -314,8 +314,62 @@ async function handleUrl() {
     if (!HAS_FB) { showToast('Firebase requis.', 'error'); return; }
     const safeToken = String(token).replace(/[^a-f0-9]/gi, '').slice(0, 64);
     if (!safeToken) { showToast('Token invalide.', 'error'); return; }
+
+    // Authentification requise pour approuver/rejeter (Firebase Rules exigent auth sur reviews.write)
+    if (!window._auth || !window._signIn) {
+      showToast('SDK Firebase non chargé — réessayez dans quelques secondes.', 'error');
+      window.history.replaceState({}, '', window.location.pathname);
+      return;
+    }
+
+    // Brute-force protection (partagée avec le panel admin)
+    const ADMIN_KEY = 'admin_attempts';
+    const ADMIN_LOCK_MS = 30 * 60 * 1000;
+    const MAX_ATTEMPTS = 3;
+    function getAdminAttempts() { try { return JSON.parse(localStorage.getItem(ADMIN_KEY) || '{"count":0,"ts":0}'); } catch { return { count: 0, ts: 0 }; } }
+    function setAdminAttempts(d) { try { localStorage.setItem(ADMIN_KEY, JSON.stringify(d)); } catch {} }
+    function resetAdminAttempts() { setAdminAttempts({ count: 0, ts: 0 }); }
+
+    const attempts = getAdminAttempts();
+    const now = Date.now();
+    if (attempts.count >= MAX_ATTEMPTS && (now - attempts.ts) < ADMIN_LOCK_MS) {
+      const remainMin = Math.ceil((ADMIN_LOCK_MS - (now - attempts.ts)) / 60000);
+      showToast(`Accès bloqué. Réessayez dans ${remainMin} min.`, 'error', 6000);
+      window.history.replaceState({}, '', window.location.pathname);
+      return;
+    }
+    if ((now - attempts.ts) >= ADMIN_LOCK_MS) resetAdminAttempts();
+
+    const actionLabel = action === 'approve' ? 'approuver' : 'rejeter';
+    showToast(`Connexion requise pour ${actionLabel} cet avis.`, 'info', 4000);
+
+    const email = prompt('Email admin :');
+    if (!email) { window.history.replaceState({}, '', window.location.pathname); return; }
+    const pwd = prompt('Mot de passe :');
+    if (!pwd) { window.history.replaceState({}, '', window.location.pathname); return; }
+
+    try {
+      await window._signIn(window._auth, email, pwd);
+      resetAdminAttempts();
+    } catch (err) {
+      const cur = getAdminAttempts();
+      const newCount = (cur.count || 0) + 1;
+      setAdminAttempts({ count: newCount, ts: Date.now() });
+      const remaining = MAX_ATTEMPTS - newCount;
+      const msg =
+        err.code === 'auth/invalid-credential'    ? `Email ou mot de passe incorrect.${remaining > 0 ? ' ' + remaining + ' tentative(s) restante(s).' : ' Accès bloqué 30 min.'}` :
+        err.code === 'auth/invalid-email'          ? 'Adresse email invalide.' :
+        err.code === 'auth/too-many-requests'      ? 'Trop de tentatives. Réessaie dans quelques minutes.' :
+        err.code === 'auth/network-request-failed' ? 'Erreur réseau. Vérifie ta connexion.' :
+        'Accès refusé.';
+      showToast(msg, 'error', 5000);
+      window.history.replaceState({}, '', window.location.pathname);
+      return;
+    }
+
+    // Authentifié — on peut maintenant lire pending et écrire dans reviews
     const ok = action === 'approve' ? await fbApprove(safeIdVal, safeToken) : await fbReject(safeIdVal, safeToken);
-    showToast(ok ? (action === 'approve' ? '✓ Avis approuvé !' : 'Avis rejeté.') : 'Avis introuvable ou token invalide.', ok ? 'success' : 'error', 6000);
+    showToast(ok ? (action === 'approve' ? '✓ Avis approuvé et publié !' : 'Avis rejeté.') : 'Avis introuvable ou token invalide.', ok ? 'success' : 'error', 6000);
     if (ok && action === 'approve') await init();
     window.history.replaceState({}, '', window.location.pathname);
   }
