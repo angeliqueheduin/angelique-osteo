@@ -167,21 +167,15 @@
 
     <link rel="stylesheet" href="css/parcours.css">
     <link rel="stylesheet" href="css/cookie.css">
-  <script>try{
-  var _cb=document.getElementById('cookie-banner');
-  var _cs=localStorage.getItem('cookie_consent');
-  if(_cs==='accepted'||_cs==='refused'){if(_cb)_cb.style.display='none';}
-  function acceptCookies(){try{localStorage.setItem('cookie_consent','accepted');}catch(e){}if(_cb)_cb.style.display='none';var s=document.createElement('script');s.src='https://www.google.com/recaptcha/api.js?render=6Ldup4osAAAAACCUSh7PHbTCISNPjY-ABHnM6h1H';s.async=true;document.head.appendChild(s);}
-  function refuseCookies(){try{localStorage.setItem('cookie_consent','refused');}catch(e){}if(_cb)_cb.style.display='none';}
-}catch(e){}</script>
+  <script>try{var _cb=document.getElementById('cookie-banner');var _cs=localStorage.getItem('cookie_consent');if(_cs==='accepted'||_cs==='refused'){if(_cb)_cb.style.display='none';}}catch(e){}</script>
 </head>
 <body>
 
     <div id="cookie-banner" role="dialog" aria-modal="true" aria-live="polite" aria-label="Consentement aux cookies">
         <p>Ce site utilise des outils tiers (Calendly, Google Maps) pouvant déposer des cookies. En continuant votre navigation, vous acceptez leur utilisation. <a href="/mentions-legales">En savoir plus</a></p>
         <div class="cookie-buttons">
-            <button class="btn-accept-cookies" id="btn-accept-cookies" aria-label="Accepter les cookies" onclick="acceptCookies()">Accepter</button>
-            <button class="btn-refuse-cookies" id="btn-refuse-cookies" aria-label="Refuser les cookies" onclick="refuseCookies()">Refuser</button>
+            <button class="btn-accept-cookies" id="btn-accept-cookies" aria-label="Accepter les cookies">Accepter</button>
+            <button class="btn-refuse-cookies" id="btn-refuse-cookies" aria-label="Refuser les cookies">Refuser</button>
         </div>
     </div>
 
