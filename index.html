@@ -13,10 +13,9 @@
     <!-- FIX #1 : un seul preload pour l'image LCP (sport.webp uniquement) -->
     <link rel="preload" as="image" href="/photos-header/sport.webp" fetchpriority="high">
 
-    <!-- FIX #2 : Google Fonts chargé en asynchrone (non render-blocking) -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap"></noscript></noscript>
+    <!-- Google Fonts chargé en différé via JS (évite le handler inline bloqué par CSP) -->
+    <link rel="preload" id="google-fonts-preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" as="style">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap"></noscript>
 
     <!-- === SEO BASE === -->
     <title>Ostéopathe à Bessan — Angélique Héduin D.O.</title>
@@ -268,15 +267,15 @@
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/cookie.css">
-  <script>try{var c=localStorage.getItem('cookie_consent');if(c){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}}catch(e){}</script>
+  <script>try{var c=localStorage.getItem('cookie_consent');if(c==='accepted'||c==='refused'){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}}catch(e){}</script>
 </head>
 <body>
 
     <div id="cookie-banner" role="dialog" aria-modal="true" aria-live="polite" aria-label="Consentement aux cookies">
         <p>Ce site utilise des outils tiers (Calendly, Google Maps) pouvant déposer des cookies. En continuant votre navigation, vous acceptez leur utilisation. <a href="/mentions-legales">En savoir plus</a></p>
         <div class="cookie-buttons">
-            <button class="btn-accept-cookies" onclick="acceptCookies()">Accepter</button>
-            <button class="btn-refuse-cookies" onclick="refuseCookies()">Refuser</button>
+            <button class="btn-accept-cookies" id="btn-accept-cookies">Accepter</button>
+            <button class="btn-refuse-cookies" id="btn-refuse-cookies">Refuser</button>
         </div>
     </div>
 
@@ -305,7 +304,7 @@
                     <!-- FIX #3 : baby.webp reste lazy car pas le LCP -->
                     <img src="photos-header/baby.webp" class="side" alt="Ostéopathie pédiatrique nourrisson Bessan Hérault" loading="lazy" width="300" height="220">
                     <!-- FIX #3 : utilisation de sport.webp au lieu de sport.jpg pour le LCP -->
-                    <img src="photos-header/sport.jpg" class="center" alt="Ostéopathie sportive Bessan Agde Hérault" loading="eager" fetchpriority="high" width="600" height="300">
+                    <img src="photos-header/sport.webp" class="center" alt="Ostéopathie sportive Bessan Agde Hérault" loading="eager" fetchpriority="high" width="600" height="300">
                     <!-- FIX #3 : utilisation de personnes-agees.webp si disponible, sinon lazy sur le jpg -->
                     <img src="photos-header/personnes-agees.jpg" class="side" alt="Ostéopathie seniors Bessan Hérault" loading="lazy" width="300" height="220">
                 </div>
@@ -496,7 +495,7 @@
                 <span>Appeler</span>
             </a>
         </nav>
-        <button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions">?</button>
+        <button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions"><span aria-hidden="true">?</span></button>
     </div>
 
     <footer class="site-footer">

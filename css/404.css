@@ -1,1 +1,214 @@
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{height:100%}body{min-height:100%;display:flex;flex-direction:column;background-color:#f5f0eb;color:#2d2d2d;font-family:'Poppins',sans-serif;font-weight:400;-webkit-font-smoothing:antialiased}.container-404{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 1.5rem 2rem;gap:1.25rem}.logo-link{display:inline-block;margin-bottom:0.5rem;transition:opacity 0.2s ease}.logo-link:hover,.logo-link:focus-visible{opacity:0.75;outline:2px solid #7d9d85;outline-offset:4px;border-radius:4px}.logo-link img{display:block;width:64px;height:auto}.code-404{font-family:'Playfair Display',serif;font-size:clamp(5rem,18vw,9rem);font-weight:600;line-height:1;color:#7d9d85;letter-spacing:-0.02em;user-select:none}.separator{width:48px;height:2px;background-color:#7d9d85;border-radius:2px;opacity:0.5}.titre-404{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2rem);font-weight:600;color:#2d2d2d;line-height:1.25}.message-404{font-size:clamp(0.875rem,2vw,1rem);font-weight:300;color:#5a5a5a;line-height:1.7;max-width:480px}.actions-404{display:flex;flex-wrap:wrap;gap:0.875rem;justify-content:center;margin-top:0.5rem}.btn-home,.btn-rdv-404{display:inline-flex;align-items:center;gap:0.5rem;padding:0.7rem 1.4rem;border-radius:8px;font-family:'Poppins',sans-serif;font-size:0.875rem;font-weight:500;text-decoration:none;transition:background-color 0.2s ease,color 0.2s ease,transform 0.15s ease;white-space:nowrap}.btn-home{background-color:#7d9d85;color:#fff;border:2px solid #7d9d85}.btn-home:hover,.btn-home:focus-visible{background-color:#6a8a72;border-color:#6a8a72;transform:translateY(-1px);box-shadow:0 4px 12px rgba(125,157,133,0.35);outline:none}.btn-rdv-404{background-color:transparent;color:#7d9d85;border:2px solid #7d9d85}.btn-rdv-404:hover,.btn-rdv-404:focus-visible{background-color:#7d9d85;color:#fff;transform:translateY(-1px);box-shadow:0 4px 12px rgba(125,157,133,0.35);outline:none}.footer-404{padding:1.25rem 1.5rem;text-align:center;border-top:1px solid rgba(125,157,133,0.2);background-color:#f5f0eb}.footer-404 p{font-size:0.8rem;font-weight:300;color:#7a7a7a;line-height:1.8}.footer-404 a{color:#7d9d85;text-decoration:none;font-weight:400;transition:color 0.2s ease}.footer-404 a:hover,.footer-404 a:focus-visible{color:#4d6e55;text-decoration:underline;outline-offset:2px}@media (max-width:480px){.container-404{padding:2rem 1.25rem 1.5rem;gap:1rem}.logo-link img{width:52px}.actions-404{flex-direction:column;align-items:stretch;width:100%;max-width:280px}.btn-home,.btn-rdv-404{justify-content:center;padding:0.75rem 1rem}.message-404 br{display:none}}:focus-visible{outline:2px solid #7d9d85;outline-offset:3px;border-radius:3px}@media (prefers-reduced-motion:reduce){.btn-home,.btn-rdv-404,.logo-link{transition:none;transform:none!important}}
+/* =============================================================
+   404.css — Page d'erreur 404
+   angelique-osteo.fr
+   ============================================================= */
+
+
+*,
+*::before,
+*::after {
+    box-sizing:border-box;
+    margin:0;
+    padding:0
+}
+
+html {
+    height:100%
+}
+
+body {
+    min-height:100%;
+    display:flex;
+    flex-direction:column;
+    background-color:#f5f0eb;
+    color:#2d2d2d;
+    font-family:'Poppins', sans-serif;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased
+}
+
+.container-404 {
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:3rem 1.5rem 2rem;
+    gap:1.25rem
+}
+
+.logo-link {
+    display:inline-block;
+    margin-bottom:0.5rem;
+    transition:opacity 0.2s ease
+}
+
+.logo-link:hover,
+.logo-link:focus-visible {
+    opacity:0.75;
+    outline:2px solid #7d9d85;
+    outline-offset:4px;
+    border-radius:4px
+}
+
+.logo-link img {
+    display:block;
+    width:64px;
+    height:auto
+}
+
+.code-404 {
+    font-family:'Playfair Display', serif;
+    font-size:clamp(5rem, 18vw, 9rem);
+    font-weight:600;
+    line-height:1;
+    color:#7d9d85;
+    letter-spacing:-0.02em;
+    user-select:none
+}
+
+.separator {
+    width:48px;
+    height:2px;
+    background-color:#7d9d85;
+    border-radius:2px;
+    opacity:0.5
+}
+
+.titre-404 {
+    font-family:'Playfair Display', serif;
+    font-size:clamp(1.4rem, 4vw, 2rem);
+    font-weight:600;
+    color:#2d2d2d;
+    line-height:1.25
+}
+
+.message-404 {
+    font-size:clamp(0.875rem, 2vw, 1rem);
+    font-weight:300;
+    color:#5a5a5a;
+    line-height:1.7;
+    max-width:480px
+}
+
+.actions-404 {
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.875rem;
+    justify-content:center;
+    margin-top:0.5rem
+}
+
+.btn-home,
+.btn-rdv-404 {
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    padding:0.7rem 1.4rem;
+    border-radius:8px;
+    font-family:'Poppins', sans-serif;
+    font-size:0.875rem;
+    font-weight:500;
+    text-decoration:none;
+    transition:background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+    white-space:nowrap
+}
+
+.btn-home {
+    background-color:#7d9d85;
+    color:#fff;
+    border:2px solid #7d9d85
+}
+
+.btn-home:hover,
+.btn-home:focus-visible {
+    background-color:#6a8a72;
+    border-color:#6a8a72;
+    transform:translateY(-1px);
+    box-shadow:0 4px 12px rgba(125, 157, 133, 0.35);
+    outline:none
+}
+
+.btn-rdv-404 {
+    background-color:transparent;
+    color:#7d9d85;
+    border:2px solid #7d9d85
+}
+
+.btn-rdv-404:hover,
+.btn-rdv-404:focus-visible {
+    background-color:#7d9d85;
+    color:#fff;
+    transform:translateY(-1px);
+    box-shadow:0 4px 12px rgba(125, 157, 133, 0.35);
+    outline:none
+}
+
+.footer-404 {
+    padding:1.25rem 1.5rem;
+    text-align:center;
+    border-top:1px solid rgba(125, 157, 133, 0.2);
+    background-color:#f5f0eb
+}
+
+.footer-404 p {
+    font-size:0.8rem;
+    font-weight:300;
+    color:#7a7a7a;
+    line-height:1.8
+}
+
+.footer-404 a {
+    color:#7d9d85;
+    text-decoration:none;
+    font-weight:400;
+    transition:color 0.2s ease
+}
+
+.footer-404 a:hover,
+.footer-404 a:focus-visible {
+    color:#4d6e55;
+    text-decoration:underline;
+    outline-offset:2px
+}
+
+@media (max-width:480px) {
+    .container-404 {
+        padding:2rem 1.25rem 1.5rem;
+        gap:1rem
+}
+
+    .logo-link img {
+        width:52px
+}
+
+    .actions-404 {
+        flex-direction:column;
+        align-items:stretch;
+        width:100%;
+        max-width:280px
+}
+
+    .btn-home, .btn-rdv-404 {
+        justify-content:center;
+        padding:0.75rem 1rem
+}
+
+    .message-404 br {
+        display:none
+}
+}
+
+:focus-visible {
+    outline:2px solid #7d9d85;
+    outline-offset:3px;
+    border-radius:3px
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .btn-home, .btn-rdv-404, .logo-link {
+        transition:none;
+        transform:none!important
+}
+}

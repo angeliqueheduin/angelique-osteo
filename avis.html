@@ -11,7 +11,7 @@
   <link rel="dns-prefetch" href="https://www.google.com">
   <link rel="preload" href="/photos-header/logo-site.webp" as="image" fetchpriority="high">
   <link rel="preload" href="https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko80ySKSelqFsYT.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" as="style" id="google-fonts-preload">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"></noscript>
 
   <!-- === SEO BASE === -->
@@ -159,7 +159,7 @@
     window._signIn = signInWithEmailAndPassword;
   </script>
 
-  <script>try{var c=localStorage.getItem('cookie_consent');if(c){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}}catch(e){}</script>
+  <script>try{var c=localStorage.getItem('cookie_consent');if(c==='accepted'||c==='refused'){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}}catch(e){}</script>
 </head>
 <body>
 
@@ -172,8 +172,8 @@
 <div id="cookie-banner" role="dialog" aria-modal="true" aria-label="Consentement aux cookies" aria-live="polite">
   <p>Ce site utilise des outils tiers (Calendly, reCAPTCHA) pouvant déposer des cookies. <a href="/mentions-legales">En savoir plus</a></p>
   <div class="cookie-buttons">
-    <button class="btn-accept-cookies" aria-label="Accepter les cookies" onclick="acceptCookies()">Accepter</button>
-    <button class="btn-refuse-cookies" aria-label="Refuser les cookies" onclick="refuseCookies()">Refuser</button>
+    <button class="btn-accept-cookies" id="btn-accept-cookies" aria-label="Accepter les cookies">Accepter</button>
+    <button class="btn-refuse-cookies" id="btn-refuse-cookies" aria-label="Refuser les cookies">Refuser</button>
   </div>
 </div>
 
@@ -610,8 +610,8 @@ async function showAdmin() {
       <div class="review-stars" aria-label="${r.rating} étoiles sur 5">${stars(r.rating)}</div>
       <p class="review-text">${esc(r.text)}</p>
       <div class="admin-actions">
-        <button class="btn-approve" data-id="${esc(r.id)}" data-token="${esc(r.approvalToken || '')}">✓ Approuver</button>
-        <button class="btn-reject"  data-id="${esc(r.id)}" data-token="${esc(r.approvalToken || '')}">✕ Rejeter</button>
+        <button class="btn-approve" data-id="${esc(r.id)}" data-token="${esc(r.approvalToken || '')}" aria-label="Approuver cet avis">✓ Approuver</button>
+        <button class="btn-reject" data-id="${esc(r.id)}" data-token="${esc(r.approvalToken || '')}" aria-label="Rejeter cet avis">✕ Rejeter</button>
       </div>`;
     card.querySelector('.btn-approve').addEventListener('click', async function () {
       const ok = await fbApprove(this.dataset.id, this.dataset.token);

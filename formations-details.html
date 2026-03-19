@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://calendly.com">
     <link rel="dns-prefetch" href="https://www.google.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" as="style" id="google-fonts-preload">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"></noscript>
 
     <!-- === SEO === -->
@@ -179,7 +179,7 @@
 
     <link rel="stylesheet" href="css/formations-details.css">
     <link rel="stylesheet" href="css/cookie.css">
-  <script>try{var c=localStorage.getItem('cookie_consent');if(c){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}}catch(e){}</script>
+  <script>try{var c=localStorage.getItem('cookie_consent');if(c==='accepted'||c==='refused'){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}}catch(e){}</script>
 </head>
 <body>
 
@@ -187,8 +187,8 @@
     <div id="cookie-banner" role="dialog" aria-modal="true" aria-live="polite" aria-label="Consentement aux cookies">
         <p>Ce site utilise des outils tiers (Calendly, Google Maps) pouvant déposer des cookies. En continuant votre navigation, vous acceptez leur utilisation. <a href="/mentions-legales">En savoir plus</a></p>
         <div class="cookie-buttons">
-            <button class="btn-accept-cookies" aria-label="Accepter les cookies" onclick="acceptCookies()">Accepter</button>
-            <button class="btn-refuse-cookies" aria-label="Refuser les cookies" onclick="refuseCookies()">Refuser</button>
+            <button class="btn-accept-cookies" id="btn-accept-cookies" aria-label="Accepter les cookies">Accepter</button>
+            <button class="btn-refuse-cookies" id="btn-refuse-cookies" aria-label="Refuser les cookies">Refuser</button>
         </div>
     </div>
 

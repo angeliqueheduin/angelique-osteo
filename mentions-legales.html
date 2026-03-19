@@ -9,7 +9,7 @@
   <!-- === PRECONNECT & PRELOAD === -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" as="style" id="google-fonts-preload">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"></noscript>
 
   <!-- === FAVICONS === -->
@@ -21,7 +21,7 @@
     <link rel="manifest" href="/site.webmanifest">
 
   <link rel="stylesheet" href="css/mentions-legales.css">
-  <script>try{var c=localStorage.getItem('cookie_consent');if(c){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}}catch(e){}</script>
+  <script>try{var c=localStorage.getItem('cookie_consent');if(c==='accepted'||c==='refused'){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}}catch(e){}</script>
 </head>
 <body>
 
