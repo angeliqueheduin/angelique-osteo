@@ -20,14 +20,7 @@ function initEmailJS() { if (HAS_EJ && typeof emailjs !== 'undefined') emailjs.i
 const VALID_SOURCES = new Set(['google', 'facebook', 'connaissances', 'direct']);
 const VALID_MOODS   = new Set(['😌', '😊', '🤩', '💪', '🙏', '👶']);
 
-const DEMOS = [
-  { id: 'r1', firstname: 'Sophie',  lastname: 'M.', source: 'google',        mood: '😌', moodLabel: 'Soulagée',      rating: 5, text: "Angélique a résolu en une séance mon problème de cervicales que j'avais depuis des mois. Elle est à l'écoute, douce et vraiment professionnelle. Je recommande sans hésiter !", date: '2026-03-08', likes: 14, likedBy: {} },
-  { id: 'r2', firstname: 'Laurent', lastname: 'B.', source: 'direct',        mood: '💪', moodLabel: 'Guéri',         rating: 5, text: "Après une blessure sportive persistante, deux séances ont suffi pour retrouver ma mobilité complète. Le suivi est personnalisé et les explications très claires.",      date: '2026-02-21', likes: 8,  likedBy: {} },
-  { id: 'r3', firstname: 'Camille', lastname: 'R.', source: 'facebook',      mood: '👶', moodLabel: 'Pour bébé',     rating: 5, text: "J'y ai amené mon bébé de 3 semaines pour des coliques et un torticolis. Les gestes sont d'une douceur extrême, et dès le lendemain les pleurs avaient diminué de moitié.", date: '2026-02-14', likes: 21, likedBy: {} },
-  { id: 'r4', firstname: 'Nathalie',lastname: 'G.', source: 'google',        mood: '🙏', moodLabel: 'Reconnaissante',rating: 5, text: "Suivi tout au long de ma grossesse avec une douceur et une bienveillance remarquables. Angélique adapte chaque séance à mes besoins. Je me sens vraiment prise en charge.", date: '2026-01-30', likes: 17, likedBy: {} },
-  { id: 'r5', firstname: 'Pierre',  lastname: 'T.', source: 'connaissances', mood: '🤩', moodLabel: 'Excellent',     rating: 5, text: "Souffrant de migraines chroniques depuis des années, j'ai trouvé chez Angélique une approche globale qui fait vraiment la différence. Résultats durables et praticienne passionnée.", date: '2026-01-15', likes: 11, likedBy: {} },
-  { id: 'r6', firstname: 'Julie',   lastname: 'D.', source: 'direct',        mood: '😊', moodLabel: 'Satisfaite',    rating: 5, text: "Venue pour un suivi post-partum, j'ai été impressionnée par la précision et la douceur des soins. Angélique explique chaque geste, ce qui rassure vraiment.",              date: '2025-12-20', likes: 9,  likedBy: {} }
-];
+const DEMOS = [];
 
 let reviews = [], currentFilter = 'all', pollTimer = null;
 
@@ -153,8 +146,14 @@ async function fbLoadReviews() {
 
 async function fbSyncLikes() {
   const data = await fbGet('reviews'); if (!data) return;
+  // Ne pas écraser les likes gérés localement
   let changed = false;
-  reviews.forEach((r, i) => { const fb = data[r.id]; if (fb && typeof fb.likes === 'number' && fb.likes !== r.likes) { reviews[i].likes = fb.likes; changed = true; } });
+  reviews.forEach((r, i) => {
+    const fb = data[r.id];
+    if (!fb || typeof fb.likes !== 'number') return;
+    if (hasLiked(r.id)) return; // l'utilisateur a liké : on garde la valeur locale
+    if (fb.likes !== r.likes) { reviews[i].likes = fb.likes; changed = true; }
+  });
   if (changed) document.querySelectorAll('.like-btn').forEach(btn => {
     const rv = reviews.find(r => r.id === btn.dataset.id); if (!rv) return;
     const liked = hasLiked(rv.id);
@@ -165,13 +164,8 @@ async function fbSyncLikes() {
 }
 
 async function fbLike(reviewId, liked) {
-  /* Les règles Firebase bloquent l'écriture anonyme sur reviews/.
-     Les likes sont conservés localement (localStorage) et reflétés
-     visuellement immédiatement. Aucune tentative d'écriture Firebase. */
-  const idx = reviews.findIndex(r => r.id === reviewId);
-  if (idx !== -1) {
-    reviews[idx].likes = Math.max(0, (reviews[idx].likes || 0) + (liked ? 1 : -1));
-  }
+  // Likes gérés uniquement en local (localStorage + mémoire reviews[]).
+  // fbSyncLikes ignore les avis likés localement => le unlike (-1) n'est jamais écrasé.
 }
 
 async function fbSubmitPending(r) { return fbSet(`pending/${r.id}`, r); }
@@ -410,8 +404,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     } catch (rcErr) { console.warn('reCAPTCHA indisponible:', rcErr); }
     if (!rcToken) {
-      fErr.textContent = 'Vérification anti-robot échouée. Réessayez.';
-      fErr.style.display = 'block';
+      // reCAPTCHA absent = cookies refusés. On informe l'utilisateur et on lui
+      // propose de rouvrir le bandeau cookie plutôt que de bloquer silencieusement.
+      fErr.textContent = 'La vérification anti-robot nécessite d’accepter les cookies.';
+      var lnk = document.createElement('a'); lnk.href = '#'; lnk.textContent = ' Gérer mes préférences';
+      lnk.style.cssText = 'color:inherit;font-weight:600;text-decoration:underline;';
+      lnk.onclick = function(e){ e.preventDefault(); var b=document.getElementById('cookie-banner'); if(b)b.style.display=''; };
+      fErr.appendChild(lnk);
       btn.disabled = false; btn.textContent = 'Envoyer mon témoignage';
       return;
     }
