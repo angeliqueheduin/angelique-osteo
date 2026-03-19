@@ -1,0 +1,22 @@
+{
+  "name": "Angélique Héduin — Ostéopathe D.O.",
+  "short_name": "Ostéopathe Bessan",
+  "description": "Cabinet d'ostéopathie à Bessan (34550) — Angélique Héduin D.O.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#7d9d85",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/photos-header/logo-site.png",
+      "sizes": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "/photos-header/logo-site.webp",
+      "sizes": "any",
+      "type": "image/webp"
+    }
+  ]
+}

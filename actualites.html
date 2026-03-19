@@ -171,14 +171,15 @@
 
     <link rel="stylesheet" href="css/actualites.css">
     <link rel="stylesheet" href="css/cookie.css">
+  <script>try{var c=localStorage.getItem('cookie_consent');if(c){var b=document.getElementById('cookie-banner');if(b)b.style.display='none';}}catch(e){}</script>
 </head>
 <body>
 
     <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Consentement aux cookies">
         <p>Ce site utilise des outils tiers (Calendly, Google Maps) pouvant déposer des cookies. En continuant votre navigation, vous acceptez leur utilisation. <a href="/mentions-legales">En savoir plus</a></p>
         <div class="cookie-buttons">
-            <button class="btn-accept-cookies" onclick="acceptCookies()">Accepter</button>
-            <button class="btn-refuse-cookies" onclick="refuseCookies()">Refuser</button>
+            <button class="btn-accept-cookies" aria-label="Accepter les cookies" onclick="acceptCookies()">Accepter</button>
+            <button class="btn-refuse-cookies" aria-label="Refuser les cookies" onclick="refuseCookies()">Refuser</button>
         </div>
     </div>
 
@@ -366,7 +367,7 @@
 
                 </div>
 
-                <button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions">?</button>
+                <button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions"><span aria-hidden="true">?</span></button>
 
             </div>
         </div>
