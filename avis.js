@@ -157,12 +157,10 @@ async function fbLoadReviews() {
 
 async function fbSyncLikes() {
   const data = await fbGet('reviews'); if (!data) return;
-  // Ne pas écraser les likes gérés localement
   let changed = false;
   reviews.forEach((r, i) => {
     const fb = data[r.id];
     if (!fb || typeof fb.likes !== 'number') return;
-    if (hasLiked(r.id)) return; // l'utilisateur a liké : on garde la valeur locale
     if (fb.likes !== r.likes) { reviews[i].likes = fb.likes; changed = true; }
   });
   if (changed) document.querySelectorAll('.like-btn').forEach(btn => {
@@ -175,8 +173,10 @@ async function fbSyncLikes() {
 }
 
 async function fbLike(reviewId, liked) {
-  // Likes gérés uniquement en local (localStorage + mémoire reviews[]).
-  // fbSyncLikes ignore les avis likés localement => le unlike (-1) n'est jamais écrasé.
+  const idx = reviews.findIndex(r => r.id === reviewId);
+  if (idx === -1) return;
+  const newCount = Math.max(0, reviews[idx].likes || 0);
+  await fbPatch(`reviews/${reviewId}`, { likes: newCount });
 }
 
 async function fbSubmitPending(r) { return fbSet(`pending/${r.id}`, r); }
