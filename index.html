@@ -9,17 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.google.com">
     <link rel="dns-prefetch" href="https://calendly.com">
-
-    <!-- FIX #1 : un seul preload pour l'image LCP (sport.webp uniquement) -->
     <link rel="preload" as="image" href="/photos-header/sport.webp" fetchpriority="high">
-
-    <!-- Google Fonts chargé en différé via JS (évite le handler inline bloqué par CSP) -->
     <link rel="preload" id="google-fonts-preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" as="style">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap"></noscript>
 
     <!-- === SEO BASE === -->
     <title>Ostéopathe à Bessan — Angélique Héduin D.O.</title>
-    <meta name="description" content="Angélique Héduin, ostéopathe D.O. à Bessan (34550). Nourrissons, femmes enceintes, sportifs, seniors. Cabinet PMR, prise en charge à domicile. Zones : Agde, Pézenas, Béziers, Hérault.">
+    <meta name="description" content="Angélique Héduin, ostéopathe D.O. fasciathérapeute à Bessan (34550). Spécialisée nourrissons, femmes enceintes. Reçoit aussi adultes, sportifs, seniors. Drainage lymphatique, massages seniors. PMR, soins à domicile: Agde, Pézenas, Béziers, Hérault.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="author" content="Angélique Héduin — Ostéopathe D.O.">
     <link rel="canonical" href="https://angelique-osteo.fr/">
@@ -32,16 +28,17 @@
     <meta name="geo.position" content="43.3566598;3.4164462">
     <meta name="ICBM" content="43.3566598, 3.4164462">
 
-    <!-- === FAVICONS (PNG en premier pour compatibilité maximale) === -->
+    <!-- === FAVICONS === -->
     <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" href="/photos-header/logo-site.png">
-    <link rel="icon" type="image/webp" href="/photos-header/logo-site.webp">
-    <link rel="apple-touch-icon" href="/photos-header/logo-site.png">
+    <link rel="icon" type="image/svg+xml" href="/photos-header/logo-site.webp">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#7d9d85">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="format-detection" content="telephone=no">
 
-    <!-- === OPEN GRAPH (image jpg pour compatibilité max Facebook/WhatsApp) === -->
+
+    <!-- === OPEN GRAPH === -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Angélique Héduin — Ostéopathe D.O.">
@@ -61,13 +58,14 @@
     <meta name="twitter:image" content="https://angelique-osteo.fr/photos-header/sport.jpg">
     <meta name="twitter:image:alt" content="Cabinet d'ostéopathie Angélique Héduin à Bessan">
 
-    <!-- === SCHEMA.ORG — MedicalBusiness === -->
-    <script type="application/ld+json" id="schema-medical-business">
+    <!-- === SCHEMA.ORG — MedicalBusiness (page principale : schéma complet) === -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "@id": "https://angelique-osteo.fr/#business",
       "name": "Angélique Héduin — Ostéopathe D.O.",
+      "alternateName": ["Angélique Héduin Ostéopathie", "Ostéopathe Bessan", "Ostéopathe Béziers"],
       "url": "https://angelique-osteo.fr",
       "logo": {
         "@type": "ImageObject",
@@ -76,13 +74,19 @@
         "height": 124
       },
       "image": "https://angelique-osteo.fr/photos-header/sport.webp",
-      "description": "Cabinet d'ostéopathie à Bessan. Prise en charge des nourrissons, femmes enceintes, adultes, sportifs et seniors.",
+      "description": "Cabinet d'ostéopathie à Bessan (34550). Prise en charge des nourrissons, bébés, femmes enceintes, adultes, sportifs et seniors. Fasciathérapie, drainage lymphatique. Urgences ostéopathiques. Interventions sur Béziers, Agde, Pézenas et alentours.",
       "telephone": "+33622400172",
+      "priceRange": "60€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Espèces, Chèque",
+      "medicalSpecialty": ["Osteopathic", "Physiotherapy"],
+      "hasMap": "https://www.google.com/maps/place/Osteopathe+bessan+Ang%C3%A9lique+H%C3%A9duin/@43.3566598,3.4164462,17z",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "17 Chemin du Maïroual",
         "addressLocality": "Bessan",
         "postalCode": "34550",
+        "addressRegion": "Hérault",
         "addressCountry": "FR"
       },
       "geo": {
@@ -90,12 +94,33 @@
         "latitude": 43.3566598,
         "longitude": 3.4164462
       },
-      "areaServed": [
-        "Bessan","Agde","Béziers","Florensac","Pézenas","Saint-Thibéry","Marseillan","Vias","Montblanc","Pomérols","Nézignan-l'Évêque","Montagnac"
-      ],
       "amenityFeature": [
         { "@type": "LocationFeatureSpecification", "name": "Accès PMR", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Parking gratuit", "value": true }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Bessan",                 "sameAs": "https://www.wikidata.org/wiki/Q1072234" },
+        { "@type": "City", "name": "Béziers",                "sameAs": "https://www.wikidata.org/wiki/Q151423"  },
+        { "@type": "City", "name": "Agde",                   "sameAs": "https://www.wikidata.org/wiki/Q190623"  },
+        { "@type": "City", "name": "Pézenas",                "sameAs": "https://www.wikidata.org/wiki/Q473330"  },
+        { "@type": "City", "name": "Florensac",              "sameAs": "https://www.wikidata.org/wiki/Q1072179" },
+        { "@type": "City", "name": "Marseillan",             "sameAs": "https://www.wikidata.org/wiki/Q633095"  },
+        { "@type": "City", "name": "Vias",                   "sameAs": "https://www.wikidata.org/wiki/Q732103"  },
+        { "@type": "City", "name": "Montblanc",              "sameAs": "https://www.wikidata.org/wiki/Q1108264" },
+        { "@type": "City", "name": "Pomérols",               "sameAs": "https://www.wikidata.org/wiki/Q1148216" },
+        { "@type": "City", "name": "Saint-Thibéry",         "sameAs": "https://www.wikidata.org/wiki/Q200777"  },
+        { "@type": "City", "name": "Montagnac",              "sameAs": "https://www.wikidata.org/wiki/Q665511"  },
+        { "@type": "City", "name": "Sète",                   "sameAs": "https://www.wikidata.org/wiki/Q170707"  },
+        { "@type": "City", "name": "Frontignan",             "sameAs": "https://www.wikidata.org/wiki/Q240898"  },
+        { "@type": "City", "name": "Mèze",                   "sameAs": "https://www.wikidata.org/wiki/Q641249"  },
+        { "@type": "City", "name": "Valras-Plage",           "sameAs": "https://www.wikidata.org/wiki/Q749463"  },
+        { "@type": "City", "name": "Sérignan",               "sameAs": "https://www.wikidata.org/wiki/Q1148006" },
+        { "@type": "City", "name": "Villeneuve-lès-Béziers", "sameAs": "https://www.wikidata.org/wiki/Q1148281" },
+        { "@type": "City", "name": "Sauvian",                "sameAs": "https://www.wikidata.org/wiki/Q923363"  },
+        { "@type": "City", "name": "Boujan-sur-Libron",      "sameAs": "https://www.wikidata.org/wiki/Q1072124" },
+        { "@type": "City", "name": "Cers",                   "sameAs": "https://www.wikidata.org/wiki/Q1072213" },
+        { "@type": "City", "name": "Portiragnes",            "sameAs": "https://www.wikidata.org/wiki/Q1148425" },
+        { "@type": "City", "name": "Nézignan-l'Évêque" }
       ],
       "openingHoursSpecification": [
         {
@@ -111,19 +136,25 @@
           "closes": "13:00"
         }
       ],
-      "priceRange": "60€",
-      "currenciesAccepted": "EUR",
-      "paymentAccepted": "Espèces, Chèque",
-      "medicalSpecialty": "Osteopathic",
-      "hasMap": "https://www.google.com/maps/place/Osteopathe+bessan+Ang%C3%A9lique+H%C3%A9duin/@43.3566598,3.4164462,17z",
+      "knowsAbout": [
+        "Ostéopathie structurelle","Ostéopathie viscérale","Ostéopathie crânienne",
+        "Ostéopathie tissulaire","Ostéopathie douce","Ostéopathie périnatale",
+        "Fasciathérapie","Drainage lymphatique","Massages","Sciatique","Cruralgie",
+        "Lombalgie","Lumbago","Hernie discale","Migraines","Torticolis","Mal de dos",
+        "RGO nourrisson","Coliques nourrisson","Tête plate (plagiocéphalie)",
+        "Troubles du sommeil nourrisson","PMA et fertilité",
+        "Ostéopathie femme enceinte","Ostéopathie bébé","Ostéopathie sportifs","Urgences ostéopathiques"
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Consultations d'ostéopathie",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie adulte" }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie nourrisson / enfant" }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie femme enceinte" }, "price": "60", "priceCurrency": "EUR" },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie sportif" }, "price": "60", "priceCurrency": "EUR" }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie adulte", "description": "Traitement des douleurs articulaires, musculaires et vertébrales." }, "price": "60", "priceCurrency": "EUR" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie nourrisson et enfant", "description": "Bilan nouveau-né, coliques, tête plate, troubles du sommeil, RGO." }, "price": "60", "priceCurrency": "EUR" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie femme enceinte", "description": "Suivi périnatal, préparation à l'accouchement, douleurs ligamentaires." }, "price": "60", "priceCurrency": "EUR" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultation ostéopathie sportif", "description": "Prévention et récupération, traitement des traumatismes sportifs." }, "price": "60", "priceCurrency": "EUR" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drainage lymphatique manuel", "description": "Réduction des œdèmes, amélioration de la circulation lymphatique." }, "price": "60", "priceCurrency": "EUR" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fasciathérapie", "description": "Travail en profondeur sur les fascias pour libérer les tensions chroniques." }, "price": "60", "priceCurrency": "EUR" }
         ]
       },
       "sameAs": [
@@ -139,36 +170,23 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
-        "reviewCount": "6",
-        "bestRating": "5"
+        "reviewCount": "7",
+        "bestRating": "5",
+        "worstRating": "1"
       },
       "review": [
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Doriane Brouillard" },
-          "datePublished": "2024-09-01",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Une professionnelle à la fois douce, à l'écoute et extrêmement bienveillante. Elle prend le temps d'expliquer chaque geste et on se sent tout de suite en confiance."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Pauline Vi" },
-          "datePublished": "2024-06-01",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Une professionnelle ultra compétente, douce, attentive. Je lui ai confié mon bébé, mon mari, mes parents et nous sommes tous convaincus par son grand professionnalisme."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Camron Lamart" },
-          "datePublished": "2022-02-01",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "reviewBody": "Une ostéopathe très à l'écoute, extrêmement efficace, qui connait parfaitement son métier et surtout très humaine."
-        }
+        { "@type": "Review", "author": { "@type": "Person", "name": "Doriane Brouillard" }, "datePublished": "2025-09-01", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Une professionnelle à la fois douce, à l'écoute et extrêmement bienveillante. Elle prend le temps d'expliquer chaque geste et on se sent tout de suite en confiance." },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Pauline Vi." }, "datePublished": "2024-06-01", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Une professionnelle ultra compétente, douce, attentive à tous nos maux, qui soigne en douceur, très à l'écoute et toujours de très bons conseils." },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Eva Couge" }, "datePublished": "2023-10-01", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Une expérience incroyable. Une praticienne d'une douceur et gentillesse qu'il est agréable de recevoir." },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Camron Lamart" }, "datePublished": "2022-02-01", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Très à l'écoute, extrêmement efficace, qui connaît parfaitement son métier et surtout très humaine. Je vous conseille vivement." },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Cindy Radice" }, "datePublished": "2021-02-01", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Je la recommande vivement. Mme Heduin prend le temps et est très à l'écoute. Très observatrice et de très bons conseils pour mon fils." },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Charles-henry Ragot" }, "datePublished": "2019-06-01", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Je n'étais pas un fervent de l'ostéopathie jusqu'au jour où bien bloqué du dos ma compagne m'a fait connaître Angélique Héduin, depuis mes lombaires se portent à merveille." },
+        { "@type": "Review", "author": { "@type": "Person", "name": "Marie-Claude T." }, "datePublished": "2020-04-01", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Angélique est une ostéopathe d'exception. Disponible, réactive et d'une grande douceur. Je recommande sans hésiter." }
       ]
     }
     </script>
 
-<!-- === SCHEMA.ORG — WebSite === -->
+    <!-- === SCHEMA.ORG — WebSite === -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -176,26 +194,9 @@
       "@id": "https://angelique-osteo.fr/#website",
       "url": "https://angelique-osteo.fr",
       "name": "Angélique Héduin — Ostéopathe D.O.",
-      "description": "Site officiel du cabinet d'ostéopathie d'Angélique Héduin D.O. à Bessan (34550).",
+      "description": "Site officiel du cabinet d'ostéopathie d'Angélique Héduin D.O. à Bessan (34550). Nourrissons, femmes enceintes, sportifs, seniors.",
       "inLanguage": "fr-FR",
       "publisher": { "@id": "https://angelique-osteo.fr/#business" }
-    }
-    </script>
-
-    <!-- === SCHEMA.ORG — BreadcrumbList === -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "@id": "https://angelique-osteo.fr/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Accueil",
-          "item": "https://angelique-osteo.fr/"
-        }
-      ]
     }
     </script>
 
@@ -206,16 +207,29 @@
       "@type": "WebPage",
       "@id": "https://angelique-osteo.fr/",
       "name": "Ostéopathe à Bessan — Angélique Héduin D.O.",
-      "description": "Angélique Héduin, ostéopathe D.O. à Bessan (34550). Nourrissons, femmes enceintes, sportifs, seniors.",
-      "isPartOf": { "@type": "WebSite", "@id": "https://angelique-osteo.fr/#website" },
+      "description": "Angélique Héduin, ostéopathe D.O. à Bessan (34550). Nourrissons, femmes enceintes, sportifs, seniors. Urgences ostéopathiques. Fasciathérapie et drainage lymphatique.",
+      "isPartOf": { "@id": "https://angelique-osteo.fr/#website" },
+      "about": { "@id": "https://angelique-osteo.fr/#business" },
       "breadcrumb": { "@id": "https://angelique-osteo.fr/#breadcrumb" },
       "author": { "@id": "https://angelique-osteo.fr/#business" },
       "inLanguage": "fr-FR",
-      "dateModified": "2026-03-16"
+      "dateModified": "2026-03-24"
     }
     </script>
 
-    <!-- === SCHEMA.ORG — FAQPage === -->
+    <!-- === SCHEMA.ORG — BreadcrumbList === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "@id": "https://angelique-osteo.fr/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://angelique-osteo.fr/" }
+      ]
+    }
+    </script>
+
+    <!-- === SCHEMA.ORG — FAQPage (questions spécifiques à la page d'accueil) === -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -224,42 +238,27 @@
         {
           "@type": "Question",
           "name": "Quel est le tarif d'une séance d'ostéopathie à Bessan ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La séance d'ostéopathie est à 60€, que ce soit pour un adulte, un enfant, un nourrisson ou une femme enceinte. Une majoration s'applique pour les consultations à domicile."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "La séance d'ostéopathie est à 60€ pour un adulte, un enfant, un nourrisson ou une femme enceinte. Une majoration s'applique pour les consultations à domicile." }
         },
         {
           "@type": "Question",
           "name": "L'ostéopathie est-elle remboursée par la Sécurité Sociale ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Les séances ne sont pas prises en charge par la Sécurité Sociale. En revanche, la majorité des mutuelles remboursent tout ou partie des consultations sur présentation d'une facture remise en fin de séance."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Les séances ne sont pas prises en charge par la Sécurité Sociale. En revanche, la majorité des mutuelles remboursent tout ou partie des consultations sur présentation d'une facture remise en fin de séance." }
         },
         {
           "@type": "Question",
-          "name": "Faut-il une ordonnance pour consulter un ostéopathe ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Non, l'ostéopathe est un praticien de première intention. Vous pouvez consulter directement sans prescription médicale préalable."
-          }
+          "name": "Quelles sont les spécialités d'Angélique Héduin ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Angélique Héduin est spécialisée en ostéopathie périnatale (femmes enceintes, nourrissons et bébés), fasciathérapie et drainage lymphatique. Elle prend également en charge les sportifs, les seniors et les urgences ostéopathiques (lumbago, sciatique, torticolis)." }
         },
         {
           "@type": "Question",
-          "name": "Quelle est la durée d'une séance d'ostéopathie ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Une séance dure en moyenne entre 45 minutes et 1 heure. La première consultation est généralement plus longue car elle comprend un bilan approfondi des antécédents médicaux et des habitudes de vie."
-          }
+          "name": "Comment prendre rendez-vous avec l'ostéopathe à Bessan ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Vous pouvez prendre rendez-vous en ligne via Calendly, ou par téléphone au 06 22 40 01 72. Le cabinet est ouvert du lundi au vendredi de 8h45 à 20h00 et le samedi de 9h00 à 13h00." }
         },
         {
           "@type": "Question",
           "name": "Angélique Héduin se déplace-t-elle à domicile ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, elle se déplace à domicile dans un rayon de 15 km autour de Bessan pour les personnes qui ne peuvent pas se déplacer. Une majoration tarifaire s'applique pour les déplacements à domicile."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Oui, elle se déplace à domicile dans un rayon de 15 km autour de Bessan pour les personnes qui ne peuvent pas se déplacer (personnes âgées, nouveau-nés, post-opératoire). Une majoration tarifaire s'applique." }
         }
       ]
     }
@@ -267,7 +266,7 @@
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/cookie.css">
-  <script>try{var _cs=localStorage.getItem('cookie_consent');if(_cs==='accepted'||_cs==='refused'){var _cb=document.getElementById('cookie-banner');if(_cb)_cb.style.display='none';}}catch(e){}</script>
+    <script>try{var _cs=localStorage.getItem('cookie_consent');if(_cs==='accepted'||_cs==='refused'){var _cb=document.getElementById('cookie-banner');if(_cb)_cb.style.display='none';}}catch(e){}</script>
 </head>
 <body>
 
@@ -282,7 +281,7 @@
     <header class="header-section" id="accueil">
         <nav class="navbar" aria-label="Navigation principale">
             <a href="/" class="logo" aria-label="Accueil — Angélique Héduin Ostéopathe">
-                <img src="/photos-header/logo-site.webp" alt="Logo Angélique Héduin Ostéopathe" class="logo-img" width="70" height="62" loading="eager" fetchpriority="high">
+                <img src="/photos-header/logo-site-2.webp" alt="Logo Angélique Héduin Ostéopathe" class="logo-img" width="70" height="62" loading="eager" fetchpriority="high">
             </a>
             <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navbar-links">
                 <span aria-hidden="true"></span>
@@ -301,11 +300,8 @@
         <div class="carousel" role="region" aria-label="Galerie de photos du cabinet">
             <div class="carousel-container">
                 <div class="carousel-track">
-                    <!-- FIX #3 : baby.webp reste lazy car pas le LCP -->
                     <img src="photos-header/baby.webp" class="side" alt="Ostéopathie pédiatrique nourrisson Bessan Hérault" loading="lazy" width="300" height="220">
-                    <!-- FIX #3 : utilisation de sport.webp au lieu de sport.jpg pour le LCP -->
                     <img src="photos-header/sport.webp" class="center" alt="Ostéopathie sportive Bessan Agde Hérault" loading="eager" fetchpriority="high" width="600" height="300">
-                    <!-- FIX #3 : utilisation de personnes-agees.webp si disponible, sinon lazy sur le jpg -->
                     <img src="photos-header/personnes-agees.jpg" class="side" alt="Ostéopathie seniors Bessan Hérault" loading="lazy" width="300" height="220">
                 </div>
             </div>
@@ -331,15 +327,7 @@
                     </p>
                 </div>
                 <div class="grid-item portrait-block">
-                    <!-- FIX #3 : portrait chargé en lazy (hors viewport initial sur mobile) -->
-                    <img
-                        src="photos-header/angelique-heduin.jpg"
-                        alt="Angélique Héduin, ostéopathe D.O. à Bessan, Hérault"
-                        class="portrait-img"
-                        loading="lazy"
-                        width="320"
-                        height="400"
-                    >
+                    <img src="photos-header/angelique-heduin.jpg" alt="Angélique Héduin, ostéopathe D.O. à Bessan, Hérault" class="portrait-img" loading="lazy" width="320" height="400">
                 </div>
                 <div class="grid-item info-block">
                     <div class="stat">
@@ -433,39 +421,73 @@
                 <div class="marquee-track" id="marqueeTrack" aria-live="off">
 
                     <div class="marquee-card" itemscope itemtype="https://schema.org/Review">
+                        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/MedicalBusiness">
+                            <meta itemprop="name" content="Angélique Héduin — Ostéopathe D.O.">
+                            <meta itemprop="url" content="https://angelique-osteo.fr">
+                        </div>
                         <div class="marquee-stars" aria-label="5 étoiles sur 5" role="img">★★★★★</div>
                         <p class="marquee-text" itemprop="reviewBody">Une professionnelle à la fois douce, à l'écoute et extrêmement bienveillante. Elle prend le temps d'expliquer chaque geste et on se sent tout de suite en confiance.</p>
-                        <p class="marquee-author" itemprop="author">Doriane Brouillard <span>· Septembre 2024</span></p>
+                        <p class="marquee-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="color: rgb(223, 119, 228);">Doriane Brouillard</span> <span>· Septembre 2024</span></p>
                     </div>
 
                     <div class="marquee-card" itemscope itemtype="https://schema.org/Review">
+                        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/MedicalBusiness">
+                            <meta itemprop="name" content="Angélique Héduin — Ostéopathe D.O.">
+                            <meta itemprop="url" content="https://angelique-osteo.fr">
+                        </div>
                         <div class="marquee-stars" aria-label="5 étoiles sur 5" role="img">★★★★★</div>
-                        <p class="marquee-text" itemprop="reviewBody">Je lui ai confié mon bébé, mon mari, mes parents et nous sommes tous convaincus par son grand professionnalisme. Une perle !</p>
-                        <p class="marquee-author" itemprop="author">Pauline Vi. <span>· Juin 2024</span></p>
+                        <p class="marquee-text" itemprop="reviewBody">Une professionnelle ultra compétente, douce, attentive à tous nos maux, qui soigne en douceur, très à l'écoute et toujours de très bons conseils.</p>
+                        <p class="marquee-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="color: rgb(223, 119, 228);">Pauline Vi.</span> <span>· Juin 2024</span></p>
                     </div>
 
                     <div class="marquee-card" itemscope itemtype="https://schema.org/Review">
+                        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/MedicalBusiness">
+                            <meta itemprop="name" content="Angélique Héduin — Ostéopathe D.O.">
+                            <meta itemprop="url" content="https://angelique-osteo.fr">
+                        </div>
                         <div class="marquee-stars" aria-label="5 étoiles sur 5" role="img">★★★★★</div>
                         <p class="marquee-text" itemprop="reviewBody">Très à l'écoute, extrêmement efficace, qui connaît parfaitement son métier et surtout très humaine. Je vous conseille vivement.</p>
-                        <p class="marquee-author" itemprop="author">Camron Lamart <span>· Février 2022</span></p>
+                        <p class="marquee-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="color: rgb(223, 119, 228);">Camron Lamart</span> <span>· Février 2022</span></p>
                     </div>
 
-                    <div class="marquee-card" aria-hidden="true">
-                        <div class="marquee-stars">★★★★★</div>
-                        <p class="marquee-text">Une professionnelle à la fois douce, à l'écoute et extrêmement bienveillante. Elle prend le temps d'expliquer chaque geste et on se sent tout de suite en confiance.</p>
-                        <p class="marquee-author">Doriane Brouillard <span>· Septembre 2024</span></p>
+                    <div class="marquee-card" itemscope itemtype="https://schema.org/Review">
+                        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/MedicalBusiness">
+                            <meta itemprop="name" content="Angélique Héduin — Ostéopathe D.O.">
+                            <meta itemprop="url" content="https://angelique-osteo.fr">
+                        </div>
+                        <div class="marquee-stars" aria-label="5 étoiles sur 5" role="img">★★★★★</div>
+                        <p class="marquee-text" itemprop="reviewBody">J'ai consulté ce matin et je suis vraiment ravie de cette rencontre. Une professionnelle à la fois douce, à l'écoute et extrêmement bienveillante.</p>
+                        <p class="marquee-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="color: rgb(223, 119, 228);">Doriane Brouillard</span> <span>· Septembre 2025</span></p>
                     </div>
 
-                    <div class="marquee-card" aria-hidden="true">
-                        <div class="marquee-stars">★★★★★</div>
-                        <p class="marquee-text">Je lui ai confié mon bébé, mon mari, mes parents et nous sommes tous convaincus par son grand professionnalisme. Une perle !</p>
-                        <p class="marquee-author">Pauline Vi. <span>· Juin 2024</span></p>
+                    <div class="marquee-card" itemscope itemtype="https://schema.org/Review">
+                        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/MedicalBusiness">
+                            <meta itemprop="name" content="Angélique Héduin — Ostéopathe D.O.">
+                            <meta itemprop="url" content="https://angelique-osteo.fr">
+                        </div>
+                        <div class="marquee-stars" aria-label="5 étoiles sur 5" role="img">★★★★★</div>
+                        <p class="marquee-text" itemprop="reviewBody">Une expérience Incroyable. Une praticienne d'une douceur et gentillesse qu'il est agréable de recevoir.</p>
+                        <p class="marquee-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="color: rgb(223, 119, 228);">Eva Couge</span> <span>· Octobre 2023</span></p>
                     </div>
 
-                    <div class="marquee-card" aria-hidden="true">
-                        <div class="marquee-stars">★★★★★</div>
-                        <p class="marquee-text">Très à l'écoute, extrêmement efficace, qui connaît parfaitement son métier et surtout très humaine. Je vous conseille vivement.</p>
-                        <p class="marquee-author">Camron Lamart <span>· Février 2022</span></p>
+                    <div class="marquee-card" itemscope itemtype="https://schema.org/Review">
+                        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/MedicalBusiness">
+                            <meta itemprop="name" content="Angélique Héduin — Ostéopathe D.O.">
+                            <meta itemprop="url" content="https://angelique-osteo.fr">
+                        </div>
+                        <div class="marquee-stars" aria-label="5 étoiles sur 5" role="img">★★★★★</div>
+                        <p class="marquee-text" itemprop="reviewBody">Je n'étais pas un fervent de l'ostéopathie jusqu'au jour où bien bloqué du dos ma compagne m'a fait connaître Angélique HEDUIN, depuis mes lombaires se portent à merveille.</p>
+                        <p class="marquee-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="color: rgb(223, 119, 228);">Charles-henry Ragot</span> <span>· Juin 2019</span></p>
+                    </div>
+
+                    <div class="marquee-card" itemscope itemtype="https://schema.org/Review">
+                        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/MedicalBusiness">
+                            <meta itemprop="name" content="Angélique Héduin — Ostéopathe D.O.">
+                            <meta itemprop="url" content="https://angelique-osteo.fr">
+                        </div>
+                        <div class="marquee-stars" aria-label="5 étoiles sur 5" role="img">★★★★★</div>
+                        <p class="marquee-text" itemprop="reviewBody">Je la recommande vivement. Mme Heduin prend le temps et est très à l'écoute. Très observatrice et de très bons conseils pour mon fils.</p>
+                        <p class="marquee-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name" style="color: rgb(223, 119, 228);">Cindy Radice</span> <span>· Février 2021</span></p>
                     </div>
 
                 </div>
@@ -494,7 +516,18 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <span>Appeler</span>
             </a>
+            <div class="floating-action-btn floating-color-btn" id="btnColorMode" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Choisir le mode couleur">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg>
+                <span id="colorModeLabel">Mode couleur</span>
+            </div>
         </nav>
+        <div id="colorModePanel" class="color-mode-panel" role="menu" aria-label="Choisir un mode couleur">
+            <div class="color-mode-title">Choisir un thème</div>
+            <button class="color-mode-option" data-theme="light" role="menuitem"><span class="color-mode-swatch" style="background:#fcfbfa;border:1.5px solid #ddd;"></span><span>Clair <span class="color-mode-check" id="check-light">✓</span></span></button>
+            <button class="color-mode-option" data-theme="dark-brown" role="menuitem"><span class="color-mode-swatch" style="background:#3b3b3b;"></span><span>Nuit profonde <span class="color-mode-check" id="check-dark-brown"></span></span></button>
+            <button class="color-mode-option" data-theme="dark-green" role="menuitem"><span class="color-mode-swatch" style="background:#155110;"></span><span>Ardoise verte <span class="color-mode-check" id="check-dark-green"></span></span></button>
+            <button class="color-mode-option" data-theme="dark-purple" role="menuitem"><span class="color-mode-swatch" style="background:#4a3466;"></span><span>Prune doux <span class="color-mode-check" id="check-dark-purple"></span></span></button>
+        </div>
         <button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions"><span aria-hidden="true">?</span></button>
     </div>
 
@@ -523,7 +556,7 @@
         </div>
     </footer>
 
-    <script src="script.js?v=3" defer></script>
+    <script src="script.js?v=7" defer></script>
 
 </body>
 </html>

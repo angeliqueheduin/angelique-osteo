@@ -51,12 +51,16 @@
 
   <!-- === FAVICONS === -->
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/webp" href="/photos-header/logo-site.webp">
-  <link rel="icon" type="image/png" href="/photos-header/logo-site.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/photos-header/logo-site.png">
+  <link rel="icon" type="image/svg+xml" href="/photos-header/logo-site.webp">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#7d9d85">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="format-detection" content="telephone=no">
 
-  <!-- === SCHEMA.ORG — MedicalBusiness avec avis === -->
-  <script type="application/ld+json" id="schema-medical-business">
+
+  <!-- === SCHEMA.ORG — MedicalBusiness avec avis patients === -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
@@ -68,56 +72,64 @@
     "priceRange": "60€",
     "currenciesAccepted": "EUR",
     "paymentAccepted": "Espèces, Chèque",
-    "openingHoursSpecification": [
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:45","closes":"20:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}
-    ],
     "medicalSpecialty": "Osteopathic",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "17 Chemin du Maïroual",
       "addressLocality": "Bessan",
       "postalCode": "34550",
-      "addressCountry": "FR",
-      "addressRegion": "Hérault"
+      "addressRegion": "Hérault",
+      "addressCountry": "FR"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 43.3566598,
-      "longitude": 3.4164462
-    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 43.3566598, "longitude": 3.4164462 },
     "hasMap": "https://www.google.com/maps/place/Osteopathe+bessan+Ang%C3%A9lique+H%C3%A9duin/@43.3566598,3.4164462,17z",
-    "sameAs": ["https://www.facebook.com/profile.php?id=61551878556788"],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:45", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61551878556788",
+      "https://www.resalib.fr/praticien/77980-angelique-heduin-osteopathe-bessan",
+      "https://www.pagesjaunes.fr/pros/61376348"
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
-      "reviewCount": "6",
-      "bestRating": "5"
+      "reviewCount": "13",
+      "bestRating": "5",
+      "worstRating": "1"
     },
     "review": [
-      {"@type":"Review","author":{"@type":"Person","name":"Sophie M."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2026-03-08","reviewBody":"Angélique a résolu en une séance mon problème de cervicales que j'avais depuis des mois. Elle est à l'écoute, douce et vraiment professionnelle. Je recommande sans hésiter !"},
-      {"@type":"Review","author":{"@type":"Person","name":"Laurent B."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2026-02-21","reviewBody":"Après une blessure sportive persistante, deux séances ont suffi pour retrouver ma mobilité complète. Le suivi est personnalisé et les explications très claires."},
-      {"@type":"Review","author":{"@type":"Person","name":"Camille R."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2026-02-14","reviewBody":"J'y ai amené mon bébé de 3 semaines pour des coliques et un torticolis. Les gestes sont d'une douceur extrême, et dès le lendemain les pleurs avaient diminué de moitié."},
-      {"@type":"Review","author":{"@type":"Person","name":"Nathalie G."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2026-01-30","reviewBody":"Suivi tout au long de ma grossesse avec une douceur et une bienveillance remarquables. Angélique adapte chaque séance à mes besoins. Je me sens vraiment prise en charge."},
-      {"@type":"Review","author":{"@type":"Person","name":"Pierre T."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2026-01-15","reviewBody":"Souffrant de migraines chroniques depuis des années, j'ai trouvé chez Angélique une approche globale qui fait vraiment la différence. Résultats durables et praticienne passionnée."},
-      {"@type":"Review","author":{"@type":"Person","name":"Julie D."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"datePublished":"2025-12-20","reviewBody":"Venue pour un suivi post-partum, j'ai été impressionnée par la précision et la douceur des soins. Angélique explique chaque geste, ce qui rassure vraiment."}
+      { "@type": "Review", "author": { "@type": "Person", "name": "Sophie M." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2026-03-08", "reviewBody": "Angélique a résolu en une séance mon problème de cervicales que j\'avais depuis des mois. Elle est à l\'écoute, douce et vraiment professionnelle. Je recommande sans hésiter !" },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Laurent B." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2026-02-21", "reviewBody": "Après une blessure sportive persistante, deux séances ont suffi pour retrouver ma mobilité complète. Le suivi est personnalisé et les explications très claires." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Camille R." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2026-02-14", "reviewBody": "J\'y ai amené mon bébé de 3 semaines pour des coliques et un torticolis. Les gestes sont d\'une douceur extrême, et dès le lendemain les pleurs avaient diminué de moitié." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Nathalie G." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2026-01-30", "reviewBody": "Suivi tout au long de ma grossesse avec une douceur et une bienveillance remarquables. Angélique adapte chaque séance à mes besoins. Je me sens vraiment prise en charge." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Pierre T." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2026-01-15", "reviewBody": "Souffrant de migraines chroniques depuis des années, j\'ai trouvé chez Angélique une approche globale qui fait vraiment la différence. Résultats durables et praticienne passionnée." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Julie D." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2025-12-20", "reviewBody": "Venue pour un suivi post-partum, j\'ai été impressionnée par la précision et la douceur des soins. Angélique explique chaque geste, ce qui rassure vraiment." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Doriane Brouillard" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2025-09-01", "reviewBody": "Une professionnelle à la fois douce, à l\'écoute et extrêmement bienveillante. Elle prend le temps d\'expliquer chaque geste et on se sent tout de suite en confiance." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Pauline Vi." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2024-06-01", "reviewBody": "Une professionnelle ultra compétente, douce, attentive à tous nos maux, qui soigne en douceur, très à l\'écoute et toujours de très bons conseils." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Eva Couge" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2023-10-01", "reviewBody": "Une expérience incroyable. Une praticienne d\'une douceur et gentillesse qu\'il est agréable de recevoir." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Camron Lamart" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2022-02-01", "reviewBody": "Très à l\'écoute, extrêmement efficace, qui connaît parfaitement son métier et surtout très humaine. Je vous conseille vivement." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Cindy Radice" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2021-02-01", "reviewBody": "Je la recommande vivement. Mme Heduin prend le temps et est très à l\'écoute. Très observatrice et de très bons conseils pour mon fils." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Charles-henry Ragot" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2019-06-01", "reviewBody": "Je n\'étais pas un fervent de l\'ostéopathie jusqu\'au jour où bien bloqué du dos ma compagne m\'a fait connaître Angélique Héduin, depuis mes lombaires se portent à merveille." },
+      { "@type": "Review", "author": { "@type": "Person", "name": "Marie-Claude T." }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "datePublished": "2020-04-01", "reviewBody": "Angélique est une ostéopathe d\'exception. Disponible, réactive et d\'une grande douceur. Je recommande sans hésiter." }
     ]
   }
   </script>
 
   <!-- === SCHEMA.ORG — BreadcrumbList === -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://angelique-osteo.fr/avis#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://angelique-osteo.fr/"},{"@type":"ListItem","position":2,"name":"Avis & Témoignages","item":"https://angelique-osteo.fr/avis"}]}
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "@id": "https://angelique-osteo.fr/avis#breadcrumb", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://angelique-osteo.fr/" }, { "@type": "ListItem", "position": 2, "name": "Avis & Témoignages", "item": "https://angelique-osteo.fr/avis" } ] }
   </script>
 
   <!-- === SCHEMA.ORG — WebPage === -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","@id":"https://angelique-osteo.fr/avis#webpage","url":"https://angelique-osteo.fr/avis","name":"Avis & Témoignages — Ostéopathe à Bessan | Angélique Héduin D.O.","description":"Lisez les avis et témoignages des patients d'Angélique Héduin, ostéopathe D.O. à Bessan (Hérault 34).","inLanguage":"fr-FR","isPartOf":{"@id":"https://angelique-osteo.fr/#website"},"about":{"@id":"https://angelique-osteo.fr/#business"},"author":{"@id":"https://angelique-osteo.fr/#person"},"breadcrumb":{"@id":"https://angelique-osteo.fr/avis#breadcrumb"},"dateModified":"2026-03-16"}
+  { "@context": "https://schema.org", "@type": "WebPage", "@id": "https://angelique-osteo.fr/avis", "url": "https://angelique-osteo.fr/avis", "name": "Avis & Témoignages — Ostéopathe à Bessan | Angélique Héduin D.O.", "description": "Lisez les avis et témoignages des patients d\'Angélique Héduin, ostéopathe D.O. à Bessan (Hérault 34). Consultations adultes, nourrissons, femmes enceintes.", "inLanguage": "fr-FR", "isPartOf": { "@id": "https://angelique-osteo.fr/#website" }, "about": { "@id": "https://angelique-osteo.fr/#business" }, "author": { "@id": "https://angelique-osteo.fr/#person" }, "breadcrumb": { "@id": "https://angelique-osteo.fr/avis#breadcrumb" }, "dateModified": "2026-03-24" }
   </script>
 
   <!-- === SCHEMA.ORG — WebSite === -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","@id":"https://angelique-osteo.fr/#website","url":"https://angelique-osteo.fr","name":"Angélique Héduin — Ostéopathe D.O.","inLanguage":"fr-FR","publisher":{"@id":"https://angelique-osteo.fr/#business"}}
+  { "@context": "https://schema.org", "@type": "WebSite", "@id": "https://angelique-osteo.fr/#website", "url": "https://angelique-osteo.fr", "name": "Angélique Héduin — Ostéopathe D.O.", "inLanguage": "fr-FR", "publisher": { "@id": "https://angelique-osteo.fr/#business" } }
   </script>
 
   <link rel="stylesheet" href="css/avis.css">
@@ -168,7 +180,7 @@
   <nav class="navbar" aria-label="Navigation principale">
     <div class="logo">
       <a href="/" aria-label="Accueil — Angélique Héduin Ostéopathe">
-        <img src="/photos-header/logo-site.webp" alt="Logo Angélique Héduin Ostéopathe Bessan" class="logo-img" width="70" height="62" loading="eager" fetchpriority="high">
+        <img src="/photos-header/logo-site-2.webp" alt="Logo Angélique Héduin Ostéopathe Bessan" class="logo-img" width="70" height="62" loading="eager" fetchpriority="high">
       </a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navbar-links">
@@ -314,7 +326,7 @@
 </div>
 
 <div class="floating-help" role="complementary" aria-label="Actions rapides">
-  <nav id="floating-actions" class="floating-actions" aria-hidden="true" aria-label="Actions rapides">
+  <nav id="floating-actions" class="floating-actions" aria-label="Actions rapides">
     <a href="https://www.facebook.com/profile.php?id=61551878556788" target="_blank" rel="noopener noreferrer me" class="floating-action-btn" aria-label="Rejoindre la page Facebook du cabinet">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
       <span>Facebook</span>
@@ -327,8 +339,33 @@
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       <span>Appeler</span>
     </a>
+    <!-- Bouton Mode couleur -->
+    <div class="floating-action-btn floating-color-btn" id="btnColorMode" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Choisir le mode couleur">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg>
+      <span id="colorModeLabel">Mode couleur</span>
+    </div>
   </nav>
-  <button class="help-toggle" id="helpBtn" aria-label="Ouvrir les actions rapides" aria-expanded="false" aria-controls="floating-actions"><span aria-hidden="true">?</span></button>
+  <!-- Sous-menu modes couleur -->
+  <div id="colorModePanel" class="color-mode-panel" role="menu" aria-label="Choisir un mode couleur">
+    <div class="color-mode-title">Choisir un thème</div>
+    <button class="color-mode-option" data-theme="light" role="menuitem">
+      <span class="color-mode-swatch" style="background:#fdfcfb;border:1.5px solid #ddd;"></span>
+      <span>Clair <span class="color-mode-check" id="check-light">✓</span></span>
+    </button>
+    <button class="color-mode-option" data-theme="dark-brown" role="menuitem">
+      <span class="color-mode-swatch" style="background:#3b3b3b;"></span>
+      <span>Nuit profonde <span class="color-mode-check" id="check-dark-brown"></span></span>
+    </button>
+    <button class="color-mode-option" data-theme="dark-green" role="menuitem">
+      <span class="color-mode-swatch" style="background:#155110;"></span>
+      <span>Ardoise verte <span class="color-mode-check" id="check-dark-green"></span></span>
+    </button>
+    <button class="color-mode-option" data-theme="dark-purple" role="menuitem">
+      <span class="color-mode-swatch" style="background:#4a3466;"></span>
+      <span>Prune doux <span class="color-mode-check" id="check-dark-purple"></span></span>
+    </button>
+  </div>
+  <button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions"><span aria-hidden="true">?</span></button>
 </div>
 <div id="page-blur-overlay" class="page-blur-overlay" aria-hidden="true"></div>
 
@@ -349,7 +386,7 @@
   </div>
 </footer>
 
-<script src="script.js?v=3" defer></script>
+<script src="script.js?v=5" defer></script>
 <script src="avis.js?v=3" defer></script>
 </body>
 </html>

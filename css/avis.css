@@ -60,7 +60,7 @@ body {
 
 .logo-img {
     max-height:40px;
-    width:auto
+    width:auto;
 }
 
 .hamburger {
@@ -1283,4 +1283,536 @@ body {
     #admin-panel {
         padding:0 40px
 }
+}
+/* ============================================================
+   MODES COULEUR — Thèmes sombres (avis.css)
+   ============================================================ */
+
+.floating-color-btn {
+    cursor:pointer;
+    user-select:none
+}
+
+.floating-color-btn:hover {
+    background:#f5f5f5
+}
+
+.color-mode-panel {
+    display:none;
+    flex-direction:column;
+    gap:4px;
+    background:#fff;
+    border:1px solid #e0e0e0;
+    border-radius:16px;
+    padding:12px 10px;
+    margin-bottom:8px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.10);
+    min-width:180px;
+    align-self:flex-end
+}
+
+.color-mode-panel.open {
+    display:flex
+}
+
+.color-mode-title {
+    font-size:11px;
+    font-weight:600;
+    color:#888;
+    letter-spacing:0.8px;
+    text-transform:uppercase;
+    padding:0 6px 6px;
+    border-bottom:1px solid #f0ece8;
+    margin-bottom:4px
+}
+
+.color-mode-option {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:none;
+    border:none;
+    border-radius:10px;
+    padding:8px 10px;
+    font-size:13px;
+    font-weight:500;
+    color:#3d3530;
+    cursor:pointer;
+    text-align:left;
+    width:100%;
+    transition:background 0.15s
+}
+
+.color-mode-option:hover {
+    background:#f5f5f5
+}
+
+.color-mode-swatch {
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    flex-shrink:0;
+    display:inline-block
+}
+
+.color-mode-check {
+    color:#7d9d85;
+    font-size:12px;
+    margin-left:4px
+}
+
+/* ============================================================
+   THÈME : Nuit profonde (dark-brown) — avis
+   ============================================================ */
+body.theme-dark-brown {
+    background-color:#1a1614;
+    color:#e8e0dd
+}
+body.theme-dark-brown .navbar {
+    background-color:rgba(26,22,20,0.97);
+    border-bottom:1px solid #2e2825;
+    box-shadow:0 2px 20px rgba(0,0,0,0.3)
+}
+body.theme-dark-brown .navbar-links {
+    background-color:rgba(26,22,20,0.98);
+    border-top:1px solid #2e2825
+}
+body.theme-dark-brown .navbar-links a {
+    color:#e8e0dd;
+    border-bottom-color:#2e2825
+}
+body.theme-dark-brown .navbar-links a:hover {
+    background-color:#2e2825;
+    color:#7d9d85
+}
+body.theme-dark-brown .emoji-btn {
+    background:#28221a;
+}
+body.theme-dark-brown .emoji-btn span{
+    color:#ffffff;
+}
+body.theme-dark-brown .hamburger span {
+    background-color:#e8e0dd
+}
+body.theme-dark-brown .hero {
+    background:linear-gradient(180deg,#231f1c 0%,#1e1b18 60%,#1a1614 100%)
+}
+body.theme-dark-brown .hero h1 {
+    color:#cec6c2
+}
+body.theme-dark-brown .hero-sub {
+    color:#998880
+}
+body.theme-dark-brown .source-badge.facebook, body.theme-dark-brown .source-badge.google {
+    background-color: rgb(46, 46, 46);
+}
+body.theme-dark-brown .stat-num {
+    color:#cec6c2
+}
+body.theme-dark-brown .stat-label {
+    color:#998880
+}
+body.theme-dark-brown .form-card {
+    background:#231f1c;
+    border-color:#2e2825
+}
+body.theme-dark-brown .form-card h2 {
+    color:#cec6c2
+}
+body.theme-dark-brown .form-card .form-intro {
+    color:#998880
+}
+body.theme-dark-brown .field label {
+    color:#998880
+}
+body.theme-dark-brown .field input,
+body.theme-dark-brown .field select,
+body.theme-dark-brown .field textarea {
+    background:#2e2825;
+    border-color:#3a3330;
+    color:#cec6c2
+}
+body.theme-dark-brown .field input::placeholder,
+body.theme-dark-brown .field textarea::placeholder {
+    color:#665a57
+}
+body.theme-dark-brown .source-opt {
+    background: #28221a;
+    color: rgb(255, 255, 255);
+}
+body.theme-dark-brown .source-icon {
+    background: #28221a;
+}
+body.theme-dark-brown .review-card {
+    background:#231f1c;
+    border-color:#2e2825
+}
+body.theme-dark-brown .review-card:hover {
+    border-color:#3a3330;
+    box-shadow:0 8px 24px rgba(0,0,0,0.2)
+}
+body.theme-dark-brown .review-name {
+    color:#cec6c2
+}
+body.theme-dark-brown .review-info,
+body.theme-dark-brown .review-date {
+    color:#998880
+}
+body.theme-dark-brown .review-text {
+    color:#b0a8a4
+}
+body.theme-dark-brown .reviews-section h2 {
+    color:#cec6c2
+}
+body.theme-dark-brown .filter-btn {
+    background:#231f1c;
+    border-color:#2e2825;
+    color:#998880
+}
+body.theme-dark-brown .filter-btn:hover,
+body.theme-dark-brown .filter-btn.active {
+    background:#2e2825;
+    color:#cec6c2
+}
+body.theme-dark-brown .site-footer {
+    background:#141110;
+    border-top:1px solid #2e2825
+}
+body.theme-dark-brown .footer-bottom {
+    border-top:1px solid #2e2825
+}
+body.theme-dark-brown .footer-info p,
+body.theme-dark-brown .footer-info a,
+body.theme-dark-brown .footer-info strong {
+    color:#a08880
+}
+body.theme-dark-brown .page-blur-overlay {
+    background:rgba(26,22,20,0.7)
+}
+body.theme-dark-brown .floating-action-btn {
+    background:#231f1c;
+    border-color:#2e2825;
+    color:#e8e0dd
+}
+body.theme-dark-brown .floating-action-btn:hover,
+body.theme-dark-brown .floating-color-btn:hover {
+    background:#2e2825
+}
+body.theme-dark-brown .color-mode-panel {
+    background:#231f1c;
+    border-color:#2e2825
+}
+body.theme-dark-brown .color-mode-title {
+    color:#665a57;
+    border-bottom-color:#2e2825
+}
+body.theme-dark-brown .color-mode-option {
+    color:#e8e0dd
+}
+body.theme-dark-brown .color-mode-option:hover {
+    background:#2e2825
+}
+
+/* ============================================================
+   THÈME : Ardoise verte (dark-green) — avis
+   ============================================================ */
+body.theme-dark-green {
+    background-color:#141c18;
+    color:#d4e8da
+}
+body.theme-dark-green .navbar {
+    background-color:rgba(20,28,24,0.97);
+    border-bottom:1px solid #1e2e25;
+    box-shadow:0 2px 20px rgba(0,0,0,0.3)
+}
+body.theme-dark-green .navbar-links {
+    background-color:rgba(20,28,24,0.98);
+    border-top:1px solid #1e2e25
+}
+body.theme-dark-green .navbar-links a {
+    color:#d4e8da;
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green .navbar-links a:hover {
+    background-color:#1e2e25;
+    color:#7d9d85
+}
+body.theme-dark-green .hamburger span {
+    background-color:#d4e8da
+}
+body.theme-dark-green .hero {
+    background:linear-gradient(180deg,#1a2820 0%,#172418 60%,#141c18 100%)
+}
+body.theme-dark-green .hero h1 {
+    color:#b8d4be
+}
+body.theme-dark-green .hero-sub {
+    color:#6a8a72
+}
+body.theme-dark-green .stat-num {
+    color:#b8d4be
+}
+body.theme-dark-green .stat-label {
+    color:#6a8a72
+}
+body.theme-dark-green .form-card {
+    background:#1a2820;
+    border-color:#1e2e25
+}
+body.theme-dark-green .form-card h2 {
+    color:#b8d4be
+}
+body.theme-dark-green .source-opt {
+    background: #141b1172;
+    color: rgb(255, 255, 255);
+}
+body.theme-dark-green .source-icon {
+    background: #141b1172;
+}
+body.theme-dark-green .form-card .form-intro {
+    color:#6a8a72
+}
+body.theme-dark-green .field label {
+    color:#6a8a72
+}
+body.theme-dark-green .emoji-btn {
+    background:#102206;
+}
+body.theme-dark-green .emoji-btn span{
+    color:#ffffff;
+}
+body.theme-dark-green .source-badge.facebook, body.theme-dark-brown .source-badge.google {
+    background-color: rgb(37, 53, 40);
+}
+body.theme-dark-green .field input,
+body.theme-dark-green .field select,
+body.theme-dark-green .field textarea {
+    background:#1e2e25;
+    border-color:#263d2e;
+    color:#b8d4be
+}
+body.theme-dark-green .field input::placeholder,
+body.theme-dark-green .field textarea::placeholder {
+    color:#2e4a35
+}
+body.theme-dark-green .review-card {
+    background:#1a2820;
+    border-color:#1e2e25
+}
+body.theme-dark-green .review-card:hover {
+    border-color:#263d2e;
+    box-shadow:0 8px 24px rgba(0,0,0,0.2)
+}
+body.theme-dark-green .review-name {
+    color:#b8d4be
+}
+body.theme-dark-green .review-info,
+body.theme-dark-green .review-date {
+    color:#6a8a72
+}
+body.theme-dark-green .review-text {
+    color:#7a9a82
+}
+body.theme-dark-green .reviews-section h2 {
+    color:#b8d4be
+}
+body.theme-dark-green .filter-btn {
+    background:#1a2820;
+    border-color:#1e2e25;
+    color:#6a8a72
+}
+body.theme-dark-green .filter-btn:hover,
+body.theme-dark-green .filter-btn.active {
+    background:#1e2e25;
+    color:#b8d4be
+}
+body.theme-dark-green .site-footer {
+    background:#0f1611;
+    border-top:1px solid #1e2e25
+}
+body.theme-dark-green .footer-bottom {
+    border-top:1px solid #1e2e25
+}
+body.theme-dark-green .footer-info p,
+body.theme-dark-green .footer-info a,
+body.theme-dark-green .footer-info strong {
+    color:#5a7a62
+}
+body.theme-dark-green .page-blur-overlay {
+    background:rgba(20,28,24,0.7)
+}
+body.theme-dark-green .floating-action-btn {
+    background:#1a2820;
+    border-color:#1e2e25;
+    color:#d4e8da
+}
+body.theme-dark-green .floating-action-btn:hover,
+body.theme-dark-green .floating-color-btn:hover {
+    background:#1e2e25
+}
+body.theme-dark-green .color-mode-panel {
+    background:#1a2820;
+    border-color:#1e2e25
+}
+body.theme-dark-green .color-mode-title {
+    color:#2e4a35;
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green .color-mode-option {
+    color:#d4e8da
+}
+body.theme-dark-green .color-mode-option:hover {
+    background:#1e2e25
+}
+
+/* ============================================================
+   THÈME : Prune doux (dark-purple) — avis
+   ============================================================ */
+body.theme-dark-purple {
+    background-color:#1c1624;
+    color:#e8dff0
+}
+body.theme-dark-purple .navbar {
+    background-color:rgba(28,22,36,0.97);
+    border-bottom:1px solid #2a1e35;
+    box-shadow:0 2px 20px rgba(0,0,0,0.3)
+}
+body.theme-dark-purple .navbar-links {
+    background-color:rgba(28,22,36,0.98);
+    border-top:1px solid #2a1e35
+}
+body.theme-dark-purple .navbar-links a {
+    color:#e8dff0;
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple .navbar-links a:hover {
+    background-color:#2a1e35;
+    color:#bf7ad0
+}
+body.theme-dark-purple .hamburger span {
+    background-color:#e8dff0
+}
+body.theme-dark-purple .emoji-btn {
+    background:#1a0622;
+}
+body.theme-dark-purple .emoji-btn span{
+    color:#ffffff;
+}
+body.theme-dark-purple .hero {
+    background:linear-gradient(180deg,#221830 0%,#1e1a2a 60%,#1c1624 100%)
+}
+body.theme-dark-purple .hero h1 {
+    color:#c8bedd
+}
+body.theme-dark-purple .hero-sub {
+    color:#8a7499
+}
+body.theme-dark-purple .stat-num {
+    color:#c8bedd
+}
+body.theme-dark-purple .stat-label {
+    color:#8a7499
+}
+body.theme-dark-purple .source-opt {
+    background: #1a0622ad;
+    color: rgb(255, 255, 255);
+}
+body.theme-dark-pruple .source-icon {
+    background: #1a0622ad;
+}
+body.theme-dark-purple .form-card {
+    background:#211730;
+    border-color:#2a1e35
+}
+body.theme-dark-purple .form-card h2 {
+    color:#c8bedd
+}
+body.theme-dark-purple .form-card .form-intro {
+    color:#8a7499
+}
+body.theme-dark-purple .field label {
+    color:#8a7499
+}
+body.theme-dark-purple .field input,
+body.theme-dark-purple .field select,
+body.theme-dark-purple .field textarea {
+    background:#2a1e35;
+    border-color:#352544;
+    color:#c8bedd
+}
+body.theme-dark-purple .field input::placeholder,
+body.theme-dark-purple .field textarea::placeholder {
+    color:#4a3a5a
+}
+body.theme-dark-purple .review-card {
+    background:#211730;
+    border-color:#2a1e35
+}
+body.theme-dark-purple .review-card:hover {
+    border-color:#352544;
+    box-shadow:0 8px 24px rgba(0,0,0,0.2)
+}
+body.theme-dark-purple .review-name {
+    color:#c8bedd
+}
+body.theme-dark-purple .review-info,
+body.theme-dark-purple .review-date {
+    color:#8a7499
+}
+body.theme-dark-purple .review-text {
+    color:#9a8aaa
+}
+body.theme-dark-purple .reviews-section h2 {
+    color:#c8bedd
+}
+body.theme-dark-purple .filter-btn {
+    background:#211730;
+    border-color:#2a1e35;
+    color:#8a7499
+}
+body.theme-dark-purple .filter-btn:hover,
+body.theme-dark-purple .filter-btn.active {
+    background:#2a1e35;
+    color:#c8bedd
+}
+body.theme-dark-purple .site-footer {
+    background:#150f1e;
+    border-top:1px solid #2a1e35
+}
+body.theme-dark-purple .footer-bottom {
+    border-top:1px solid #2a1e35
+}
+body.theme-dark-purple .footer-info p,
+body.theme-dark-purple .footer-info a,
+body.theme-dark-purple .footer-info strong {
+    color:#7a6289
+}
+body.theme-dark-purple .page-blur-overlay {
+    background:rgba(28,22,36,0.7)
+}
+body.theme-dark-purple .source-badge.facebook, body.theme-dark-brown .source-badge.google {
+    background-color: rgba(125, 157, 133, 0.12);
+}
+body.theme-dark-purple .floating-action-btn {
+    background:#221830;
+    border-color:#2a1e35;
+    color:#e8dff0
+}
+body.theme-dark-purple .floating-action-btn:hover,
+body.theme-dark-purple .floating-color-btn:hover {
+    background:#2a1e35
+}
+body.theme-dark-purple .color-mode-panel {
+    background:#221830;
+    border-color:#2a1e35
+}
+body.theme-dark-purple .color-mode-title {
+    color:#3a2a4a;
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple .color-mode-option {
+    color:#e8dff0
+}
+body.theme-dark-purple .color-mode-option:hover {
+    background:#2a1e35
 }

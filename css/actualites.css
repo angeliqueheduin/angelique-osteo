@@ -381,7 +381,7 @@ body {
 
 .faq-section {
     background-color:#fff;
-    padding:36px 0;
+    padding:36px 24px;
     border-radius:16px;
     box-shadow:0 6px 20px rgba(0, 0, 0, 0.03);
     margin:0 0 40px
@@ -389,13 +389,16 @@ body {
 
 .faq-list {
     max-width:800px;
-    margin:0 auto
+    margin:0 auto;
+    padding:0 4px;
 }
 
 .faq-item {
-    padding:20px 0;
+    padding:20px 12px;
     border-bottom:1px solid #e8e2db;
-    transition:transform 0.5s ease
+    transition:transform 0.5s ease;
+    border-radius: 25px;
+    margin-bottom: 7px;
 }
 
 .faq-item:last-child {
@@ -789,13 +792,13 @@ body {
 }
 
     .faq-section {
-        padding:60px 0;
+        padding:60px 32px;
         border-radius:20px;
         margin:0 20px 60px
 }
 
     .faq-item {
-        padding:25px 0
+        padding:25px 14px
 }
 
     .faq-question {
@@ -859,7 +862,7 @@ body {
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:16px;
+    gap:30px;
     padding-right:4px;
     user-select:none
 }
@@ -889,8 +892,7 @@ body {
 
 .faq-item:hover {
     background-color:#faf8f6;
-    border-radius:10px;
-    padding-left:14px
+    padding-left:20px
 }
 
 .faq-item:hover .faq-question {
@@ -899,4 +901,465 @@ body {
 
 .faq-item:hover .faq-question::after {
     opacity:1
+}
+/* ============================================================
+   MODES COULEUR — Thèmes sombres (actualites.css)
+   ============================================================ */
+
+.floating-color-btn {
+    cursor:pointer;
+    user-select:none
+}
+
+.floating-color-btn:hover {
+    background:#f5f5f5
+}
+
+.color-mode-panel {
+    display:none;
+    flex-direction:column;
+    gap:4px;
+    background:#fff;
+    border:1px solid #e0e0e0;
+    border-radius:16px;
+    padding:12px 10px;
+    margin-bottom:8px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.10);
+    min-width:180px;
+    align-self:flex-end
+}
+
+.color-mode-panel.open {
+    display:flex
+}
+
+.color-mode-title {
+    font-size:11px;
+    font-weight:600;
+    color:#888;
+    letter-spacing:0.8px;
+    text-transform:uppercase;
+    padding:0 6px 6px;
+    border-bottom:1px solid #f0ece8;
+    margin-bottom:4px
+}
+
+.color-mode-option {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:none;
+    border:none;
+    border-radius:10px;
+    padding:8px 10px;
+    font-size:13px;
+    font-weight:500;
+    color:#3d3530;
+    cursor:pointer;
+    text-align:left;
+    width:100%;
+    transition:background 0.15s
+}
+
+.color-mode-option:hover {
+    background:#f5f5f5
+}
+
+.color-mode-swatch {
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    flex-shrink:0;
+    display:inline-block
+}
+
+.color-mode-check {
+    color:#7d9d85;
+    font-size:12px;
+    margin-left:4px
+}
+
+/* ============================================================
+   THÈME : Nuit profonde (dark-brown) — actualites
+   ============================================================ */
+body.theme-dark-brown {
+    background-color:#1a1614;
+    color:#e8e0dd
+}
+body.theme-dark-brown .navbar {
+    background-color:rgba(26,22,20,0.97);
+    border-bottom:1px solid #2e2825;
+    box-shadow:0 2px 20px rgba(0,0,0,0.3)
+}
+body.theme-dark-brown .navbar-links {
+    background-color:rgba(26,22,20,0.98);
+    border-top:1px solid #2e2825
+}
+body.theme-dark-brown .navbar-links a {
+    color:#e8e0dd;
+    border-bottom-color:#2e2825
+}
+body.theme-dark-brown .navbar-links a:hover {
+    background-color:#2e2825;
+    color:#7d9d85
+}
+body.theme-dark-brown .hamburger span {
+    background-color:#e8e0dd
+}
+body.theme-dark-brown .main-content {
+    background-color:#1a1614
+}
+body.theme-dark-brown .page-header {
+    background:linear-gradient(135deg,#1a1614 0%,#231f1c 100%)
+}
+body.theme-dark-brown .section-title {
+    color:#e8e0dd
+}
+body.theme-dark-brown .section-subtitle,
+body.theme-dark-brown .subsection-title {
+    color:#a08880
+}
+body.theme-dark-brown .article-card {
+    background:#231f1c;
+    border-color:#2e2825;
+    box-shadow:none
+}
+body.theme-dark-brown .article-title {
+    color:#e8e0dd
+}
+body.theme-dark-brown .article-excerpt {
+    color:#a08880
+}
+body.theme-dark-brown .press-section {
+    background:#1a1614
+}
+body.theme-dark-brown .press-feature {
+    background:#231f1c;
+    border-color:#2e2825
+}
+body.theme-dark-brown .press-mini-card {
+    background:#231f1c;
+    border-color:#2e2825
+}
+body.theme-dark-brown .press-mini-card h4 {
+    color:#e8e0dd
+}
+body.theme-dark-brown .press-mini-card p {
+    color:#a08880
+}
+body.theme-dark-brown .press-quote {
+    color:#a08880
+}
+body.theme-dark-brown .faq-section {
+    background:#1a1614
+}
+body.theme-dark-brown .faq-item {
+    background:#231f1c;
+    border-color:#2e2825;
+    padding:20px 12px
+}
+body.theme-dark-brown .faq-item:hover {
+    background:#2e2825;
+    padding-left:20px
+}
+body.theme-dark-brown .faq-question {
+    color:#e8e0dd
+}
+body.theme-dark-brown .faq-answer {
+    color:#a08880
+}
+body.theme-dark-brown .site-footer {
+    background:#141110;
+    border-top:1px solid #2e2825
+}
+body.theme-dark-brown .footer-bottom {
+    border-top:1px solid #2e2825
+}
+body.theme-dark-brown .footer-info p,
+body.theme-dark-brown .footer-info a,
+body.theme-dark-brown .footer-info strong {
+    color:#a08880
+}
+body.theme-dark-brown .page-blur-overlay {
+    background:rgba(26,22,20,0.7)
+}
+body.theme-dark-brown .floating-action-btn {
+    background:#231f1c;
+    border-color:#2e2825;
+    color:#e8e0dd
+}
+body.theme-dark-brown .floating-action-btn:hover,
+body.theme-dark-brown .floating-color-btn:hover {
+    background:#2e2825
+}
+body.theme-dark-brown .color-mode-panel {
+    background:#231f1c;
+    border-color:#2e2825
+}
+body.theme-dark-brown .color-mode-title {
+    color:#665a57;
+    border-bottom-color:#2e2825
+}
+body.theme-dark-brown .color-mode-option {
+    color:#e8e0dd
+}
+body.theme-dark-brown .color-mode-option:hover {
+    background:#2e2825
+}
+
+/* ============================================================
+   THÈME : Ardoise verte (dark-green) — actualites
+   ============================================================ */
+body.theme-dark-green {
+    background-color:#141c18;
+    color:#d4e8da
+}
+body.theme-dark-green .navbar {
+    background-color:rgba(20,28,24,0.97);
+    border-bottom:1px solid #1e2e25;
+    box-shadow:0 2px 20px rgba(0,0,0,0.3)
+}
+body.theme-dark-green .navbar-links {
+    background-color:rgba(20,28,24,0.98);
+    border-top:1px solid #1e2e25
+}
+body.theme-dark-green .navbar-links a {
+    color:#d4e8da;
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green .navbar-links a:hover {
+    background-color:#1e2e25;
+    color:#7d9d85
+}
+body.theme-dark-green .hamburger span {
+    background-color:#d4e8da
+}
+body.theme-dark-green .main-content {
+    background-color:#141c18
+}
+body.theme-dark-green .page-header {
+    background:linear-gradient(135deg,#141c18 0%,#1a2820 100%)
+}
+body.theme-dark-green .section-title {
+    color:#d4e8da
+}
+body.theme-dark-green .section-subtitle,
+body.theme-dark-green .subsection-title {
+    color:#5a7a62
+}
+body.theme-dark-green .article-card {
+    background:#1a2820;
+    border-color:#1e2e25;
+    box-shadow:none
+}
+body.theme-dark-green .article-title {
+    color:#d4e8da
+}
+body.theme-dark-green .article-excerpt {
+    color:#5a7a62
+}
+body.theme-dark-green .press-section {
+    background:#141c18
+}
+body.theme-dark-green .press-feature {
+    background:#1a2820;
+    border-color:#1e2e25
+}
+body.theme-dark-green .press-mini-card {
+    background:#1a2820;
+    border-color:#1e2e25
+}
+body.theme-dark-green .press-mini-card h4 {
+    color:#d4e8da
+}
+body.theme-dark-green .press-mini-card p {
+    color:#5a7a62
+}
+body.theme-dark-green .press-quote {
+    color:#5a7a62
+}
+body.theme-dark-green .faq-section {
+    border-radius: 25px;
+    background:#141c18
+}
+body.theme-dark-green .faq-item {
+    background:#1a2820;
+    border-color:#1e2e25;
+    padding:20px 12px
+}
+body.theme-dark-green .faq-item:hover {
+    background:#1e2e25;
+    padding-left:20px
+}
+body.theme-dark-green .faq-question {
+    color:#d4e8da
+}
+body.theme-dark-green .faq-answer {
+    color:#5a7a62
+}
+body.theme-dark-green .site-footer {
+    background:#0f1611;
+    border-top:1px solid #1e2e25
+}
+body.theme-dark-green .footer-bottom {
+    border-top:1px solid #1e2e25
+}
+body.theme-dark-green .footer-info p,
+body.theme-dark-green .footer-info a,
+body.theme-dark-green .footer-info strong {
+    color:#5a7a62
+}
+body.theme-dark-green .page-blur-overlay {
+    background:rgba(20,28,24,0.7)
+}
+body.theme-dark-green .floating-action-btn {
+    background:#1a2820;
+    border-color:#1e2e25;
+    color:#d4e8da
+}
+body.theme-dark-green .floating-action-btn:hover,
+body.theme-dark-green .floating-color-btn:hover {
+    background:#1e2e25
+}
+body.theme-dark-green .color-mode-panel {
+    background:#1a2820;
+    border-color:#1e2e25
+}
+body.theme-dark-green .color-mode-title {
+    color:#2e4a35;
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green .color-mode-option {
+    color:#d4e8da
+}
+body.theme-dark-green .color-mode-option:hover {
+    background:#1e2e25
+}
+
+/* ============================================================
+   THÈME : Prune doux (dark-purple) — actualites
+   ============================================================ */
+body.theme-dark-purple {
+    background-color:#1c1624;
+    color:#e8dff0
+}
+body.theme-dark-purple .navbar {
+    background-color:rgba(28,22,36,0.97);
+    border-bottom:1px solid #2a1e35;
+    box-shadow:0 2px 20px rgba(0,0,0,0.3)
+}
+body.theme-dark-purple .navbar-links {
+    background-color:rgba(28,22,36,0.98);
+    border-top:1px solid #2a1e35
+}
+body.theme-dark-purple .navbar-links a {
+    color:#e8dff0;
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple .navbar-links a:hover {
+    background-color:#2a1e35;
+    color:#bf7ad0
+}
+body.theme-dark-purple .hamburger span {
+    background-color:#e8dff0
+}
+body.theme-dark-purple .main-content {
+    background-color:#1c1624
+}
+body.theme-dark-purple .page-header {
+    background:linear-gradient(135deg,#1c1624 0%,#221830 100%)
+}
+body.theme-dark-purple .section-title {
+    color:#e8dff0
+}
+body.theme-dark-purple .section-subtitle,
+body.theme-dark-purple .subsection-title {
+    color:#7a6289
+}
+body.theme-dark-purple .article-card {
+    background:#221830;
+    border-color:#2a1e35;
+    box-shadow:none
+}
+body.theme-dark-purple .article-title {
+    color:#e8dff0
+}
+body.theme-dark-purple .article-excerpt {
+    color:#7a6289
+}
+body.theme-dark-purple .press-section {
+    background:#1c1624
+}
+body.theme-dark-purple .press-feature {
+    background:#221830;
+    border-color:#2a1e35
+}
+body.theme-dark-purple .press-mini-card {
+    background:#221830;
+    border-color:#2a1e35
+}
+body.theme-dark-purple .press-mini-card h4 {
+    color:#e8dff0
+}
+body.theme-dark-purple .press-mini-card p {
+    color:#7a6289
+}
+body.theme-dark-purple .press-quote {
+    color:#7a6289
+}
+body.theme-dark-purple .faq-section {
+    background:#1c1624
+}
+body.theme-dark-purple .faq-item {
+    background:#221830;
+    border-color:#2a1e35;
+    padding:20px 12px
+}
+body.theme-dark-purple .faq-item:hover {
+    background:#2a1e35;
+    padding-left:20px
+}
+body.theme-dark-purple .faq-question {
+    color:#e8dff0
+}
+body.theme-dark-purple .faq-answer {
+    color:#7a6289
+}
+body.theme-dark-purple .site-footer {
+    background:#150f1e;
+    border-top:1px solid #2a1e35
+}
+body.theme-dark-purple .footer-bottom {
+    border-top:1px solid #2a1e35
+}
+body.theme-dark-purple .footer-info p,
+body.theme-dark-purple .footer-info a,
+body.theme-dark-purple .footer-info strong {
+    color:#7a6289
+}
+body.theme-dark-purple .page-blur-overlay {
+    background:rgba(28,22,36,0.7)
+}
+body.theme-dark-purple .floating-action-btn {
+    background:#221830;
+    border-color:#2a1e35;
+    color:#e8dff0
+}
+body.theme-dark-purple .floating-action-btn:hover,
+body.theme-dark-purple .floating-color-btn:hover {
+    background:#2a1e35
+}
+body.theme-dark-purple .color-mode-panel {
+    background:#221830;
+    border-color:#2a1e35
+}
+body.theme-dark-purple .color-mode-title {
+    color:#3a2a4a;
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple .color-mode-option {
+    color:#e8dff0
+}
+body.theme-dark-purple .color-mode-option:hover {
+    background:#2a1e35
 }

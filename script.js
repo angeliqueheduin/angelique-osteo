@@ -87,23 +87,37 @@ function initCookies() {
   var outer = document.getElementById('marqueeOuter');
   if (!track || !outer) return;
 
-  track.style.willChange = 'transform';
+  // Track + clone positionnés en absolu dans outer.
+  // track va de translateX(0) à translateX(-trackWidth).
+  // clone suit avec un décalage de +trackWidth, créant la boucle seamless.
+  outer.style.position = 'relative';
+  track.style.position = 'absolute';
+  track.style.top = '0';
+  track.style.left = '0';
+
   var clone = track.cloneNode(true);
   clone.setAttribute('aria-hidden', 'true');
   clone.removeAttribute('id');
-  clone.style.willChange = 'transform';
-  track.parentNode.appendChild(clone);
+  clone.style.position = 'absolute';
+  clone.style.top = '0';
+  clone.style.left = '0';
+  outer.appendChild(clone);
 
-  // FIX : lecture unique de scrollWidth après insertion du clone
   var pos = 0;
-  var halfWidth = track.scrollWidth;
+  var trackWidth = 0;
+
+  function refreshWidth() {
+    trackWidth = track.scrollWidth + 16;
+    outer.style.height = (track.offsetHeight + 20) + 'px';
+  }
+  if (document.readyState === 'complete') { refreshWidth(); }
+  else { window.addEventListener('load', refreshWidth); }
 
   function isMobile() { return window.innerWidth < 768; }
   var normalSpeed = isMobile() ? 0.22 : 0.5;
   var slowSpeed   = isMobile() ? 0.08 : 0.18;
   var currentSpeed = normalSpeed, targetSpeed = normalSpeed;
 
-  // FIX : resize recalcule scrollWidth hors du RAF (pas de reflow dans la boucle)
   var resizeTimer;
   window.addEventListener('resize', function() {
     clearTimeout(resizeTimer);
@@ -111,7 +125,7 @@ function initCookies() {
       normalSpeed = isMobile() ? 0.22 : 0.5;
       slowSpeed   = isMobile() ? 0.08 : 0.18;
       targetSpeed = normalSpeed;
-      halfWidth = track.scrollWidth; // lecture unique au resize
+      refreshWidth();
     }, 100);
   });
 
@@ -122,12 +136,12 @@ function initCookies() {
 
   var raf;
   function tick() {
+    if (trackWidth === 0) { raf = requestAnimationFrame(tick); return; }
     currentSpeed += (targetSpeed - currentSpeed) * 0.04;
     pos += currentSpeed;
-    // FIX : pas de lecture DOM ici — on utilise la valeur en cache
-    if (pos >= halfWidth) { pos -= halfWidth; }
+    if (pos >= trackWidth) { pos -= trackWidth; }
     track.style.transform = 'translateX(-' + pos + 'px)';
-    clone.style.transform = 'translateX(-' + pos + 'px)';
+    clone.style.transform = 'translateX(' + (trackWidth - pos) + 'px)';
     raf = requestAnimationFrame(tick);
   }
 
@@ -163,6 +177,32 @@ window.addEventListener('load', function() {
     })
     .catch(function() {});
 });
+
+
+// ============================================================
+// THÈME COULEUR — Application immédiate (avant paint)
+// ============================================================
+(function() {
+  var saved = lsGet('color_theme');
+  if (saved && saved !== 'light') {
+    document.documentElement.classList.add('theme-loading');
+    document.body ? applyTheme(saved) : document.addEventListener('DOMContentLoaded', function() { applyTheme(saved); });
+  }
+})();
+
+function applyTheme(theme) {
+  var themes = ['theme-dark-brown', 'theme-dark-green', 'theme-dark-purple'];
+  themes.forEach(function(t) { document.body.classList.remove(t); });
+  if (theme && theme !== 'light') {
+    document.body.classList.add('theme-' + theme);
+  }
+  // Mettre à jour les coches dans le panel
+  ['light','dark-brown','dark-green','dark-purple'].forEach(function(t) {
+    var el = document.getElementById('check-' + t);
+    if (el) el.textContent = (t === theme || (!theme && t === 'light')) ? '✓' : '';
+  });
+  lsSet('color_theme', theme || 'light');
+}
 
 // ============================================================
 // DOMContentLoaded
@@ -355,5 +395,47 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  // Mode couleur
+  var btnColor = document.getElementById('btnColorMode');
+  var colorPanel = document.getElementById('colorModePanel');
+  if (btnColor && colorPanel) {
+    // Init thème sauvegardé
+    var savedTheme = lsGet('color_theme') || 'light';
+    applyTheme(savedTheme);
+
+    function openColorPanel() {
+      colorPanel.classList.add('open');
+      btnColor.setAttribute('aria-expanded', 'true');
+    }
+    function closeColorPanel() {
+      colorPanel.classList.remove('open');
+      btnColor.setAttribute('aria-expanded', 'false');
+    }
+
+    btnColor.addEventListener('click', function(e) {
+      e.stopPropagation();
+      colorPanel.classList.contains('open') ? closeColorPanel() : openColorPanel();
+    });
+    btnColor.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btnColor.click(); }
+    });
+
+    colorPanel.querySelectorAll('.color-mode-option').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var theme = btn.getAttribute('data-theme');
+        applyTheme(theme);
+        closeColorPanel();
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!btnColor.contains(e.target) && !colorPanel.contains(e.target)) {
+        closeColorPanel();
+      }
+    });
+  }
+
 
 });

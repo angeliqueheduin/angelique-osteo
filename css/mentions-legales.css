@@ -479,3 +479,524 @@ footer {
         margin-top:0.3rem
 }
 }
+/* ============================================================
+   MODES COULEUR — Thèmes sombres (mentions-legales.css)
+   ============================================================ */
+
+/* ============================================================
+   THÈME : Nuit profonde (dark-brown) — mentions-legales
+   ============================================================ */
+body.theme-dark-brown {
+    background-color:#1a1614;
+    color:#e8e0dd
+}
+body.theme-dark-brown .back-bar {
+    background-color:#141110;
+    border-bottom:1px solid #2e2825
+}
+body.theme-dark-brown .back-link {
+    color:rgba(232,224,221,0.45)
+}
+body.theme-dark-brown .back-link:hover {
+    color:#a08880
+}
+body.theme-dark-brown header {
+    background-color:#141110
+}
+body.theme-dark-brown h1 {
+    color:#e8e0dd
+}
+body.theme-dark-brown .layout {
+    background-color:#1a1614
+}
+body.theme-dark-brown .sidebar {
+    background-color:#1a1614
+}
+body.theme-dark-brown .sidebar-title {
+    color:#665a57;
+    border-bottom-color:#2e2825
+}
+body.theme-dark-brown .sidebar nav a {
+    color:#a08880
+}
+body.theme-dark-brown .sidebar nav a:hover {
+    color:#e8e0dd;
+    background-color:#2e2825;
+    border-left-color:#3a3330
+}
+body.theme-dark-brown .section {
+    border-bottom-color:#2e2825
+}
+body.theme-dark-brown h2 {
+    color:#e8e0dd
+}
+body.theme-dark-brown h3 {
+    color:#a08880
+}
+body.theme-dark-brown p {
+    color:#a08880
+}
+body.theme-dark-brown .info-card {
+    background-color:#231f1c;
+    border-color:#2e2825
+}
+body.theme-dark-brown .info-card h3 {
+    border-top-color:#2e2825
+}
+body.theme-dark-brown .info-row {
+    border-bottom-color:#2e2825
+}
+body.theme-dark-brown .info-label {
+    color:#a99792
+}
+body.theme-dark-brown .info-value {
+    color:#e8e0dd
+}
+body.theme-dark-brown .highlight-box {
+    background:linear-gradient(135deg,rgba(160,136,128,0.06),rgba(160,136,128,0.02));
+    border-color:#3a3330;
+    border-left-color:#a08880;
+    color:#a08880
+}
+body.theme-dark-brown a {
+    color:#a08880;
+    border-bottom-color:#3a3330
+}
+body.theme-dark-brown a:hover {
+    color:#e8e0dd;
+    border-bottom-color:#e8e0dd
+}
+body.theme-dark-brown footer {
+    background-color:#141110
+}
+
+/* ============================================================
+   THÈME : Ardoise verte (dark-green) — mentions-legales
+   ============================================================ */
+body.theme-dark-green {
+    background-color:#141c18;
+    color:#d4e8da
+}
+body.theme-dark-green .back-bar {
+    background-color:#0f1611;
+    border-bottom:1px solid #1e2e25
+}
+body.theme-dark-green .back-link {
+    color:rgba(212,232,218,0.45)
+}
+body.theme-dark-green .back-link:hover {
+    color:#5a7a62
+}
+body.theme-dark-green header {
+    background-color:#0f1611
+}
+body.theme-dark-green h1 {
+    color:#d4e8da
+}
+body.theme-dark-green .layout {
+    background-color:#141c18
+}
+body.theme-dark-green .sidebar {
+    background-color:#141c18
+}
+body.theme-dark-green .sidebar-title {
+    color:#2e4a35;
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green .sidebar nav a {
+    color:#5a7a62
+}
+body.theme-dark-green .sidebar nav a:hover {
+    color:#d4e8da;
+    background-color:#1e2e25;
+    border-left-color:#263d2e
+}
+body.theme-dark-green .section {
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green h2 {
+    color:#d4e8da
+}
+body.theme-dark-green h3 {
+    color:#5a7a62
+}
+body.theme-dark-green p {
+    color:#5a7a62
+}
+body.theme-dark-green .info-card {
+    background-color:#1a2820;
+    border-color:#1e2e25
+}
+body.theme-dark-green .info-card h3 {
+    border-top-color:#1e2e25
+}
+body.theme-dark-green .info-row {
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green .info-label {
+    color:#428051
+}
+body.theme-dark-green .info-value {
+    color:#d4e8da
+}
+body.theme-dark-green .highlight-box {
+    background:linear-gradient(135deg,rgba(90,122,98,0.08),rgba(90,122,98,0.02));
+    border-color:#263d2e;
+    border-left-color:#5a7a62;
+    color:#5a7a62
+}
+body.theme-dark-green a {
+    color:#5a7a62;
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green a:hover {
+    color:#d4e8da;
+    border-bottom-color:#d4e8da
+}
+body.theme-dark-green footer {
+    background-color:#0f1611
+}
+
+/* ============================================================
+   THÈME : Prune doux (dark-purple) — mentions-legales
+   ============================================================ */
+body.theme-dark-purple {
+    background-color:#1c1624;
+    color:#e8dff0
+}
+body.theme-dark-purple .back-bar {
+    background-color:#150f1e;
+    border-bottom:1px solid #2a1e35
+}
+body.theme-dark-purple .back-link {
+    color:rgba(232,223,240,0.45)
+}
+body.theme-dark-purple .back-link:hover {
+    color:#7a6289
+}
+body.theme-dark-purple header {
+    background-color:#150f1e
+}
+body.theme-dark-purple h1 {
+    color:#e8dff0
+}
+body.theme-dark-purple .layout {
+    background-color:#1c1624
+}
+body.theme-dark-purple .sidebar {
+    background-color:#1c1624
+}
+body.theme-dark-purple .sidebar-title {
+    color:#3a2a4a;
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple .sidebar nav a {
+    color:#7a6289
+}
+body.theme-dark-purple .sidebar nav a:hover {
+    color:#e8dff0;
+    background-color:#2a1e35;
+    border-left-color:#352544
+}
+body.theme-dark-purple .section {
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple h2 {
+    color:#e8dff0
+}
+body.theme-dark-purple h3 {
+    color:#7a6289
+}
+body.theme-dark-purple p {
+    color:#7a6289
+}
+body.theme-dark-purple .info-card {
+    background-color:#221830;
+    border-color:#2a1e35
+}
+body.theme-dark-purple .info-card h3 {
+    border-top-color:#2a1e35
+}
+body.theme-dark-purple .info-row {
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple .info-label {
+    color:#9c70c3;
+}
+body.theme-dark-purple .info-value {
+    color:#e8dff0
+}
+body.theme-dark-purple .highlight-box {
+    background:linear-gradient(135deg,rgba(122,98,137,0.08),rgba(122,98,137,0.02));
+    border-color:#352544;
+    border-left-color:#7a6289;
+    color:#7a6289
+}
+body.theme-dark-purple a {
+    color:#7a6289;
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple a:hover {
+    color:#e8dff0;
+    border-bottom-color:#e8dff0
+}
+body.theme-dark-purple footer {
+    background-color:#150f1e
+}
+
+/* ============================================================
+   FLOATING HELP — Bouton flottant & actions rapides
+   (identique à index.css)
+   ============================================================ */
+
+.page-blur-overlay {
+    position:fixed;
+    inset:0;
+    background:rgba(255,255,255,0.55);
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+    z-index:1999;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 0.25s ease
+}
+
+.page-blur-overlay.active {
+    opacity:1;
+    pointer-events:auto
+}
+
+.floating-help {
+    position:fixed;
+    bottom:18px;
+    right:16px;
+    z-index:2000;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    background:transparent
+}
+
+.floating-actions {
+    display:none;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:8px;
+    margin-bottom:10px;
+    background:transparent
+}
+
+.floating-actions.open {
+    display:flex
+}
+
+.floating-action-btn {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#fff;
+    border:1px solid #e0e0e0;
+    border-radius:999px;
+    padding:8px 16px 8px 12px;
+    text-decoration:none;
+    color:#333;
+    font-size:13px;
+    font-weight:500;
+    white-space:nowrap;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    transition:background 0.2s
+}
+
+.floating-action-btn:hover {
+    background:#f5f5f5;
+    border-bottom:1px solid #e0e0e0
+}
+
+.help-toggle {
+    width:46px;
+    height:46px;
+    background-color:#bf7ad0;
+    border-radius:50%;
+    border:none;
+    color:white;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 3px 12px rgba(191,122,208,0.4);
+    transition:transform 0.2s ease
+}
+
+.help-toggle:active {
+    transform:scale(0.95)
+}
+
+/* --- Bouton Mode couleur --- */
+.floating-color-btn {
+    cursor:pointer;
+    user-select:none
+}
+
+.floating-color-btn:hover {
+    background:#f5f5f5
+}
+
+/* --- Panel de sélection --- */
+.color-mode-panel {
+    display:none;
+    flex-direction:column;
+    gap:4px;
+    background:#fff;
+    border:1px solid #e0e0e0;
+    border-radius:16px;
+    padding:12px 10px;
+    margin-bottom:8px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.10);
+    min-width:180px;
+    align-self:flex-end
+}
+
+.color-mode-panel.open {
+    display:flex
+}
+
+.color-mode-title {
+    font-size:11px;
+    font-weight:600;
+    color:#888;
+    letter-spacing:0.8px;
+    text-transform:uppercase;
+    padding:0 6px 6px;
+    border-bottom:1px solid #f0ece8;
+    margin-bottom:4px
+}
+
+.color-mode-option {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:none;
+    border:none;
+    border-radius:10px;
+    padding:8px 10px;
+    font-size:13px;
+    font-weight:500;
+    color:#3d3530;
+    cursor:pointer;
+    text-align:left;
+    width:100%;
+    transition:background 0.15s
+}
+
+.color-mode-option:hover {
+    background:#f5f5f5
+}
+
+.color-mode-swatch {
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    flex-shrink:0;
+    display:inline-block
+}
+
+.color-mode-check {
+    color:#7d9d85;
+    font-size:12px;
+    margin-left:4px
+}
+
+@media (min-width:768px) {
+    .page-blur-overlay {
+        display:none
+    }
+}
+
+/* ============================================================
+   FLOATING HELP — Thèmes sombres (identique à index.css)
+   ============================================================ */
+
+body.theme-dark-brown .page-blur-overlay {
+    background:rgba(26,22,20,0.7)
+}
+body.theme-dark-brown .floating-action-btn {
+    background:#231f1c;
+    border-color:#2e2825;
+    color:#e8e0dd
+}
+body.theme-dark-brown .floating-action-btn:hover {
+    background:#2e2825
+}
+body.theme-dark-brown .color-mode-panel {
+    background:#231f1c;
+    border-color:#2e2825
+}
+body.theme-dark-brown .color-mode-title {
+    color:#665a57;
+    border-bottom-color:#2e2825
+}
+body.theme-dark-brown .color-mode-option {
+    color:#e8e0dd
+}
+body.theme-dark-brown .color-mode-option:hover {
+    background:#2e2825
+}
+
+body.theme-dark-green .page-blur-overlay {
+    background:rgba(20,28,24,0.7)
+}
+body.theme-dark-green .floating-action-btn {
+    background:#1a2820;
+    border-color:#1e2e25;
+    color:#d4e8da
+}
+body.theme-dark-green .floating-action-btn:hover {
+    background:#1e2e25
+}
+body.theme-dark-green .color-mode-panel {
+    background:#1a2820;
+    border-color:#1e2e25
+}
+body.theme-dark-green .color-mode-title {
+    color:#2e4a35;
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green .color-mode-option {
+    color:#d4e8da
+}
+body.theme-dark-green .color-mode-option:hover {
+    background:#1e2e25
+}
+
+body.theme-dark-purple .page-blur-overlay {
+    background:rgba(28,22,36,0.7)
+}
+body.theme-dark-purple .floating-action-btn {
+    background:#221830;
+    border-color:#2a1e35;
+    color:#e8dff0
+}
+body.theme-dark-purple .floating-action-btn:hover {
+    background:#2a1e35
+}
+body.theme-dark-purple .color-mode-panel {
+    background:#221830;
+    border-color:#2a1e35
+}
+body.theme-dark-purple .color-mode-title {
+    color:#3a2a4a;
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple .color-mode-option {
+    color:#e8dff0
+}
+body.theme-dark-purple .color-mode-option:hover {
+    background:#2a1e35
+}
+/* ============================================================
+   RECAPTCHA — Badge masqué (mention légale présente dans le HTML)
+   ============================================================ */
+.grecaptcha-badge {
+    visibility:hidden !important;
+    opacity:0 !important;
+    pointer-events:none !important
+}

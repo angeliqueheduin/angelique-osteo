@@ -723,3 +723,434 @@ body {
     color:#bbb;
     text-decoration:underline
 }
+/* ============================================================
+   MODES COULEUR — Thèmes sombres (tarifs-et-horaires.css)
+   ============================================================ */
+
+.floating-color-btn {
+    cursor:pointer;
+    user-select:none
+}
+
+.floating-color-btn:hover {
+    background:#f5f5f5
+}
+
+.color-mode-panel {
+    display:none;
+    flex-direction:column;
+    gap:4px;
+    background:#fff;
+    border:1px solid #e0e0e0;
+    border-radius:16px;
+    padding:12px 10px;
+    margin-bottom:8px;
+    box-shadow:0 4px 18px rgba(0,0,0,0.10);
+    min-width:180px;
+    align-self:flex-end
+}
+
+.color-mode-panel.open {
+    display:flex
+}
+
+.color-mode-title {
+    font-size:11px;
+    font-weight:600;
+    color:#888;
+    letter-spacing:0.8px;
+    text-transform:uppercase;
+    padding:0 6px 6px;
+    border-bottom:1px solid #f0ece8;
+    margin-bottom:4px
+}
+
+.color-mode-option {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:none;
+    border:none;
+    border-radius:10px;
+    padding:8px 10px;
+    font-size:13px;
+    font-weight:500;
+    color:#3d3530;
+    cursor:pointer;
+    text-align:left;
+    width:100%;
+    transition:background 0.15s
+}
+
+.color-mode-option:hover {
+    background:#f5f5f5
+}
+
+.color-mode-swatch {
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    flex-shrink:0;
+    display:inline-block
+}
+
+.color-mode-check {
+    color:#7d9d85;
+    font-size:12px;
+    margin-left:4px
+}
+
+/* ============================================================
+   THÈME : Nuit profonde (dark-brown) — tarifs-et-horaires
+   ============================================================ */
+body.theme-dark-brown {
+    background-color:#1a1614;
+    color:#e8e0dd
+}
+
+body.theme-dark-brown .navbar {
+    background-color:rgba(26,22,20,0.97);
+    border-bottom:1px solid #2e2825;
+    box-shadow:0 2px 20px rgba(0,0,0,0.3)
+}
+body.theme-dark-brown .navbar-links {
+    background-color:rgba(26,22,20,0.98);
+    border-top:1px solid #2e2825
+}
+body.theme-dark-brown .navbar-links a {
+    color:#e8e0dd;
+    border-bottom-color:#2e2825
+}
+body.theme-dark-brown .navbar-links a:hover {
+    background-color:#2e2825;
+    color:#7d9d85
+}
+body.theme-dark-brown .hamburger span {
+    background-color:#e8e0dd
+}
+body.theme-dark-brown .bento-wrapper {
+    background-color:transparent
+}
+body.theme-dark-brown .seo-intro h1 {
+    color:#e8e0dd
+}
+body.theme-dark-brown .seo-intro p {
+    color:#c2a59b
+}
+body.theme-dark-brown .seo-intro strong {
+    color:#e8e0dd
+}
+body.theme-dark-brown .glass-card {
+    background:#231f1c;
+    border-color:#2e2825;
+    box-shadow:none
+}
+body.theme-dark-brown .card-header h3,
+body.theme-dark-brown .glass-card>h3 {
+    color:#e8e0dd
+}
+body.theme-dark-brown .price-item {
+    border-bottom-color:#2e2825
+}
+body.theme-dark-brown .price-item span:first-child {
+    color:#e8e0dd
+}
+body.theme-dark-brown .price-footer {
+    color:#a08880
+}
+body.theme-dark-brown .day-row {
+    border-bottom-color:#2e2825;
+    color:#e8e0dd
+}
+body.theme-dark-brown .day-row strong {
+    color:#e8e0dd
+}
+body.theme-dark-brown .location-card {
+    background:linear-gradient(135deg,rgba(125,157,133,0.08) 0%,rgba(35,31,28,0.9) 100%)
+}
+body.theme-dark-brown .villes-tags span {
+    background:#2e2825;
+    color:#e8e0dd;
+    border-color:#3a3330
+}
+body.theme-dark-brown .contact-mini-card {
+    background:#141110
+}
+body.theme-dark-brown .contact-mini-card p {
+    color:#a08880
+}
+body.theme-dark-brown .site-footer {
+    background:#141110;
+    border-top:1px solid #2e2825
+}
+body.theme-dark-brown .footer-bottom {
+    border-top:1px solid #2e2825
+}
+body.theme-dark-brown .footer-info p,
+body.theme-dark-brown .footer-info a,
+body.theme-dark-brown .footer-info strong {
+    color:#a08880
+}
+body.theme-dark-brown .page-blur-overlay {
+    background:rgba(26,22,20,0.7)
+}
+body.theme-dark-brown .floating-action-btn {
+    background:#231f1c;
+    border-color:#2e2825;
+    color:#e8e0dd
+}
+body.theme-dark-brown .floating-action-btn:hover,
+body.theme-dark-brown .floating-color-btn:hover {
+    background:#2e2825
+}
+body.theme-dark-brown .color-mode-panel {
+    background:#231f1c;
+    border-color:#2e2825
+}
+body.theme-dark-brown .color-mode-title {
+    color:#665a57;
+    border-bottom-color:#2e2825
+}
+body.theme-dark-brown .color-mode-option {
+    color:#e8e0dd
+}
+body.theme-dark-brown .color-mode-option:hover {
+    background:#2e2825
+}
+
+/* ============================================================
+   THÈME : Ardoise verte (dark-green) — tarifs-et-horaires
+   ============================================================ */
+body.theme-dark-green {
+    background-color:#141c18;
+    color:#d4e8da
+}
+body.theme-dark-green main p {
+    color: rgb(161, 187, 161)
+}
+body.theme-dark-green .navbar {
+    background-color:rgba(20,28,24,0.97);
+    border-bottom:1px solid #1e2e25;
+    box-shadow:0 2px 20px rgba(0,0,0,0.3)
+}
+body.theme-dark-green .navbar-links {
+    background-color:rgba(20,28,24,0.98);
+    border-top:1px solid #1e2e25
+}
+body.theme-dark-green .navbar-links a {
+    color:#d4e8da;
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green .navbar-links a:hover {
+    background-color:#1e2e25;
+    color:#7d9d85
+}
+body.theme-dark-green .hamburger span {
+    background-color:#d4e8da
+}
+body.theme-dark-green .bento-wrapper {
+    background-color:transparent
+}
+body.theme-dark-green .seo-intro h1 {
+    color:#d4e8da
+}
+body.theme-dark-green .seo-intro p {
+    color:rgb(147, 189, 147)
+}
+body.theme-dark-green .seo-intro strong {
+    color:#d4e8da
+}
+body.theme-dark-green .glass-card {
+    background:#1a2820;
+    border-color:#1e2e25;
+    box-shadow:none
+}
+body.theme-dark-green .card-header h3,
+body.theme-dark-green .glass-card>h3 {
+    color:#d4e8da
+}
+body.theme-dark-green .price-item {
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green .price-item span:first-child {
+    color:#d4e8da
+}
+body.theme-dark-green .price-footer {
+    color:#5a7a62
+}
+body.theme-dark-green .day-row {
+    border-bottom-color:#1e2e25;
+    color:#d4e8da
+}
+body.theme-dark-green .day-row strong {
+    color:#d4e8da
+}
+body.theme-dark-green .location-card {
+    background:linear-gradient(135deg,rgba(125,157,133,0.08) 0%,rgba(26,40,32,0.9) 100%)
+}
+body.theme-dark-green .villes-tags span {
+    background:#1e2e25;
+    color:#d4e8da;
+    border-color:#263d2e
+}
+body.theme-dark-green .contact-mini-card {
+    background:#0f1611
+}
+body.theme-dark-green .contact-mini-card p {
+    color:#5a7a62
+}
+body.theme-dark-green .site-footer {
+    background:#0f1611;
+    border-top:1px solid #1e2e25
+}
+body.theme-dark-green .footer-bottom {
+    border-top:1px solid #1e2e25
+}
+body.theme-dark-green .footer-info p,
+body.theme-dark-green .footer-info a,
+body.theme-dark-green .footer-info strong {
+    color:#5a7a62
+}
+body.theme-dark-green .page-blur-overlay {
+    background:rgba(20,28,24,0.7)
+}
+body.theme-dark-green .floating-action-btn {
+    background:#1a2820;
+    border-color:#1e2e25;
+    color:#d4e8da
+}
+body.theme-dark-green .floating-action-btn:hover,
+body.theme-dark-green .floating-color-btn:hover {
+    background:#1e2e25
+}
+body.theme-dark-green .color-mode-panel {
+    background:#1a2820;
+    border-color:#1e2e25
+}
+body.theme-dark-green .color-mode-title {
+    color:#2e4a35;
+    border-bottom-color:#1e2e25
+}
+body.theme-dark-green .color-mode-option {
+    color:#d4e8da
+}
+body.theme-dark-green .color-mode-option:hover {
+    background:#1e2e25
+}
+
+/* ============================================================
+   THÈME : Prune doux (dark-purple) — tarifs-et-horaires
+   ============================================================ */
+body.theme-dark-purple {
+    background-color:#1c1624;
+    color:#e8dff0
+}
+body.theme-dark-purple .navbar {
+    background-color:rgba(28,22,36,0.97);
+    border-bottom:1px solid #2a1e35;
+    box-shadow:0 2px 20px rgba(0,0,0,0.3)
+}
+body.theme-dark-purple .navbar-links {
+    background-color:rgba(28,22,36,0.98);
+    border-top:1px solid #2a1e35
+}
+body.theme-dark-purple .navbar-links a {
+    color:#e8dff0;
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple .navbar-links a:hover {
+    background-color:#2a1e35;
+    color:#bf7ad0
+}
+body.theme-dark-purple .hamburger span {
+    background-color:#e8dff0
+}
+body.theme-dark-purple .bento-wrapper {
+    background-color:transparent
+}
+body.theme-dark-purple .seo-intro h1 {
+    color:#e8dff0
+}
+body.theme-dark-purple .seo-intro p {
+    color:#9f81b3
+}
+body.theme-dark-purple .seo-intro strong {
+    color:#e8dff0
+}
+body.theme-dark-purple .glass-card {
+    background:#221830;
+    border-color:#2a1e35;
+    box-shadow:none
+}
+body.theme-dark-purple .card-header h3,
+body.theme-dark-purple .glass-card>h3 {
+    color:#e8dff0
+}
+body.theme-dark-purple .price-item {
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple .price-item span:first-child {
+    color:#e8dff0
+}
+body.theme-dark-purple .price-footer {
+    color:#7a6289
+}
+body.theme-dark-purple .day-row {
+    border-bottom-color:#2a1e35;
+    color:#e8dff0
+}
+body.theme-dark-purple .day-row strong {
+    color:#e8dff0
+}
+body.theme-dark-purple .location-card {
+    background:linear-gradient(135deg,rgba(191,122,208,0.06) 0%,rgba(34,24,48,0.9) 100%)
+}
+body.theme-dark-purple .villes-tags span {
+    background:#2a1e35;
+    color:#e8dff0;
+    border-color:#352544
+}
+body.theme-dark-purple .contact-mini-card {
+    background:#150f1e
+}
+body.theme-dark-purple .contact-mini-card p {
+    color:#7a6289
+}
+body.theme-dark-purple .site-footer {
+    background:#150f1e;
+    border-top:1px solid #2a1e35
+}
+body.theme-dark-purple .footer-bottom {
+    border-top:1px solid #2a1e35
+}
+body.theme-dark-purple .footer-info p,
+body.theme-dark-purple .footer-info a,
+body.theme-dark-purple .footer-info strong {
+    color:#7a6289
+}
+body.theme-dark-purple .page-blur-overlay {
+    background:rgba(28,22,36,0.7)
+}
+body.theme-dark-purple .floating-action-btn {
+    background:#221830;
+    border-color:#2a1e35;
+    color:#e8dff0
+}
+body.theme-dark-purple .floating-action-btn:hover,
+body.theme-dark-purple .floating-color-btn:hover {
+    background:#2a1e35
+}
+body.theme-dark-purple .color-mode-panel {
+    background:#221830;
+    border-color:#2a1e35
+}
+body.theme-dark-purple .color-mode-title {
+    color:#3a2a4a;
+    border-bottom-color:#2a1e35
+}
+body.theme-dark-purple .color-mode-option {
+    color:#e8dff0
+}
+body.theme-dark-purple .color-mode-option:hover {
+    background:#2a1e35
+}

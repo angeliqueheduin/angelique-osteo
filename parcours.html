@@ -30,9 +30,9 @@
 
     <!-- === FAVICONS (PNG en premier pour compatibilité maximale) === -->
     <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" href="/photos-header/logo-site.png">
-    <link rel="icon" type="image/webp" href="/photos-header/logo-site.webp">
-    <link rel="apple-touch-icon" href="/photos-header/logo-site.png">
+    <link rel="icon" type="image/svg+xml" href="/photos-header/logo-site.webp">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#7d9d85">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="format-detection" content="telephone=no">
@@ -57,7 +57,11 @@
     <meta name="twitter:image" content="https://angelique-osteo.fr/photos-header/angelique-heduin.jpg">
     <meta name="twitter:image:alt" content="Angélique Héduin, ostéopathe D.O. à Bessan">
 
-    <!-- === SCHEMA.ORG — Person === -->
+
+
+
+
+    <!-- === SCHEMA.ORG — Person (page parcours : entité principale) === -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,23 +70,19 @@
       "name": "Angélique Héduin",
       "jobTitle": "Ostéopathe D.O.",
       "url": "https://angelique-osteo.fr/parcours",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://angelique-osteo.fr/parcours"
-      },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://angelique-osteo.fr/parcours" },
       "image": {
         "@type": "ImageObject",
         "url": "https://angelique-osteo.fr/photos-header/angelique-heduin.webp",
         "width": 320,
         "height": 400
       },
+      "description": "Ostéopathe D.O. diplômée en 2002 à l'ESO Paris. 24+ ans d'expérience. Spécialisée pédiatrie, fasciathérapie, gynécologie et psychothérapie. Cabinet à Bessan (Hérault 34).",
       "telephone": "+33622400172",
       "knowsAbout": [
-        "Ostéopathie",
-        "Fasciathérapie",
-        "Pédiatrie ostéopathique",
-        "Ostéopathie gynécologique",
-        "Psychothérapie"
+        "Ostéopathie","Fasciathérapie","Pédiatrie ostéopathique",
+        "Ostéopathie gynécologique","Psychothérapie","Drainage lymphatique",
+        "Ostéopathie périnatale","Neurosciences de la douleur","Nutrition ostéopathique"
       ],
       "worksFor": {
         "@type": "MedicalBusiness",
@@ -98,31 +98,23 @@
       },
       "alumniOf": {
         "@type": "EducationalOrganization",
-        "name": "ESO Paris — École Supérieure d'Ostéopathie"
+        "name": "ESO Paris — École Supérieure d\'Ostéopathie",
+        "address": { "@type": "PostalAddress", "addressLocality": "Marne-la-Vallée", "addressCountry": "FR" }
       },
       "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Diplôme d'Ostéopathe D.O.",
-          "credentialCategory": "degree",
-          "dateCreated": "2002"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Diplôme de Praticienne en Psychothérapie",
-          "credentialCategory": "certificate",
-          "dateCreated": "2021"
-        }
+        { "@type": "EducationalOccupationalCredential", "name": "Diplôme d\'Ostéopathe D.O.", "credentialCategory": "degree", "dateCreated": "2002" },
+        { "@type": "EducationalOccupationalCredential", "name": "Diplôme de Praticienne en Psychothérapie", "credentialCategory": "certificate", "dateCreated": "2021" },
+        { "@type": "EducationalOccupationalCredential", "name": "Diplôme de Praticienne en magnétisme et énergétique", "credentialCategory": "certificate", "dateCreated": "2020" }
       ],
       "identifier": [
         { "@type": "PropertyValue", "name": "ADELI", "value": "340016203" },
-        { "@type": "PropertyValue", "name": "RPPS", "value": "10010096856" }
+        { "@type": "PropertyValue", "name": "RPPS", "value": "10010096856" },
+        { "@type": "PropertyValue", "name": "SIRET", "value": "449 808 286 000 40" }
       ],
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61551878556788",
         "https://www.resalib.fr/praticien/77980-angelique-heduin-osteopathe-bessan"
-      ],
-      "description": "Ostéopathe D.O. diplômée en 2002, spécialisée en pédiatrie, fasciathérapie, gynécologie et psychothérapie. Cabinet à Bessan dans l'Hérault."
+      ]
     }
     </script>
 
@@ -133,18 +125,8 @@
       "@type": "BreadcrumbList",
       "@id": "https://angelique-osteo.fr/parcours#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Accueil",
-          "item": "https://angelique-osteo.fr/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Mon Parcours",
-          "item": "https://angelique-osteo.fr/parcours"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://angelique-osteo.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Mon Parcours", "item": "https://angelique-osteo.fr/parcours" }
       ]
     }
     </script>
@@ -156,12 +138,13 @@
       "@type": "WebPage",
       "@id": "https://angelique-osteo.fr/parcours",
       "name": "Parcours — Angélique Héduin, Ostéopathe D.O. à Bessan",
-      "description": "Angélique Héduin, ostéopathe D.O. diplômée en 2002. 24 ans d'expérience, spécialisations en pédiatrie, fasciathérapie et psychothérapie. Cabinet à Bessan (34550).",
-      "isPartOf": { "@type": "WebSite", "@id": "https://angelique-osteo.fr/#website" },
+      "description": "Angélique Héduin, ostéopathe D.O. diplômée en 2002. 24+ ans d\'expérience. Spécialisations pédiatrie, fasciathérapie, gynécologie, psychothérapie. Cabinet à Bessan (34550).",
+      "isPartOf": { "@id": "https://angelique-osteo.fr/#website" },
+      "about": { "@id": "https://angelique-osteo.fr/#person" },
       "breadcrumb": { "@id": "https://angelique-osteo.fr/parcours#breadcrumb" },
       "author": { "@id": "https://angelique-osteo.fr/#person" },
       "inLanguage": "fr-FR",
-      "dateModified": "2026-03-16"
+      "dateModified": "2026-03-24"
     }
     </script>
 
@@ -182,7 +165,7 @@
     <header class="header-section">
         <nav class="navbar" aria-label="Navigation principale">
             <a href="/" class="logo" aria-label="Accueil — Angélique Héduin Ostéopathe">
-                <img src="/photos-header/logo-site.webp" alt="Logo Angélique Héduin Ostéopathe" class="logo-img" width="70" height="62" loading="eager" fetchpriority="high">
+                <img src="/photos-header/logo-site-2.webp" alt="Logo Angélique Héduin Ostéopathe" class="logo-img" width="70" height="62" loading="eager" fetchpriority="high">
             </a>
             <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navbar-links">
                 <span aria-hidden="true"></span>
@@ -330,7 +313,32 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <span>Appeler</span>
             </a>
+            <!-- Bouton Mode couleur -->
+            <div class="floating-action-btn floating-color-btn" id="btnColorMode" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Choisir le mode couleur">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg>
+                <span id="colorModeLabel">Mode couleur</span>
+            </div>
         </nav>
+        <!-- Sous-menu modes couleur -->
+        <div id="colorModePanel" class="color-mode-panel" role="menu" aria-label="Choisir un mode couleur">
+            <div class="color-mode-title">Choisir un thème</div>
+            <button class="color-mode-option" data-theme="light" role="menuitem">
+                <span class="color-mode-swatch" style="background:#fdfcfb;border:1.5px solid #ddd;"></span>
+                <span>Clair <span class="color-mode-check" id="check-light">✓</span></span>
+            </button>
+            <button class="color-mode-option" data-theme="dark-brown" role="menuitem">
+                <span class="color-mode-swatch" style="background:#3b3b3b;"></span>
+                <span>Nuit profonde <span class="color-mode-check" id="check-dark-brown"></span></span>
+            </button>
+            <button class="color-mode-option" data-theme="dark-green" role="menuitem">
+                <span class="color-mode-swatch" style="background:#155110;"></span>
+                <span>Ardoise verte <span class="color-mode-check" id="check-dark-green"></span></span>
+            </button>
+            <button class="color-mode-option" data-theme="dark-purple" role="menuitem">
+                <span class="color-mode-swatch" style="background:#4a3466;"></span>
+                <span>Prune doux <span class="color-mode-check" id="check-dark-purple"></span></span>
+            </button>
+        </div>
         <button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions"><span aria-hidden="true">?</span></button>
     </div>
 
@@ -359,6 +367,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=3" defer></script>
+    <script src="script.js?v=5" defer></script>
 </body>
 </html>

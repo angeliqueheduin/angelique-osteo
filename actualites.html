@@ -30,9 +30,9 @@
 
     <!-- === FAVICONS (PNG en premier pour compatibilité maximale) === -->
     <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" href="/photos-header/logo-site.png">
-    <link rel="icon" type="image/webp" href="/photos-header/logo-site.webp">
-    <link rel="apple-touch-icon" href="/photos-header/logo-site.png">
+    <link rel="icon" type="image/svg+xml" href="/photos-header/logo-site.webp">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#7d9d85">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="format-detection" content="telephone=no">
@@ -57,92 +57,25 @@
     <meta name="twitter:image" content="https://angelique-osteo.fr/photos-header/personnes-agees.jpg">
     <meta name="twitter:image:alt" content="Ostéopathie seniors — Cabinet Angélique Héduin Bessan">
 
-    <!-- === SCHEMA.ORG — FAQPage === -->
+
+
+    <!-- === SCHEMA.ORG — FAQPage (10 questions complètes de la page) === -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
+      "@id": "https://angelique-osteo.fr/actualites#faq",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Faut-il une ordonnance pour consulter un ostéopathe ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Non, l'ostéopathe est un praticien de première intention. Vous pouvez me consulter directement sans prescription médicale préalable."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Dois-je apporter mes examens médicaux à ma séance d'ostéopathie ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, si vous possédez des examens récents (radiographies, IRM, scanners, bilans sanguins) en lien avec votre motif de consultation, je vous encourage vivement à les apporter."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "L'ostéopathie est-elle remboursée par la Sécurité Sociale ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Les séances ne sont pas prises en charge par la Sécurité Sociale. En revanche, la majorité des mutuelles remboursent tout ou partie des consultations sur présentation d'une facture que je vous remets en fin de séance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Combien de séances d'ostéopathie sont nécessaires ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Le nombre de séances dépend de votre motif de consultation et de votre réponse au traitement. Pour un trouble aigu, 1 à 3 séances sont souvent suffisantes. Pour un suivi préventif ou une problématique chronique, un bilan est réalisé à chaque consultation pour adapter le rythme de suivi."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "L'ostéopathie est-elle dangereuse ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "L'ostéopathie est une pratique manuelle douce et sécurisée lorsqu'elle est exercée par un professionnel diplômé d'État. Je réalise systématiquement un bilan complet avant toute manipulation afin d'identifier les éventuelles contre-indications et adapter les techniques utilisées."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Peut-on emmener son bébé chez l'ostéopathe dès la naissance ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, l'ostéopathie pédiatrique peut être pratiquée dès les premiers jours de vie. Elle est recommandée notamment après un accouchement difficile, en cas de torticolis, de coliques, de troubles du sommeil ou de plagiocéphalie (tête plate). Les techniques utilisées chez le nourrisson sont très douces et non traumatisantes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "L'ostéopathie est-elle conseillée pendant la grossesse ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, l'ostéopathie est particulièrement bénéfique pendant la grossesse pour soulager les douleurs lombaires, les sciatiques, les tensions du bassin et préparer le corps à l'accouchement. Les techniques sont entièrement adaptées à chaque trimestre de grossesse."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quelle est la durée d'une séance d'ostéopathie ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Une séance dure en moyenne entre 45 minutes et 1 heure. La première consultation est généralement plus longue car elle comprend un bilan approfondi de vos antécédents médicaux et de vos habitudes de vie."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quels modes de paiement acceptez-vous ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Je règle les honoraires par chèque ou en espèces. Je ne dispose pas de terminal de paiement par carte bancaire. Je remets une facture en fin de séance pour faciliter le remboursement par votre mutuelle."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Vous déplacez-vous à domicile pour les séances d'ostéopathie ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, je me déplace à domicile dans un rayon de 15 km autour de Bessan pour les personnes qui ne peuvent pas se déplacer (personnes âgées, nouveau-nés, post-opératoire). Une majoration tarifaire s'applique pour les déplacements à domicile."
-          }
-        }
+        { "@type": "Question", "name": "Faut-il une ordonnance pour consulter un ostéopathe ?", "acceptedAnswer": { "@type": "Answer", "text": "Non, l\'ostéopathe est un praticien de première intention. Vous pouvez consulter directement sans prescription médicale préalable." } },
+        { "@type": "Question", "name": "Dois-je apporter mes examens médicaux à ma séance d\'ostéopathie ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, si vous possédez des examens récents (radiographies, IRM, scanners, bilans sanguins) en lien avec votre motif de consultation, il est vivement recommandé de les apporter. Cela aide à adapter le traitement." } },
+        { "@type": "Question", "name": "L\'ostéopathie est-elle remboursée par la Sécurité Sociale ?", "acceptedAnswer": { "@type": "Answer", "text": "Les séances ne sont pas prises en charge par la Sécurité Sociale. En revanche, la majorité des mutuelles remboursent tout ou partie des consultations sur présentation d\'une facture remise en fin de séance." } },
+        { "@type": "Question", "name": "Combien de séances d\'ostéopathie sont nécessaires ?", "acceptedAnswer": { "@type": "Answer", "text": "Le nombre de séances dépend de votre motif de consultation. Pour un trouble aigu, 1 à 3 séances sont souvent suffisantes. Pour une problématique chronique, un bilan est réalisé à chaque consultation pour adapter le rythme de suivi." } },
+        { "@type": "Question", "name": "L\'ostéopathie est-elle dangereuse ?", "acceptedAnswer": { "@type": "Answer", "text": "L\'ostéopathie est une pratique manuelle douce et sécurisée exercée par un professionnel diplômé d\'État. Un bilan complet est réalisé avant toute manipulation pour identifier les contre-indications éventuelles." } },
+        { "@type": "Question", "name": "Peut-on emmener son bébé chez l\'ostéopathe dès la naissance ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, l\'ostéopathie pédiatrique peut être pratiquée dès les premiers jours de vie. Elle est recommandée notamment après un accouchement difficile, en cas de torticolis, de coliques, de troubles du sommeil ou de plagiocéphalie. Les techniques utilisées chez le nourrisson sont très douces et non traumatisantes." } },
+        { "@type": "Question", "name": "L\'ostéopathie est-elle conseillée pendant la grossesse ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, l\'ostéopathie est particulièrement bénéfique pendant la grossesse pour soulager les douleurs lombaires, les sciatiques, les tensions du bassin et préparer le corps à l\'accouchement. Les techniques sont entièrement adaptées à chaque trimestre." } },
+        { "@type": "Question", "name": "Quelle est la durée d\'une séance d\'ostéopathie ?", "acceptedAnswer": { "@type": "Answer", "text": "Une séance dure en moyenne entre 45 minutes et 1 heure. La première consultation est généralement plus longue car elle comprend un bilan approfondi des antécédents médicaux et des habitudes de vie." } },
+        { "@type": "Question", "name": "Quels modes de paiement sont acceptés ?", "acceptedAnswer": { "@type": "Answer", "text": "Le règlement se fait par chèque ou en espèces. Il n\'y a pas de terminal de paiement par carte bancaire au cabinet. Une facture est remise en fin de séance pour votre mutuelle." } },
+        { "@type": "Question", "name": "Angélique Héduin se déplace-t-elle à domicile pour les séances ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, elle se déplace à domicile dans un rayon de 15 km autour de Bessan pour les personnes qui ne peuvent pas se déplacer (personnes âgées, nouveau-nés, post-opératoire). Une majoration tarifaire s\'applique pour les déplacements à domicile." } }
       ]
     }
     </script>
@@ -152,20 +85,28 @@
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
+      "@id": "https://angelique-osteo.fr/actualites#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Accueil",
-          "item": "https://angelique-osteo.fr/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Ressources & FAQ",
-          "item": "https://angelique-osteo.fr/actualites"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://angelique-osteo.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Ressources & FAQ", "item": "https://angelique-osteo.fr/actualites" }
       ]
+    }
+    </script>
+
+    <!-- === SCHEMA.ORG — WebPage === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://angelique-osteo.fr/actualites",
+      "name": "Ressources, Articles & FAQ — Ostéopathe à Bessan | Angélique Héduin",
+      "description": "Conseils en ostéopathie, articles santé et réponses à vos questions fréquentes. Angélique Héduin, ostéopathe D.O. à Bessan (34550), Hérault.",
+      "isPartOf": { "@id": "https://angelique-osteo.fr/#website" },
+      "about": { "@id": "https://angelique-osteo.fr/#business" },
+      "breadcrumb": { "@id": "https://angelique-osteo.fr/actualites#breadcrumb" },
+      "author": { "@id": "https://angelique-osteo.fr/#person" },
+      "inLanguage": "fr-FR",
+      "dateModified": "2026-03-24"
     }
     </script>
 
@@ -186,7 +127,7 @@
     <header class="header-section">
         <nav class="navbar" role="navigation" aria-label="Navigation principale">
             <a href="/" class="logo" aria-label="Accueil — Angélique Héduin Ostéopathe">
-                <img src="/photos-header/logo-site.webp" alt="Angélique Héduin Ostéopathe Bessan" class="logo-img" width="70" height="62" loading="eager" fetchpriority="high">
+                <img src="/photos-header/logo-site-2.webp" alt="Angélique Héduin Ostéopathe Bessan" class="logo-img" width="70" height="62" loading="eager" fetchpriority="high">
             </a>
             <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navbar-links">
                 <span aria-hidden="true"></span>
@@ -347,28 +288,46 @@
             </section>
 
             <div class="floating-help">
-
-                <div id="floating-actions" class="floating-actions" role="menu" aria-label="Actions rapides">
-
+                <nav id="floating-actions" class="floating-actions" aria-label="Actions rapides">
                     <a href="https://www.facebook.com/profile.php?id=61551878556788" target="_blank" rel="noopener noreferrer me" class="floating-action-btn" aria-label="Page Facebook" role="menuitem">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         <span>Facebook</span>
                     </a>
-
                     <a href="https://calendly.com/angeliqueheduin-osteopathe" target="_blank" rel="noopener noreferrer" class="floating-action-btn" aria-label="Prendre rendez-vous en ligne" role="menuitem">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                         <span>Prendre RDV</span>
                     </a>
-
                     <a href="tel:+33622400172" class="floating-action-btn" aria-label="Appeler le 06 22 40 01 72" role="menuitem">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         <span>Appeler</span>
                     </a>
-
+                    <!-- Bouton Mode couleur -->
+                    <div class="floating-action-btn floating-color-btn" id="btnColorMode" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Choisir le mode couleur">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg>
+                        <span id="colorModeLabel">Mode couleur</span>
+                    </div>
+                </nav>
+                <!-- Sous-menu modes couleur -->
+                <div id="colorModePanel" class="color-mode-panel" role="menu" aria-label="Choisir un mode couleur">
+                    <div class="color-mode-title">Choisir un thème</div>
+                    <button class="color-mode-option" data-theme="light" role="menuitem">
+                        <span class="color-mode-swatch" style="background:#fdfcfb;border:1.5px solid #ddd;"></span>
+                        <span>Clair <span class="color-mode-check" id="check-light">✓</span></span>
+                    </button>
+                    <button class="color-mode-option" data-theme="dark-brown" role="menuitem">
+                        <span class="color-mode-swatch" style="background:#3b3b3b;"></span>
+                        <span>Nuit profonde <span class="color-mode-check" id="check-dark-brown"></span></span>
+                    </button>
+                    <button class="color-mode-option" data-theme="dark-green" role="menuitem">
+                        <span class="color-mode-swatch" style="background:#155110;"></span>
+                        <span>Ardoise verte <span class="color-mode-check" id="check-dark-green"></span></span>
+                    </button>
+                    <button class="color-mode-option" data-theme="dark-purple" role="menuitem">
+                        <span class="color-mode-swatch" style="background:#4a3466;"></span>
+                        <span>Prune doux <span class="color-mode-check" id="check-dark-purple"></span></span>
+                    </button>
                 </div>
-
                 <button class="help-toggle" id="helpBtn" aria-label="Aide et contact" aria-expanded="false" aria-controls="floating-actions"><span aria-hidden="true">?</span></button>
-
             </div>
         </div>
     </main>
@@ -400,6 +359,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=3" defer></script>
+    <script src="script.js?v=5" defer></script>
 </body>
 </html>
