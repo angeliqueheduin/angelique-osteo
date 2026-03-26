@@ -425,11 +425,13 @@ body {
     background:rgba(255, 255, 255, 0.55);
     backdrop-filter:blur(4px);
     -webkit-backdrop-filter:blur(4px);
-    z-index:1999
+    z-index:1999;
+    pointer-events:none
 }
 
 .page-blur-overlay.active {
-    display:block
+    display:block;
+    pointer-events:auto
 }
 
 @media (min-width:768px) {
@@ -445,7 +447,9 @@ body {
     z-index:2000;
     display:flex;
     flex-direction:column;
-    align-items:flex-end
+    align-items:flex-end;
+    background:transparent;
+    isolation:isolate
 }
 
 .floating-actions {
@@ -926,7 +930,10 @@ body {
     margin-bottom:8px;
     box-shadow:0 4px 18px rgba(0,0,0,0.10);
     min-width:180px;
-    align-self:flex-end
+    align-self:flex-end;
+    max-width:calc(100vw - 40px);
+    position:relative;
+    z-index:2001
 }
 
 .color-mode-panel.open {

@@ -556,7 +556,9 @@ body {
     display:flex;
     flex-direction:column;
     align-items:flex-end;
-    background:transparent
+    background:transparent;
+    /* Fix mobile Safari : isolation crée un contexte de stacking propre */
+    isolation:isolate
 }
 
 .floating-actions {
@@ -953,7 +955,11 @@ body {
     margin-bottom:8px;
     box-shadow:0 4px 18px rgba(0,0,0,0.10);
     min-width:180px;
-    align-self:flex-end
+    align-self:flex-end;
+    /* Fix mobile : empêche le débordement hors écran */
+    max-width:calc(100vw - 40px);
+    position:relative;
+    z-index:2001
 }
 
 .color-mode-panel.open {

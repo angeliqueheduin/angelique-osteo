@@ -390,7 +390,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     if (overlay) overlay.addEventListener('click', closeHelper);
     document.addEventListener('click', function(e) {
-      if (!helpBtn.contains(e.target) && !floatingActions.contains(e.target)) {
+      var colorPanel = document.getElementById('colorModePanel');
+      if (
+        !helpBtn.contains(e.target) &&
+        !floatingActions.contains(e.target) &&
+        !(colorPanel && colorPanel.contains(e.target))
+      ) {
         closeHelper();
       }
     });
@@ -427,6 +432,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var theme = btn.getAttribute('data-theme');
         applyTheme(theme);
         closeColorPanel();
+        // Sur mobile, on ferme aussi le helper après avoir choisi un thème
+        // pour une meilleure UX (le panel disparaît proprement)
       });
     });
 
