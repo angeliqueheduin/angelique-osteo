@@ -78,8 +78,9 @@ function initCookies() {
 
 // ============================================================
 // MARQUEE
-// FIX forced reflow : scrollWidth lu uniquement hors du RAF,
-// mis en cache et rafraîchi seulement au resize.
+// Les lectures de géométrie sont groupées avant les écritures
+// de style, et l'animation ne démarre qu'après le premier
+// affichage pour ne pas forcer un reflow pendant le LCP.
 // ============================================================
 (function() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -87,33 +88,43 @@ function initCookies() {
   var outer = document.getElementById('marqueeOuter');
   if (!track || !outer) return;
 
-  // Track + clone positionnés en absolu dans outer.
-  // track va de translateX(0) à translateX(-trackWidth).
-  // clone suit avec un décalage de +trackWidth, créant la boucle seamless.
-  outer.style.position = 'relative';
-  track.style.position = 'absolute';
-  track.style.top = '0';
-  track.style.left = '0';
-
   var clone = track.cloneNode(true);
   clone.setAttribute('aria-hidden', 'true');
   clone.removeAttribute('id');
-  clone.style.position = 'absolute';
-  clone.style.top = '0';
-  clone.style.left = '0';
-  outer.appendChild(clone);
 
   var pos = 0;
   var trackWidth = 0;
+  var started = false;
+  var mobileQuery = window.matchMedia('(max-width: 767px)');
+
+  function isMobile() { return mobileQuery.matches; }
+
+  function measure() {
+    return {
+      width: track.scrollWidth + 16,
+      height: track.offsetHeight + 20
+    };
+  }
+
+  function applyLayout(metrics) {
+    outer.style.position = 'relative';
+    outer.style.height = metrics.height + 'px';
+    track.style.position = 'absolute';
+    track.style.top = '0';
+    track.style.left = '0';
+    clone.style.position = 'absolute';
+    clone.style.top = '0';
+    clone.style.left = '0';
+    if (!clone.parentNode) outer.appendChild(clone);
+    trackWidth = metrics.width;
+  }
 
   function refreshWidth() {
-    trackWidth = track.scrollWidth + 16;
-    outer.style.height = (track.offsetHeight + 20) + 'px';
+    var metrics = measure();
+    outer.style.height = metrics.height + 'px';
+    trackWidth = metrics.width;
   }
-  if (document.readyState === 'complete') { refreshWidth(); }
-  else { window.addEventListener('load', refreshWidth); }
 
-  function isMobile() { return window.innerWidth < 768; }
   var normalSpeed = isMobile() ? 0.22 : 0.5;
   var slowSpeed   = isMobile() ? 0.08 : 0.18;
   var currentSpeed = normalSpeed, targetSpeed = normalSpeed;
@@ -125,7 +136,7 @@ function initCookies() {
       normalSpeed = isMobile() ? 0.22 : 0.5;
       slowSpeed   = isMobile() ? 0.08 : 0.18;
       targetSpeed = normalSpeed;
-      refreshWidth();
+      if (started) refreshWidth();
     }, 100);
   });
 
@@ -145,11 +156,23 @@ function initCookies() {
     raf = requestAnimationFrame(tick);
   }
 
+  function start() {
+    if (started) return;
+    started = true;
+    requestAnimationFrame(function() {
+      applyLayout(measure());
+      raf = requestAnimationFrame(tick);
+    });
+  }
+
   document.addEventListener('visibilitychange', function() {
+    if (!started) return;
     if (document.hidden) cancelAnimationFrame(raf);
     else raf = requestAnimationFrame(tick);
   });
-  raf = requestAnimationFrame(tick);
+
+  if (document.readyState === 'complete') start();
+  else window.addEventListener('load', start);
 })();
 
 // ============================================================
@@ -331,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Animations au scroll
-  var isMobile = window.innerWidth < 768;
+  var isMobile = window.matchMedia('(max-width: 767px)').matches;
   if (!('IntersectionObserver' in window)) {
     document.querySelectorAll('.animate-on-scroll').forEach(function(el) { el.classList.add('visible'); });
   } else {

@@ -222,7 +222,7 @@ body {
 
 .description h1 em {
     font-style:italic;
-    color:#bf7ad0
+    color:#b573c5
 }
 
 .spec-header h2 em {
@@ -239,8 +239,8 @@ body {
     font-weight:600;
     letter-spacing:0.1em;
     text-transform:uppercase;
-    color:#7d9d85;
-    border:1px solid #7d9d85;
+    color:#5e7664;
+    border:1px solid #5e7664;
     padding:4px 10px;
     border-radius:20px;
     margin-bottom:12px
@@ -270,13 +270,13 @@ body {
 .stat p {
     display:block;
     font-size:3rem;
-    color:#7d9d85;
+    color:#5e7664;
     font-weight:600
 }
 
 .stat small {
     font-size:1.2rem;
-    color:#999
+    color:#707070
 }
 
 .portrait-block {
@@ -425,7 +425,7 @@ body {
 
 .avis-section>h2 em {
     font-style:italic;
-    color:#bf7ad0
+    color:#9a63a8
 }
 
 .marquee-outer {
@@ -673,12 +673,12 @@ body {
 
 .footer-legal p {
     font-size:0.8rem;
-    color:#999;
+    color:#707070;
     margin-top:8px
 }
 
 .footer-legal a {
-    color: #bf7ad0;
+    color:#915d9e;
     /* FIX Lighthouse: underline pour distinguer le lien sans dépendre uniquement de la couleur */
     text-decoration: underline
 }
@@ -920,13 +920,13 @@ body {
 
 .recaptcha-mention {
     font-size:0.72rem;
-    color:#bbb;
+    color:#707070;
     margin-top:10px;
     text-align:center
 }
 
 .recaptcha-mention a {
-    color:#bbb;
+    color:#707070;
     text-decoration:underline
 }
 /* ============================================================
@@ -1424,4 +1424,36 @@ body.theme-dark-purple .color-mode-option:hover {
 body.theme-dark-purple .circle-1,
 body.theme-dark-purple .circle-2 {
     opacity:0.04
+}
+
+/* Contraste AA : les teintes foncées du thème clair redeviennent claires sur fond sombre */
+body.theme-dark-brown .description h1 em,
+body.theme-dark-green .description h1 em,
+body.theme-dark-purple .description h1 em,
+body.theme-dark-brown .avis-section > h2 em,
+body.theme-dark-green .avis-section > h2 em,
+body.theme-dark-purple .avis-section > h2 em,
+body.theme-dark-brown .footer-legal a,
+body.theme-dark-green .footer-legal a,
+body.theme-dark-purple .footer-legal a {
+    color:#bf7ad0
+}
+body.theme-dark-brown .stat p,
+body.theme-dark-green .stat p,
+body.theme-dark-purple .stat p {
+    color:#7d9d85
+}
+body.theme-dark-brown .stat small,
+body.theme-dark-green .stat small,
+body.theme-dark-purple .stat small,
+body.theme-dark-brown .footer-legal p,
+body.theme-dark-green .footer-legal p,
+body.theme-dark-purple .footer-legal p,
+body.theme-dark-brown .recaptcha-mention,
+body.theme-dark-green .recaptcha-mention,
+body.theme-dark-purple .recaptcha-mention,
+body.theme-dark-brown .recaptcha-mention a,
+body.theme-dark-green .recaptcha-mention a,
+body.theme-dark-purple .recaptcha-mention a {
+    color:#d5d0cb
 }

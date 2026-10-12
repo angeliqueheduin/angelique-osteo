@@ -164,7 +164,7 @@ body {
 }
 
 .seo-intro h1 em {
-    color:var(--primary-color);
+    color:#5e7664;
     font-style:italic
 }
 
@@ -498,11 +498,11 @@ body {
 
 .footer-legal p {
     font-size:0.8rem;
-    color:#999
+    color:#707070
 }
 
 .footer-legal a {
-    color:var(--primary-color);
+    color:#5e7664;
     text-decoration:none;
     font-weight:500
 }
@@ -718,13 +718,13 @@ body {
 
 .recaptcha-mention {
     font-size:0.72rem;
-    color:#bbb;
+    color:#707070;
     margin-top:10px;
     text-align:center
 }
 
 .recaptcha-mention a {
-    color:#bbb;
+    color:#707070;
     text-decoration:underline
 }
 /* ============================================================
@@ -1160,4 +1160,28 @@ body.theme-dark-purple .color-mode-option {
 }
 body.theme-dark-purple .color-mode-option:hover {
     background:#2a1e35
+}
+
+/* Contraste AA : les teintes foncées du thème clair redeviennent claires sur fond sombre */
+body.theme-dark-brown .footer-legal a,
+body.theme-dark-green .footer-legal a,
+body.theme-dark-purple .footer-legal a,
+body.theme-dark-brown .hero h1 em,
+body.theme-dark-green .hero h1 em,
+body.theme-dark-purple .hero h1 em,
+body.theme-dark-brown .seo-intro h1 em,
+body.theme-dark-green .seo-intro h1 em,
+body.theme-dark-purple .seo-intro h1 em {
+    color:#7d9d85
+}
+body.theme-dark-brown .footer-legal p,
+body.theme-dark-green .footer-legal p,
+body.theme-dark-purple .footer-legal p,
+body.theme-dark-brown .recaptcha-mention,
+body.theme-dark-green .recaptcha-mention,
+body.theme-dark-purple .recaptcha-mention,
+body.theme-dark-brown .recaptcha-mention a,
+body.theme-dark-green .recaptcha-mention a,
+body.theme-dark-purple .recaptcha-mention a {
+    color:#d5d0cb
 }
